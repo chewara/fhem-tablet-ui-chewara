@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	<!--
+	/* FHEM tablet ui */
+	/*
+	* Just another dashboard for FHEM
+	*
+	* Version: 1.4.4
+	* Requires: jQuery v1.7+, font-awesome, jquery.gridster, jquery.toast
+	* URL: https://github.com/knowthelist/fhem-tablet-ui
+	*
+	* Copyright (c) 2015 Mario Stephan <mstephan@shared-files.de>
+	* Under MIT License (http://www.opensource.org/licenses/mit-license.php)
+	*
+	* - create a new folder named 'tablet' in /<fhem-path>/www
+	* - copy all files incl. sub folders into /<fhem-path>/www/tablet
+	* - add 'define tablet_ui HTTPSRV tablet ./www/tablet Tablet Frontend' in fhem.cfg
+	* - Tadaaa! A new fhem ui in http://<fhem-url>:8083/fhem/tablet/
+	*/
+	-->
+	<meta http-equiv="Cache-Control" content="no-store" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="widget_base_width" content="117">
+	<meta name="widget_base_height" content="135">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="longpoll" content="1"> <!-- 1=longpoll;0=shortpoll every 30sec -->
+	<meta name="debug" content="0"> <!-- 1=output to console;0=not output -->
+	<meta name="widget_dir" content="/fhem/tablet/widget/">
+
+	<link rel="stylesheet" href="/fhem/tablet/lib/jquery.gridster.min.css" />
+	<link rel="stylesheet" href="/fhem/tablet/css/fhem-tablet-ui.css" />
+	<link rel="stylesheet" href="/fhem/tablet/lib/font-awesome.min.css" />
+	<link rel="stylesheet" href="/fhem/tablet/lib/jquery.toast.min.css" />
+	<link rel="stylesheet" href="/fhem/tablet/lib/powerange.min.css" />
+	<link rel="stylesheet" href="/fhem/tablet/customfonts/style.css" />
+	<link rel="stylesheet" href="/fhem/tablet/lib/openautomation.css" />
+	<link rel="stylesheet" href="/fhem/tablet/lib/fhemSVG.css" />
+	<link rel="stylesheet" href="/fhem/tablet/css/wopr.css" />
+	<link rel="stylesheet" href="/fhem/tablet/fonts/nesges/style.css" />
+	<link rel="stylesheet" href="/fhem/tablet/fonts/fhem/style.css" />
+
+	<script src="/fhem/pgm2/jquery.min.js" defer></script>
+	<script src="/fhem/tablet/lib/jquery.toast.min.js" defer></script>
+	<script src="/fhem/tablet/lib/jquery.gridster.min.js" defer></script>
+	<script src="/fhem/pgm2/jquery.knob.min.js" defer></script>
+	<script src="/fhem/tablet/lib/fa-multi-button.min.js" defer></script>
+	<script src="/fhem/tablet/lib/powerange.min.js" defer></script>
+	<script src="/fhem/tablet/js/fhem-tablet-ui.js" defer></script>
+	<script src="/fhem/tablet/lib/jquery.circlemenu.js" defer></script>
+
+	<!-- Remove this line to enable for usage with WebViewControl -->
+	<script defer>var wvcDevices = {'12345': 'Tablet'}; var wvcUserCssFile="webviewcontrol.css"</script>
+	<script src="/fhem/pgm2/cordova-2.3.0.js" defer></script>
+	<script src="/fhem/pgm2/webviewcontrol.js" defer></script>
+	<!-- End for WebViewControl -->
+
+	<title>SMARTHOME :: FTUI :: Remote Control</title>
+</head>
+<body>
+<div class="gridster">
+<ul>
+<style>
+    #room_remote #bg {
+        color: rgb(170,105,0) !important;
+        border: 3px 
+    }
+</style>
+
+<li data-row="1" data-col="10" data-sizex="1" data-sizey="4">
+	<header>Auswahl</header>
+<style>
+    #room_NO #bg {
+        color: rgb(249,252,156) !important;
+        border: 3px 
+    }
+</style>
+<div class="container">
+    <a id="room_index" href="index_V2.html" class="cell fa-stack fa-2x">
+    <i id="bg" class="fa fa-stack-2x fa-circle" style="color: rgb(111,69,120);"></i>
+    <i id="fg" class="fa fa-stack-1x fa-home" style="color: rgb(255,255,255);"></i></a>
+<div data-type="circlemenu" class="cell circlemenu" data-direction="left" data-circle-radius="60">
+	<ul>
+		<li><div data-type="symbol" data-icon="fa-sun-o" data-on-background-color="rgb(111,69,120)" data-off-background-color="rgb(111,69,120)" data-on-color="rgb(255,255,255)" data-off-color="rgb(255,255,255)" data-background-icon="fa-circle"></div></li>
+		<li><div data-type="button" data-on-background-color="rgb(153,204,0)" data-url="wetter.html" data-icon="fa-cloud" data-on-color="white"></div></li>
+		<li><div data-type="button" data-on-background-color="rgb(71,163,117)" data-url="pollen.html" data-icon="fa-pagelines" data-on-color="white"></div></li>
+		<li><div data-type="button" data-on-background-color="rgb(51,133,255)" data-url="biowetter.html" data-icon="fa-smile-o" data-on-color="white"></div></li>
+	</ul>
+</div>
+<div data-type="circlemenu" class="cell circlemenu" data-direction="left" data-circle-radius="50">
+	<ul>
+		<li><div data-type="symbol" data-icon="oa-it_camera" data-on-background-color="rgb(111,69,120)" data-off-background-color="rgb(111,69,120)" data-on-color="rgb(255,255,255)" data-off-color="rgb(255,255,255)" data-background-icon="fa-circle"></div></li>
+        <li><div data-type="button" id="room_ipoutdoor" data-on-background-color="rgb(51,133,255)" data-url="ipoutdoor.html" data-icon="oa-it_camera" data-on-color="white"></div></li>
+		<li><div data-type="button" id="room_ipindoor" data-on-background-color="rgb(51,133,255)" data-url="ipindoor.html" data-icon="oa-it_camera" data-on-color="white"></div></li>
+	</ul>
+</div>
+<div data-type="circlemenu" class="cell circlemenu" data-direction="left-half" data-circle-radius="125">
+	<ul>
+		<li><div data-type="symbol" data-icon="fa-home" data-on-background-color="rgb(111,69,120)" data-off-background-color="rgb(111,69,120)" data-on-color="rgb(255,255,255)" data-off-color="rgb(255,255,255)" data-background-icon="fa-circle"></div></li>
+		<li><div id="room_schlafzimmer" data-type="button" data-on-background-color="rgb(111,69,120)" data-url="schlafzimmer.html" data-icon="fa-bed" data-on-color="white"></div></li>
+		<li><div id="room_kind1" data-type="button" data-on-background-color="rgb(111,69,120)" data-url="kind1.html" data-icon="fa-female" data-on-color="white"></div></li>
+		<li><div id="room_kueche" data-type="button" data-on-background-color="rgb(111,69,120)" data-url="kueche.html" data-icon="fa-cutlery" data-on-color="white"></div></li>
+		<li><div id="room_homeoffice" data-type="button" data-on-background-color="rgb(111,69,120)" data-url="homeoffice.html" data-icon="nesges-user-tie" data-on-color="white"></div></li>
+		<li><div id="room_wohnzimmer" data-type="button" data-on-background-color="rgb(111,69,120)" data-url="wohnzimmer.html" data-icon="nesges-sofa" data-on-color="white"></div></li>
+		<li><div id="room_badezimmer" data-type="button" data-on-background-color="rgb(111,69,120)" data-url="badezimmer.html" data-icon="font1-man-woman" data-on-color="white"></div></li>
+		<li><div id="room_keller" data-type="button" data-on-background-color="rgb(111,69,120)" data-url="keller.html" data-on-color="white"></div></li>
+		<li><div id="room_anbau" data-type="button" data-on-background-color="rgb(111,69,120)" data-url="anbau.html" data-icon="fa-building" data-on-color="white"></div></li>
+		<li><div id="room_flure" data-type="button" data-on-background-color="rgb(111,69,120)" data-url="flure.html" data-icon="fa-exchange" data-on-color="white"></div></li>
+		<li><div id="room_outdoor" data-type="button" data-on-background-color="rgb(111,69,120)" data-url="outdoor.html" data-icon="fs-building_outside" data-on-color="white"></div></li>
+	</ul>
+</div>
+<div data-type="circlemenu" class="cell circlemenu" data-direction="left" data-circle-radius="120">
+	<ul>
+		<li><div data-type="symbol" data-icon="oa-control_building_control" data-on-background-color="rgb(51,133,255)" data-off-background-color="rgb(111,69,120)" data-on-color="rgb(255,255,255)" data-off-color="rgb(255,255,255)" data-background-icon="fa-circle"></div></li>
+		<li><div id="room_gateway" data-type="button" data-on-background-color="rgb(51,133,255)" data-url="gateway.html" data-icon="oa-it_net" data-on-color="white"></div></li>
+		<li><div id="room_lacrosse" data-type="button" data-on-background-color="rgb(51,133,255)" data-url="lacrosse_tfa.html" data-icon="fs-temperature_humidity" data-on-color="white"></div></li>
+		<li><div id="room_maxht" data-type="button" data-on-background-color="rgb(51,133,255)" data-url="max_regler.html" data-icon="fs-max_heizungsthermostat" data-on-color="white"></div></li>
+		<li><div id="room_maxfk" data-type="button" data-on-background-color="rgb(51,133,255)" data-url="max_kontakte.html" data-icon="oa-fts_light_dome_open" data-on-color="white"></div></li>
+		<li><div id="room_batterie" data-type="button" data-on-background-color="rgb(51,133,255)" data-url="batterie.html" data-icon="fa-bolt" data-on-color="white"></div></li>
+	</ul>
+</div>
+<div data-type="circlemenu" class="cell circlemenu" data-direction="left" data-circle-radius="90">
+	<ul>
+		<li><div data-type="symbol" data-icon="fa-calendar" data-on-background-color="rgb(111,69,120)" data-off-background-color="rgb(111,69,120)" data-on-color="rgb(255,255,255)" data-off-color="rgb(255,255,255)" data-background-icon="fa-circle"></div></li>
+		<li><div data-type="button" id="room_abfallkalender" data-on-background-color="rgb(51,133,255)" data-url="abfallkalender.html" data-icon="fa-trash" data-on-color="white"></div></li>
+		<li><div data-type="button" id="room_kalender" data-on-background-color="rgb(51,133,255)" data-url="kalender.html" data-icon="fa-calendar" data-on-color="white"></div></li>
+		<li><div data-type="button" id="room_telefon" data-on-background-color="rgb(51,133,255)" data-url="telefon.html" data-icon="fa-phone" data-on-color="white"></div></li>
+	</ul>
+</div>
+<div data-type="circlemenu" class="cell circlemenu" data-direction="left" data-circle-radius="90">
+	<ul>
+		<li><div data-type="symbol" data-icon="oa-edit_settings" data-on-background-color="rgb(111,69,120)" data-off-background-color="rgb(111,69,120)" data-on-color="rgb(255,255,255)" data-off-color="rgb(255,255,255)" data-background-icon="fa-circle"></div></li>
+		<li><div data-type="button" id="room_statistik" data-on-background-color="rgb(51,133,255)" data-url="statistik.html" data-icon="fa-bar-chart" data-on-color="white"></div></li>
+		<li><div data-type="button" id="room_kalender" data-on-background-color="rgb(51,133,255)" data-url="kalender.html" data-icon="fa-calendar" data-on-color="white"></div></li>
+		<li><div data-type="button" id="room_telefon" data-on-background-color="rgb(51,133,255)" data-url="telefon.html" data-icon="fa-phone" data-on-color="white"></div></li>
+		<li><div data-type="button" id="room_statistik" data-on-background-color="rgb(51,133,255)" data-url="statistik.html" data-icon="fa-bar-chart" data-on-color="white"></div></li>
+	</ul>
+</div>
+<div data-type="circlemenu" class="cell circlemenu" data-direction="left-half" data-circle-radius="125">
+	<ul>
+		<li><div data-type="symbol" data-icon="font1-stats-dots" data-on-background-color="rgb(111,69,120)" data-off-background-color="rgb(111,69,120)" data-on-color="rgb(255,255,255)" data-off-color="rgb(255,255,255)" data-background-icon="fa-circle">
+		</div></li>
+		<li><div data-type="button" data-on-background-color="rgb(130,179,25)" data-url="02wz_statistik.html"data-icon="font1-sofa" data-on-color="white">
+		</div></li>
+		<li><div data-type="button" data-on-background-color="rgb(238,127,174)" data-url="#.html" data-icon="fa-female" data-on-color="white">
+		</div></li>
+		<li><div data-type="button" data-on-background-color="rgb(0,135,168)" data-url="#.html" data-icon="fa-male" data-on-color="white">
+		</div></li>
+		<li><div data-type="button" data-on-background-color="rgb(211,17,22)" data-url="01sz_statistik.html" data-icon="fa-bed" data-on-color="white">
+		</div></li>
+		<li><div data-type="button" data-on-background-color="rgb(0,204,255)" data-url="statistik_badezimmer.html" data-icon="fa-tint" data-on-color="white">
+		</div></li>
+		<li><div data-type="button" data-on-background-color="rgb(153,255,51)" data-url="05wetter_statistik.html" data-icon="fa-cloud" data-on-color="white">
+		</div></li>
+		<li><div data-type="button" data-on-background-color="rgb(255,204,51)" data-url="04verbrauch.html" data-icon="fa-bolt" data-on-color="white">
+		</div></li>
+		<li><div data-type="button" data-on-background-color="rgb(82,102,41)" data-url="03benzin.html" data-icon="fa-car" data-on-color="white">
+		</div></li>
+		<li><div data-type="button" data-on-background-color="rgb(82,204,41)" data-url="08raspberry.html" data-icon="font1-tux" data-on-color="white">
+		</div></li>
+	</ul>
+</div></div>
+</li>
+<!--
+Senderlogos:
+http://www.kodinerds.net/index.php/Thread/27408-RELEASE-Deutsche-Senderlogos-optimiert-für-den-Xperience1080-Skin/?pageNo=2
+-->
+<li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+	<header>1</header>
+	<img src="/fhem/tablet/img/senderlogos/Das-Erste-HD.png" height="80" wight="80" class="top-space" onclick="setFhemStatus('set Wz.Logitech.Smart.Hub channel 1')"></img>
+</li>
+<li data-row="1" data-col="2" data-sizex="1" data-sizey="1">
+	<header>2</header>
+	<img src="/fhem/tablet/img/senderlogos/ZDF-HD.png" height="80" wight="80" class="top-space" onclick="setFhemStatus('set Wz.Logitech.Smart.Hub channel 5')"></img>
+</li>
+<li data-row="1" data-col="3" data-sizex="1" data-sizey="1">
+	<header>3</header>
+	<img src="/fhem/tablet/img/senderlogos/NDR-HD.png" height="80" wight="80" class="top-space" onclick="setFhemStatus('set Wz.Logitech.Smart.Hub channel 31')"></img>
+</li>
+<li data-row="1" data-col="4" data-sizex="1" data-sizey="1">
+	<header>4</header>
+    <img src="/fhem/tablet/img/senderlogos/Sat.1-HD.png" height="80" wight="80" class="top-space" onclick="setFhemStatus('set Wz.Logitech.Smart.Hub channel 259')"></img>
+</li>
+<li data-row="1" data-col="5" data-sizex="1" data-sizey="1">
+	<header>5</header>
+	<img src="/fhem/tablet/img/senderlogos/RTL-HD.png" height="80" wight="80" class="top-space" onclick="setFhemStatus('set Wz.Logitech.Smart.Hub channel 260')"></img>
+</li>
+ 
+<li data-row="1" data-col="6" data-sizex="4" data-sizey="4">
+	<header>DM7020hd</header>
+	<div class="center"><br>
+		<div data-type="button" data-fhem-cmd="set harmony_31688037 command Rewind" data-icon="fa-fast-backward" data-on-color="black" data-on-background-color="#FFFFFF" class="cell"></div>
+		<div data-type="button" data-fhem-cmd="set harmony_31688037 command Pause" data-icon="fa-pause" data-on-color="black" data-on-background-color="#FFFFFF" class="cell"></div>
+		<div id="" data-type="button" data-fhem-cmd="set harmony_31688037 command Play" data-icon="fa-play-circle" data-on-color="black" data-on-background-color="#FFFFFF" class="cell"></div>
+		<div id="" data-type="button" data-fhem-cmd="set harmony_31688037 command Stop" data-icon="fa-stop" data-on-color="black" data-on-background-color="#FFFFFF" class="cell"></div>
+		<div id="" data-type="button" data-fhem-cmd="set harmony_31688037 command Record" data-icon="fa-circle" data-on-color="red" data-on-background-color="#FFFFFF" class="cell"></div>
+		<div id="" data-type="button" data-fhem-cmd="set harmony_31688037 command FastForward" data-icon="fa-fast-forward" data-on-color="black" data-on-background-color="#FFFFFF" class="cell"></div>
+	</div>
+        
+	<div style="margin-top:18px" class="center">
+		<div id="" data-type="button" data-fhem-cmd="set harmony_31688037 command Exit" data-icon="fs-rc_EXIT" data-on-color="grey" data-on-background-color="#FFFFFF" class="cell"></div>
+		<div id="" data-type="button" data-fhem-cmd="set harmony_31688037 command VolumeUp" data-icon="fa-volume-up" data-on-color="grey" data-on-background-color="#FFFFFF" class="cell"></div>
+		<div id="" data-type="button" data-fhem-cmd="set harmony_31688037 command DirectionUp" data-icon="fa-angle-up" data-on-color="grey" 		data-on-background-color="#FFFFFF" class="cell"></div>
+		<div id="" data-type="button" data-fhem-cmd="set harmony_31688037 command ChannelUp" data-icon="fa-plus" data-on-color="grey" data-on-background-color="#FFFFFF" class="cell"></div>
+		<div id="" data-type="button" data-fhem-cmd="set harmony_31688037 command Guide" data-icon="fs-rc_INFO" data-on-color="grey" data-on-background-color="#FFFFFF" class="cell"></div>
+	</div>
+
+	<div class="center">
+		<div id="" data-type="button" data-fhem-cmd="set harmony_31688037 command DirectionLeft" data-icon="fa-angle-left" data-on-color="grey" data-on-background-color="#FFFFFF" class="cell"></div>
+		<div id="" data-type="button" data-fhem-cmd="set harmony_31688037 command Select" data-icon="fs-rc_OK" data-on-color="grey" data-on-background-color="#FFFFFF" class="cell"></div>
+		<div id="" data-type="button" data-fhem-cmd="set harmony_31688037 command DirectionRight" data-icon="fa-angle-right" data-on-color="grey" data-on-background-color="#FFFFFF" class="cell"></div>
+	</div>
+
+	<div class="center">
+		<div id="" data-type="button" data-fhem-cmd="set harmony_31688037 command " data-icon="fa-step-backward" data-on-color="grey" data-on-background-color="#FFFFFF" class="cell"></div>
+		<div id="" data-type="button" data-fhem-cmd="set harmony_31688037 command VolumeDown" data-icon="fa-volume-down" data-on-color="grey" data-on-background-color="#FFFFFF" class="cell"></div>
+		<div id="" data-type="button" data-fhem-cmd="set harmony_31688037 command DirectionDown" data-icon="fa-angle-down" data-on-color="grey" data-on-background-color="#FFFFFF" class="cell"></div>
+		<div id="" data-type="button" data-fhem-cmd="set harmony_31688037 command ChannelDown" data-icon="fa-minus" data-on-color="grey" data-on-background-color="#FFFFFF" class="cell"></div>
+		<div id="" data-type="button" data-fhem-cmd="set harmony_31688037 command " data-icon="fa-step-forward" data-on-color="grey" data-on-background-color="#FFFFFF" class="cell"></div>
+	</div><br>
+
+<div style="margin-top:30px" class="center">
+	<div id="" data-type="button" data-fhem-cmd="set harmony_31688037 command Red" data-icon="" data-on-background-color="red" class="cell"></div>
+	<div id="" data-type="button" data-fhem-cmd="set harmony_31688037 command Green" data-icon="" data-on-background-color="green" class="cell"></div>
+	<div id="" data-type="button" data-fhem-cmd="set harmony_31688037 command Yellow" data-icon="" data-on-background-color="yellow" class="cell"></div>
+	<div id="" data-type="button" data-fhem-cmd="set harmony_31688037 command Blue" data-icon="" data-on-background-color="blue" class="cell"></div>
+	<div id="" data-type="button" data-fhem-cmd="set harmony_31688037 command PVR" data-icon="fs-rc_VIDEO" data-on-color="grey" data-on-background-color="#FFFFFF" class="cell"></div>
+</div>
+
+<div data-type="circlemenu"  class="cell circlemenu top-space"   data-circle-radius="85">
+    <ul>
+		<li><div data-type="symbol" data-icon="fa-th" data-on-background-color="rgb(150, 150, 136)" data-off-background-color="rgb(150, 150, 136)" data-on-color="rgb(255,255,255)" data-off-color="rgb(255,255,255)" data-background-icon="fa-circle"></div></li>
+		<li><div data-type="button" data-icon="fs-rc_1" data-on-background-color="#FFFFFF" data-fhem-cmd="set harmony_31688037 command Number1"></div></li>
+		<li><div data-type="button" data-icon="fs-rc_2" data-on-background-color="#FFFFFF" data-fhem-cmd="set harmony_31688037 command Number2"></div></li>
+		<li><div data-type="button" data-icon="fs-rc_3" data-on-background-color="#FFFFFF" data-fhem-cmd="set harmony_31688037 command Number3"></div></li>
+		<li><div data-type="button" data-icon="fs-rc_4" data-on-background-color="#FFFFFF" data-fhem-cmd="set harmony_31688037 command Number4"></div></li>
+		<li><div data-type="button" data-icon="fs-rc_5" data-on-background-color="#FFFFFF" data-fhem-cmd="set harmony_31688037 command Number5"></div></li>
+		<li><div data-type="button" data-icon="fs-rc_6" data-on-background-color="#FFFFFF" data-fhem-cmd="set harmony_31688037 command Number6"></div></li>
+		<li><div data-type="button" data-icon="fs-rc_7" data-on-background-color="#FFFFFF" data-fhem-cmd="set harmony_31688037 command Number7"></div></li>
+		<li><div data-type="button" data-icon="fs-rc_8" data-on-background-color="#FFFFFF" data-fhem-cmd="set harmony_31688037 command Number8"></div></li>
+		<li><div data-type="button" data-icon="fs-rc_9" data-on-background-color="#FFFFFF" data-fhem-cmd="set harmony_31688037 command Number9"></div></li>
+		<li><div data-type="button" data-icon="fs-rc_0" data-on-background-color="#FFFFFF" data-fhem-cmd="set harmony_31688037 command Number0"></div></li>
+	</ul>
+</div>
+</li>
+</li>
+<li data-row="2" data-col="1" data-sizex="1" data-sizey="1">
+	<header>6</header>
+	<img src="/fhem/tablet/img/senderlogos/RTL2-HD.png" height="80" wight="80" class="top-space" onclick="setFhemStatus('set Wz.Logitech.Smart.Hub channel 264')"></img>
+</li>
+<li data-row="2" data-col="2" data-sizex="1" data-sizey="1">
+	<header>7</header>
+	<img src="/fhem/tablet/img/senderlogos/Pro7-HD.png" height="80" wight="80" class="top-space" onclick="setFhemStatus('set Wz.Logitech.Smart.Hub channel 261')"></img>
+</li>
+<li data-row="2" data-col="3" data-sizex="1" data-sizey="1">
+	<header>8</header>
+	<img src="/fhem/tablet/img/senderlogos/kabel-eins-HD.png" height="80" wight="80" class="top-space" onclick="setFhemStatus('set Wz.Logitech.Smart.Hub channel 263')"></img>
+</li>
+<li data-row="2" data-col="4" data-sizex="1" data-sizey="1">
+	<header>9</header>
+	<img src="/fhem/tablet/img/senderlogos/VOX-HD.png" height="80" wight="80" class="top-space" onclick="setFhemStatus('set Wz.Logitech.Smart.Hub channel 262')"></img>
+</li>
+<li data-row="2" data-col="5" data-sizex="1" data-sizey="1">
+	<header>10</header>
+	<img src="/fhem/tablet/img/senderlogos/Sixx-HD.png" height="80" wight="80" class="top-space" onclick="setFhemStatus('set Wz.Logitech.Smart.Hub channel 270')"></img>
+</li>
+<li data-row="3" data-col="1" data-sizex="1" data-sizey="1">
+	<header>11</header>
+	<img src="/fhem/tablet/img/senderlogos/N24-HD.png" height="80" wight="80" class="top-space" onclick="setFhemStatus('set Wz.Logitech.Smart.Hub channel 273')"></img>
+</li>
+<li data-row="3" data-col="2" data-sizex="1" data-sizey="1">
+	<header>12</header>
+	<img src="/fhem/tablet/img/senderlogos/n-tv.png" height="80" wight="80" class="top-space" onclick="setFhemStatus('set Wz.Logitech.Smart.Hub channel 274')"></img>
+</li>
+<li data-row="3" data-col="3" data-sizex="1" data-sizey="1">
+	<header>13</header>
+	<img src="/fhem/tablet/img/senderlogos/KiKA-HD.png" height="80" wight="80" class="top-space" onclick="setFhemStatus('set Wz.Logitech.Smart.Hub channel 12')"></img>
+</li>
+<li data-row="3" data-col="4" data-sizex="1" data-sizey="1">
+	<header>14</header>
+	<img src="/fhem/tablet/img/senderlogos/disneyjunior.png" height="80" wight="80" class="top-space" onclick="setFhemStatus('set Wz.Logitech.Smart.Hub channel 239')"></img>
+</li>
+<li data-row="3" data-col="5" data-sizex="1" data-sizey="1">
+	<header>15</header>
+	<img src="/fhem/tablet/img/senderlogos/disneychannelhd.png" height="80" wight="80" class="top-space" onclick="setFhemStatus('set Wz.Logitech.Smart.Hub channel 238')"></img>
+</li>
+<li data-row="4" data-col="1" data-sizex="1" data-sizey="1">
+	<header>16</header>
+	<img src="/fhem/tablet/img/senderlogos/discoveryhd.png" height="80" wight="80" class="top-space" onclick="setFhemStatus('set Wz.Logitech.Smart.Hub channel 274')"></img>
+</li>
+<li data-row="4" data-col="2" data-sizex="1" data-sizey="1">
+	<header>17</header>
+	<img src="/fhem/tablet/img/senderlogos/historyhd.png" height="80" wight="80" class="top-space" onclick="setFhemStatus('set Wz.Logitech.Smart.Hub channel 241')"></img>
+</li>
+<li data-row="4" data-col="4" data-sizex="1" data-sizey="1">
+	<header>SKY BuLi HD</header>
+	<div data-type="circlemenu"  class="cell circlemenu top-space"   data-circle-radius="85">
+	<ul>
+		<li><div data-type="symbol" data-icon="font1-tv" data-on-background-color="rgb(111,69,120)" data-off-background-color="rgb(111,69,120)" data-on-color="rgb(255,255,255)" data-off-color="rgb(255,255,255)" data-background-icon="fa-circle">
+		</div></li>
+		<li><div data-type="push" data-on-color="white" data-fhem-cmd="set Wz.Logitech.Smart.Hub channel 305" data-icon="">1</div></li>
+		<li><div data-type="push" data-on-color="white" data-fhem-cmd="set Wz.Logitech.Smart.Hub channel 306" data-icon="">2</div></li>
+		<li><div data-type="push" data-on-color="white" data-fhem-cmd="set Wz.Logitech.Smart.Hub channel 307" data-icon="">3</div></li>
+		<li><div data-type="push" data-on-color="white" data-fhem-cmd="set Wz.Logitech.Smart.Hub channel 308" data-icon="">4</div></li>
+		<li><div data-type="push" data-on-color="white" data-fhem-cmd="set Wz.Logitech.Smart.Hub channel 309" data-icon="">5</div></li>
+		<li><div data-type="push" data-on-color="white" data-fhem-cmd="set Wz.Logitech.Smart.Hub channel 310" data-icon="">6</div></li>
+		<li><div data-type="push" data-on-color="white" data-fhem-cmd="set Wz.Logitech.Smart.Hub channel 311" data-icon="">7</div></li>
+		<li><div data-type="push" data-on-color="white" data-fhem-cmd="set Wz.Logitech.Smart.Hub channel 312" data-icon="">8</div></li>
+		<li><div data-type="push" data-on-color="white" data-fhem-cmd="set Wz.Logitech.Smart.Hub channel 313" data-icon="">9</div></li>
+		<li><div data-type="push" data-on-color="white" data-fhem-cmd="set Wz.Logitech.Smart.Hub channel 314" data-icon="">10</div></li>
+	</ul>
+</div>
+</li>
+<li data-row="4" data-col="3" data-sizex="1" data-sizey="1">
+  <header>SKY Sport HD</header>
+	<div data-type="circlemenu"  class="cell circlemenu top-space" data-circle-radius="85">
+	<ul>
+		<li><div data-type="symbol" data-icon="font1-tv" data-on-background-color="rgb(111,69,120)" data-off-background-color="rgb(111,69,120)" data-on-color="rgb(255,255,255)" data-off-color="rgb(255,255,255)" data-background-icon="fa-circle">
+		</div></li>
+		<li><div data-type="push" data-on-color="white" data-fhem-cmd="set Wz.Logitech.Smart.Hub channel 284" data-icon="">1</div></li>
+		<li><div data-type="push" data-on-color="white" data-fhem-cmd="set Wz.Logitech.Smart.Hub channel 285" data-icon="">2</div></li>
+		<li><div data-type="push" data-on-color="white" data-fhem-cmd="set Wz.Logitech.Smart.Hub channel 286" data-icon="">3</div></li>
+		<li><div data-type="push" data-on-color="white" data-fhem-cmd="set Wz.Logitech.Smart.Hub channel 287" data-icon="">4</div></li>
+		<li><div data-type="push" data-on-color="white" data-fhem-cmd="set Wz.Logitech.Smart.Hub channel 288" data-icon="">5</div></li>
+		<li><div data-type="push" data-on-color="white" data-fhem-cmd="set Wz.Logitech.Smart.Hub channel 289" data-icon="">6</div></li>
+		<li><div data-type="push" data-on-color="white" data-fhem-cmd="set Wz.Logitech.Smart.Hub channel 290" data-icon="">7</div></li>
+		<li><div data-type="push" data-on-color="white" data-fhem-cmd="set Wz.Logitech.Smart.Hub channel 291" data-icon="">8</div></li>
+		<li><div data-type="push" data-on-color="white" data-fhem-cmd="set Wz.Logitech.Smart.Hub channel 292" data-icon="">9</div></li>
+		<li><div data-type="push" data-on-color="white" data-fhem-cmd="set Wz.Logitech.Smart.Hub channel 293" data-icon="">10</div></li>
+	</ul>
+</div>
+</li>
+<li data-row="4" data-col="5" data-sizex="1" data-sizey="1">
+	<header>TV Programm<br></header>
+	<div>
+	<a id="room_epg" href="epg.html" class="cell fa-stack fa-2x">
+	<i id="bg" class="fa fa-stack-2x fa-circle" style="color: rgb(111,69,120);"></i>
+	<i id="fg" class="fa fa-stack-1x fs-rc_EPG" style="color: rgb(255,255,255);"></i></a>
+	</div>
+</li>
+</ul>
+</div> 
+</body>
+</html>

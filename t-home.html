@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <title>FHEM-Home</title>
+</head>
+<body>
+<div class="gridster ">
+<ul>
+<li data-row="1" data-col="1" data-sizex="1" data-sizey="5" data-template="menu.html" class="bg-mint semitransparent"></li>
+    <li data-row="1" data-col="2" data-sizex="1" data-sizey="2" class="semitransparent">
+      <header>Kinderzimmer</header>
+        <div data-type="label" data-pre-text="aktuell " data-limits='[10,17,20,22]' data-classes='["blue","yellow","green","red"]'
+      data-device="Kinderzimmerheizung" data-get="temperature" class="big cell squareborder" data-unit="°C"> </div>
+      <div data-type="spinner" data-device="Kinderzimmerheizung" data-get="desiredTemperature" data-set="desiredTemperature"
+      data-height="30" data-width="111" data-step="0.5" data-min="10" data-max="25" data-unit="&deg;" class="valueonly centered green"></div>
+         <br>
+      <div data-type="dimmer" data-device="HUEDevice2" data-get="onoff" data-get-on="1" data-get-off="0" data-set=""
+      data-set-on="on" data-set-off="off" data-dim="pct">
+    </div>
+    <br>
+      <div data-type="slider" data-device='HUEDevice2' data-get="pct" data-set="pct"   data-min="0"  data-max="100" data-width="100" class="tab  centered value horizontal">
+     </div>
+ </li>
+    <li data-row="1" data-col="3" data-sizex="1" data-sizey="2" class="semitransparent">
+      <header>  Schlafzimmer  </header>
+      <div data-type="label" data-pre-text="aktuell " data-limits='[10,17,20,22]' data-classes='["blue","yellow","green","red"]'
+      data-device="Schlafzimmerheizung" data-get="temperature" class="big cell squareborder" data-unit="°C"> </div>
+      <div data-type="spinner" data-device="Schlafzimmerheizung" data-get="desiredTemperature" data-set="desiredTemperature"
+      data-height="30" data-width="111" data-step="0.5" data-min="10" data-max="25" data-unit="&deg;" class="valueonly centered green"></div>
+      <br>
+      <div data-type="dimmer" data-device="HUEDevice1" data-get="onoff" data-get-on="1" data-get-off="0" data-set=""
+    data-set-on="on" data-set-off="off" data-dim="pct"></div>
+    <br>
+      <div data-type="slider" data-device='HUEDevice1' data-get="pct" data-set="pct"   data-min="0"  data-max="100" data-width="100" class="tab  centered value horizontal">
+     </div>
+  <br>
+    <div class="">
+      <div data-type="label" data-device="LaCrosse_20" data-get="temperature" data-unit="°C / " class="big inline thin"> Temperatur</div>
+      <div data-type="label" data-device="LaCrosse_20" data-get="humidity" data-unit="%" class="big inline thin"> Luftfeuchte</div>
+               </div></li>
+    <li data-row="1" data-col="4" data-sizex="1" data-sizey="1" class="semitransparent">
+    <header>    Esszimmer  </header>
+      <div data-type="label" data-pre-text="aktuell " data-limits='[10,17,20,22]' data-classes='["blue","yellow","green","red"]'
+      data-device="Esszimmerheizung" data-get="temperature" class="big cell  squareborder" data-unit="°C"></div>
+      <div data-type="spinner" data-device="Esszimmerheizung" data-get="desiredTemperature" data-set="desiredTemperature"
+      data-height="30" data-width="111" data-step="0.5" data-min="10" data-max="25" data-unit="&deg;" class="valueonly centered green"></div>
+       <br>
+     </li>
+    <li data-row="1" data-col="5" data-sizex="1" data-sizey="2" class="semitransparent">
+      <header>  Wohnzimmer  </header>
+      <div data-type="label" data-pre-text="aktuell " data-limits='[10,17,20,22]' data-classes='["blue","yellow","green","red"]'
+      data-device="Wohnzimmerheizung" data-get="temperature" class="big cell  squareborder" data-unit="°C"> </div>
+      <div data-type="spinner" data-device="Wohnzimmerheizung" data-get="desiredTemperature" data-set="desiredTemperature"
+      data-height="30" data-width="111" data-step="0.5" data-min="10" data-max="25" data-unit="&deg;" class="valueonly centered green"></div>
+      <div class="cell">
+         <br>
+        <div data-type="label" data-device="LaCrosse_32" data-get="temperature" data-unit="°C / " class="big inline thin"> Temperatur</div>
+        <div data-type="label" data-device="LaCrosse_32" data-get="humidity" data-unit="%" class="big inline thin"> Luftfeuchte</div>
+                 </div>
+      </li>
+    <li data-row="1" data-col="6" data-sizex="1" data-sizey="1" class="semitransparent">
+        <header>Badheizung  </header>
+      <div data-type="label" data-pre-text="aktuell " data-limits='[10,17,20,22]' data-classes='["blue","yellow","green","red"]'
+      data-device="Badheizung" data-get="temperature" class="big cell squareborder" data-unit="°C"> </div>
+      <div data-type="spinner" data-device="Badheizung" data-get="desiredTemperature" data-set="desiredTemperature"
+      data-height="30" data-width="111" data-step="0.5" data-min="10" data-max="25" data-unit="&deg;" class="valueonly centered green"></div>
+       <br>
+</li>
+
+    <li data-row="2" data-col="4" data-sizex="1" data-sizey="2" class="semitransparent">
+      <header>  Wickellicht  </header>
+      <div data-type="switch" data-device="SchreibtischSek"></div>
+      5 minuten an:  <div data-type="push" data-device="SchreibtischSek" data-set-on="on-for-timer 300" ></div>
+      15 minuten an:  <div data-type="push" data-device="SchreibtischSek" data-set-on="on-for-timer 900" ></div>
+
+    </li>
+    <li data-row="2" data-col="6" data-sizex="1" data-sizey="2" class="semitransparent">
+      <header>  Media  </header> </br>
+      <div data-type="circlemenu" class="">
+  <ul>
+    <li><div data-type="push" data-icon="fa-play"></div></li>
+    <li><div data-type="push" data-device="harmony" data-set-on="activity Kodi" data-icon="fa-play-circle-o"></div></li>
+    <li><div data-type="push" data-device="harmony" data-set-on="activity Apple.tv" data-icon="fa-apple"></div></li>
+    <li><div data-type="push" data-device="harmony" data-set-on="activity Fire.TV.sehen" data-icon="fa-amazon"></div></li>
+    <li><div data-type="push" data-device="harmony" data-set-on="activity PowerOff" data-icon="fa-stop"></div></li>
+    <li><div data-type="push" data-device="harmony" data-set-on="activity Musik.hören" data-icon="fa-music"></div></li>
+    <li><div data-type="push" data-device="harmony" data-set-on="activity Fernsehen" data-icon="fa-tv"></div></li>
+  </ul>
+</div>
+<div class="">Mediathek</div>
+<div data-type="label">wählen</div>
+<div data-type="select"
+ data-device="harmony"
+ data-items='["Fernsehen","Kodi","Apple.tv","Fire.TV.sehen","Musik.hören","PowerOff"]'
+ data-get="activity"
+ data-set="activity"></div>
+   Lautstärke Verstärker
+ <div class="small" data-type="volume" data-device='DENON2' data-get='volume' data-set='volume'></div>
+
+      </li>
+    <li data-row="3" data-col="2" data-sizex="2" data-sizey="1" class="small semitransparent">
+      <header>  ANRUFE  </header>
+  <table width="100%" class="">
+      <tr>
+          <td>
+              <!-- Zuordnung des Status zu entsprechendem Icon -->
+              <div class="narrow" data-type="symbol" data-device="calllist"
+                   data-get="1-state" data-states='["=>","=> X","=> ((o))","=> [=]","=> O_O"]'
+                   data-icons='["oa-phone_call_end_in","oa-phone_missed_in","oa-phone_ring fa-blink","oa-phone_ring_in fa-blink","oa-phone_answersing"]'
+                   data-colors='["green","firebrick","firebrick","green","#00aa69"]'></div>
+          </td>
+          <td>
+              <div data-type="label" data-device="calllist" data-get="1-timestamp" data-part="5" class=""></div>
+              <div data-type="label" data-device="calllist" data-get="1-timestamp" data-part="1" class="inline"></div>
+              <div data-type="label" data-device="calllist" data-get="1-timestamp" data-part="2" class="inline"></div>
+              <div data-type="label" data-device="calllist" data-get="1-timestamp" data-part="3" class="inline"></div>
+          </td>
+          <td>
+              <div data-type="label" data-device="calllist" data-get="1-name"></div>
+              <div data-type="label" data-device="calllist" data-get="1-number"></div>
+          </td>
+          <td>
+              <div data-type="label" data-device="calllist" data-get="1-duration"></div>
+          </td>
+      </tr>
+      <tr>
+          <td>
+              <div class="narrow" data-type="symbol" data-device="calllist"
+                   data-get="2-state" data-states='["=>","=> X","=> ((o))","=> [=]","=> O_O"]'
+                   data-icons='["oa-phone_call_end_in","oa-phone_missed_in","oa-phone_ring fa-blink","oa-phone_ring_in fa-blink","oa-phone_answersing"]'
+                   data-colors='["green","firebrick","firebrick","green","#00aa69"]'></div>
+          </td>
+          <td>
+              <div data-type="label" data-device="calllist" data-get="2-timestamp" data-part="5" class=""></div>
+              <div data-type="label" data-device="calllist" data-get="2-timestamp" data-part="1" class="inline"></div>
+              <div data-type="label" data-device="calllist" data-get="2-timestamp" data-part="2" class="inline"></div>
+              <div data-type="label" data-device="calllist" data-get="2-timestamp" data-part="3" class="inline"></div>
+          </td>
+          <td>
+              <div data-type="label" data-device="calllist" data-get="2-name"></div>
+              <div data-type="label" data-device="calllist" data-get="2-number"></div>
+          </td>
+          <td>
+              <div data-type="label" data-device="calllist" data-get="2-duration"></div>
+          </td>
+      </tr>
+  </table>
+</li>
+
+    <li data-row="3" data-col="4" data-sizex="1" data-sizey="3" class="semitransparent" >
+      <header>  Kalender  </header><br>
+<div data-type="label" data-device="myCalView" data-get="t_001_bdate" class="inline"></div>
+<div data-type="label" data-device="myCalView" data-get="t_001_btime" style="color:#00aa69;"  class="inline"></div><br>
+<div data-type="label" data-device="myCalView" data-get="t_001_summary" style="color:#00aa69;"  class="inline"></div>
+
+<br>
+<div data-type="label" data-device="myCalView" data-get="t_002_bdate"  class="inline"></div>
+<div data-type="label" data-device="myCalView" data-get="t_002_btime" style="color:#00aa69;"  class="inline"></div><br>
+<div data-type="label" data-device="myCalView" data-get="t_002_summary" style="color:#00aa69;"  class="inline"></div>
+<br>
+<div data-type="label" data-device="myCalView" data-get="t_003_bdate" class="inline"></div>
+<div data-type="label" data-device="myCalView" data-get="t_003_btime" style="color:#00aa69;"  class="inline"></div><br>
+<div data-type="label" data-device="myCalView" data-get="t_003_summary" style="color:#00aa69;" class="inline"></div>
+<br>
+<div data-type="label" data-device="myCalView" data-get="t_004_bdate" class="inline "></div>
+<div data-type="label" data-device="myCalView" data-get="t_004_btime" style="color:#00aa69;"  class="inline"></div><br>
+<div data-type="label" data-device="myCalView" data-get="t_004_summary" style="color:#00aa69;" class="inline"></div>
+<br>
+<div data-type="label" data-device="myCalView" data-get="t_005_bdate" class="inline"></div>
+<div data-type="label" data-device="myCalView" data-get="t_005_btime" style="color:#00aa69;"  class="inline"></div><br>
+<div data-type="label" data-device="myCalView" data-get="t_005_summary" style="color:#00aa69;" class="inline"></div>
+<br>
+<div data-type="label" data-device="myCalView" data-get="t_006_bdate" class="inline"></div>
+<div data-type="label" data-device="myCalView" data-get="t_006_btime" style="color:#00aa69;"  class="inline"></div><br>
+<div data-type="label" data-device="myCalView" data-get="t_006_summary" style="color:#00aa69;" class="inline"></div>
+<br>
+<div data-type="label" data-device="myCalView" data-get="t_007_bdate" class="inline"></div>
+<div data-type="label" data-device="myCalView" data-get="t_007_btime" style="color:#00aa69;"  class="inline"></div><br>
+<div data-type="label" data-device="myCalView" data-get="t_007_summary" style="color:#00aa69;" class="inline"></div>
+<br>
+<div data-type="label" data-device="myCalView" data-get="t_008_bdate" class="inline"></div>
+<div data-type="label" data-device="myCalView" data-get="t_008_btime" style="color:#00aa69;"  class="inline"></div><br>
+<div data-type="label" data-device="myCalView" data-get="t_008_summary" style="color:#00aa69;" class="inline"></div>
+<br>
+<div data-type="label" data-device="myCalView" data-get="t_009_bdate" class="inline"></div>
+<div data-type="label" data-device="myCalView" data-get="t_009_btime" style="color:#00aa69;"  class="inline"></div><br>
+<div data-type="label" data-device="myCalView" data-get="t_009_summary" style="color:#00aa69;" class="inline"></div>
+    </li>
+  <li data-row="4" data-col="5" data-sizex="1" data-sizey="1" class="semitransparent"><br>
+    Heizungen: Urlaubs- Modus einschalten!<br>
+    <div data-type="switch" data-icon="fa-suitcase" data-device="dy_Heizung_Urlaub" class="green invert"></div>
+  </li>
+      <li data-row="5" data-col="2" data-sizex="1" data-sizey="2" class="semitransparent">
+        <header>Infos  </header>
+
+      <div data-type="label" class="top-space darker">Sonnenaufgang</div>
+      <span style="color:#00aa69"><div data-type="label"
+        data-device="twilight"
+        data-get="sr_civil"
+        data-colors="orange"
+        class="large" ></div></span>
+      <div data-type="label" class="top-space darker">Sonnenuntergang</div>
+      <span style="color:#00aa69"><div data-type="label" data-device="twilight" data-get="ss_civil" data-colors="orange" class="large" >
+      </div></span>
+      <div data-type="label" class="top-space darker">Fahrzeit Büro</div>
+      <span style="color:#00aa69"><div data-type="label" data-device="traffic" data-get="duration_in_traffic" data-colors="orange" class="large">
+      </div></span>
+      <div data-type="label" class="top-space darker">Fahrzeit zurück</div>
+      <span style="color:#00aa69"><div data-type="label" data-device="traffic" data-get="return_duration_in_traffic" data-colors="orange" class="large">
+      </div></span>
+
+    </li>
+  <li data-row="5" data-col="3" data-sizex="1" data-sizey="2" class="semitransparent">
+          <div class="container weather">
+            <header>HEUTE  </header>
+          	<table width="100%">
+          		<tr>
+          			<td rowspan="5" style="text-align:center;vertical-align:top">
+          				<div data-type="weather"
+                       class="centered"
+          						data-device="Weather"
+          						data-get="condition"
+          						data-imageset="meteocons"
+          						style="width:100px"></div>
+          	<br>
+          				<div data-type="label"
+          					data-device="Weather"
+          					data-get="condition"
+                    class="centered"></div>
+          	<br>aktuell:
+              <div data-type="label"
+    					data-device="Weather"
+    					data-get="temperature"
+    					data-limits="[-50,0,10,25,30,40]"
+    					data-colors='["#9999ff","#ffbdff","#aa6900","#ff6900","#ff3333","#ff0000"]'
+    					data-unit=" %B0C%0A"
+    					class="inline " >
+    				</div><br>
+            	 			Temp: <div data-type="label"
+          					data-device="Weather"
+          					data-get="fc1_low_c"
+          					data-limits="[-50,-30,40]"
+          					data-colors='["#9999ff","#00aa69","#ff0000"]'
+          					data-unit=" %B0C%0A"
+          					class="inline"></div>
+          				- <div data-type="label"
+          					data-device="Weather"
+          					data-get="fc1_high_c"
+          					data-limits="[-50,-30,40]"
+          					data-colors='["#9999ff","#00aa69","#ff0000"]'
+          					data-unit=" %B0C%0A"
+          					class="inline"></div>
+              <br>
+              Feuchte: <div data-type="label"
+                data-device="Weather"
+                data-get="humidity"
+                data-limits="[0,40,60]"
+                data-colors='["#9999ff","#00aa69","#ff6900"]'
+                data-unit=" %"
+                class="inline" >
+              </div>
+              <br>
+              Wind:
+              <div data-type="label"
+      					data-device="Weather"
+      					data-get="wind"
+      					data-unit=" km/h"
+      					data-limits="[0, 19, 28, 38, 49, 74, 102, 117]"
+      					data-colors='["#ffffff","#dddddd","#00aa69","#00aa69","#ff9999","#ff6666","#ff3333","#ff0000"]'
+      					style="display:inline"
+      					class="inline" >
+      				</div>
+              <br>
+              Druck:
+              <div data-type="label"
+      					data-device="Weather"
+      					data-get="pressure"
+      					data-unit=" hPa"
+      					data-limits="[0,950,1000]"
+      					data-colors='["#ff9999","#00aa69","#9999ff"]'
+      					class="inline" >
+      				</div>
+            <br> Sicht:
+            <div data-type="label"
+              data-device="Weather"
+              data-get="visibility"
+              data-unit=" km"
+              class="inline" >
+            </div>
+          			</td>
+          		</tr>
+          	</table>
+          </div>
+          </li>
+
+          <li data-row="5" data-col="4" data-sizex="1" data-sizey="2" class="semitransparent">
+          <div class="container weather">
+          <div data-type="label"
+          						data-device="Weather"
+          						data-get="fc2_day_of_week"
+          						style="display:inline"></div>
+          	<table width="100%">
+          		<tr>
+          			<td rowspan="5" style="text-align:center;vertical-align:top">
+                  <div data-type="weather" class="centered"
+          						data-device="Weather"
+          						data-get="fc2_condition"
+          						data-imageset="meteocons" class="centered"
+          						style="width:100px"></div>
+          	<br>
+          				<div data-type="label"
+          					data-device="Weather"
+          					data-get="fc2_condition"></div>
+          	<br>
+          			Temp: <div data-type="label"
+          					data-device="Weather"
+          					data-get="fc2_low_c"
+          					data-limits="[-50,-30,40]"
+          					data-colors='["#9999ff","#00aa69","#ff0000"]'
+          					data-unit=" %B0C%0A"
+          					class="inline"></div>
+          				- <div data-type="label"
+          					data-device="Weather"
+          					data-get="fc2_high_c"
+          					data-limits="[-50,-30,40]"
+          					data-colors='["#9999ff","#00aa69","#ff0000"]'
+          					data-unit=" %B0C%0A"
+          					class="inline"></div>
+          			</td>
+          		</tr>
+          	</table>
+          </div>
+          </li>
+
+          <li data-row="5" data-col="5" data-sizex="1" data-sizey="2" class="semitransparent">
+          <div class="container weather">
+          <div data-type="label"
+          						data-device="Weather"
+          						data-get="fc3_day_of_week"
+          						style="display:inline"></div>
+          	<table width="100%">
+          		<tr>
+          			<td rowspan="5" style="text-align:center;vertical-align:top">
+          				<div data-type="weather"
+          						data-device="Weather"
+          						data-get="fc3_condition"
+          						data-imageset="meteocons" class="centered"
+          						style="width:100px"></div>
+          	<br>
+          				<div data-type="label"
+          					data-device="Weather"
+          					data-get="fc3_condition"></div>
+          	<br>
+          			Temp: <div data-type="label"
+          					data-device="Weather"
+          					data-get="fc3_low_c"
+          					data-limits="[-50,-30,40]"
+          					data-colors='["#9999ff","#00aa69","#ff0000"]'
+          					data-unit=" %B0C%0A"
+          					class="inline"></div>
+          				- <div data-type="label"
+          					data-device="Weather"
+          					data-get="fc3_high_c"
+          					data-limits="[-50,-30,40]"
+          					data-colors='["#9999ff","#00aa69","#ff0000"]'
+          					data-unit=" %B0C%0A"
+          					class="inline"></div>
+          			</td>
+          		</tr>
+          	</table>
+          </div>
+          </li>
+
+          <li data-row="5" data-col="6" data-sizex="1" data-sizey="2" class="semitransparent">
+          <div class="container weather">
+          <div data-type="label"
+          						data-device="Weather"
+          						data-get="fc4_day_of_week"
+          						style="display:inline"></div>
+          	<table width="100%">
+          		<tr>
+          			<td rowspan="5" style="text-align:center;vertical-align:top">
+          				<div data-type="weather"
+          						data-device="Weather"
+          						data-get="fc4_condition"
+          						data-imageset="meteocons" class="centered"
+          						style="width:100px"></div>
+          	<br>
+          				<div data-type="label"
+          					data-device="Weather"
+          					data-get="fc4_condition"></div>
+          	<br>
+          			Temp: <div data-type="label"
+          					data-device="Weather"
+          					data-get="fc4_low_c"
+          					data-limits="[-50,-30,40]"
+          					data-colors='["#9999ff","#00aa69","#ff0000"]'
+          					data-unit=" %B0C%0A"
+          					class="inline"></div>
+          				- <div data-type="label"
+          					data-device="Weather"
+          					data-get="fc4_high_c"
+          					data-limits="[-50,-30,40]"
+          					data-colors='["#9999ff","#00aa69","#ff0000"]'
+          					data-unit=" %B0C%0A"
+          					class="inline"></div>
+          			</td>
+          		</tr>
+          	</table>
+          </div>
+          <br>Tino <div data-type="homestatus"  class="small" data-version="roommate" data-device='rr_Tino'></div>
+          </li>
+
+          <li data-row="5" data-col="7" data-sizex="1" data-sizey="2" class="semitransparent">
+          <div class="container weather">
+          <div data-type="label"
+          						data-device="Weather"
+          						data-get="fc5_day_of_week"
+          						style="display:inline"></div>
+          	<table width="100%">
+          		<tr>
+          			<td rowspan="5" style="text-align:center;vertical-align:top">
+          				<div data-type="weather"
+          						data-device="Weather"
+          						data-get="fc5_condition"
+          						data-imageset="meteocons" class="centered"
+          						style="width:100px"></div>
+          	<br>
+          				<div data-type="label"
+          					data-device="Weather"
+          					data-get="fc5_condition"></div>
+          	<br>
+          			Temp: <div data-type="label"
+          					data-device="Weather"
+          					data-get="fc5_low_c"
+          					data-limits="[-50,-30,40]"
+          					data-colors='["#9999ff","#00aa69","#ff0000"]'
+          					data-unit=" %B0C%0A"
+          					class="inline"></div>
+          				- <div data-type="label"
+          					data-device="Weather"
+          					data-get="fc5_high_c"
+          					data-limits="[-50,-30,40]"
+          					data-colors='["#9999ff","#00aa69","#ff0000"]'
+          					data-unit=" %B0C%0A"
+          					class="inline"></div>
+          			</td>
+          		</tr>
+          	</table>
+          </div>
+          <br>Lisa  <div data-type="homestatus" class="small" data-version="roommate" data-device='rr_Lisa'></div>
+
+          </li>
+</ul>
+</div>
+</body>
+
+
+</html>

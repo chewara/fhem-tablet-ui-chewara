@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+	<body>
+			<div class="gridster">
+				<ul>
+					<li data-row="1" data-col="1" data-sizex="1" data-sizey="5" data-template="menu.html" class="bg-mint semitransparent"></li>
+					<!-- =============System-Uptime============ -->
+					<!-- ====================================== -->
+
+					<li data-row="2" data-col="2" data-sizex="2" data-sizey="2" class="semitransparent" >
+					<header>	TEMP Aktuell</header></br><br>
+						<div class="inline">
+							<div data-type="thermostat"
+							data-device="sysmon"
+							data-step="0.5"
+							data-min="0"
+							data-off="off"
+							data-max="100"
+							data-minColor="#4477FF"
+							data-maxColor="#FF0000"
+							data-bgColor="#bbbbbb"
+							data-boost="boost"
+							data-get="cpu_temp"
+							class="small readonly"></div>
+						</div>
+						</li>
+
+					<li data-row="2" data-col="4" data-sizex="2" data-sizey="2" class="semitransparent" >
+						<header>Updates</header>
+<div class="inline">
+	<div data-type="button"
+	data-device="Update.Counter"
+	data-warn="FHEM"
+	data-fhem-cmd=""
+	data-background-icon="fs-system_fhem"
+	data-on-background-color="#505050"
+	data-off-background-color="#505050"
+	data-icon="fa-refresh warn"
+	class="readonly warn bigger"></div>
+	<div data-type="label" class="top-narrow">FHEM</div>
+</div>
+<div class="inline">
+	<div data-type="button"
+	data-device="Update.Counter"
+    data-warn="FTUI"
+    data-fhem-cmd=""
+    data-background-icon="fs-system_fhem"
+    data-on-background-color="#505050"
+    data-off-background-color="#505050"
+    data-icon="fa-refresh warn"
+    class="readonly warn bigger"></div>
+	<div data-type="label" class="top-narrow">FTUI</div>
+</div>
+<div class="inline">
+	<div data-type="switch" data-device="Update.Dummy"
+	data-states='["idle","update","run","done"]'
+	data-set-states='["idle","start","idle","idle"]'
+	data-icons='["fa-refresh","fa-refresh","fa-refresh fa-spin","fa-refresh fa-blink"]'
+	data-background-icons='["-","-","-","-"]'
+	data-on-colors='["#505050","#aa6900","#aa6900","red"]'
+	data-background-colors='["#505050","#aa6900","#aa6900","red"]'
+	class="bigger top-narrow"></div>
+	<div data-type="label">Status / Start</div>
+</div>
+	</li>
+			<li data-row="3" data-col="2" data-sizex="2" data-sizey="2" class="semitransparent" >
+								<header>pi status</header>
+						<div class="inline">
+								<div data-type="knob"
+									data-device="sysmon"
+									data-get="stat_cpu_percent"
+									 data-part="1"
+									data-anglearc="360"
+									data-angleoffset="0"
+									data-min="0"
+									data-max="100"
+									data-fgcolor="#FA2828"
+									data-bgcolor="green"
+									class="mini readonly shadow"
+									data-unit="%"
+								></div>
+								<div data-type="label" class="shadow">CPU</div>
+						</div>
+						<div class="inline">
+								<div data-type="knob"
+										data-device="sysmon"
+										data-get="ram"
+									 data-part="7"
+										data-anglearc="360"
+										data-angleoffset="0"
+										data-min="0"
+										data-max="100"
+										data-bgcolor="green"
+										data-fgcolor="#FA2828"
+										class="mini readonly shadow"
+										data-unit="%"
+								></div>
+								<div data-type="label" class="shadow">RAM</div>
+						</div>
+						<div class="inline">
+								<div class="top-space">
+								<div data-type="knob"
+										data-device="sysmon"
+										data-get="root"
+									 data-part="7"
+										data-anglearc="360"
+										data-angleoffset="0"
+										data-min="0"
+										data-max="100"
+										data-bgcolor="green"
+										data-fgcolor="#FA2828"
+										class="mini readonly shadow"
+										data-unit="%"
+								></div>
+								<div data-type="label" class="shadow">/root</div>
+							</div>
+						</div></br>
+						<span>
+						<div class="inline">
+									<div data-device="JeeLink" data-type="symbol"
+									data-get-on='["initialized","init|disconnected"]'
+									data-icons='["fs-cul_usb","fs-cul_usb fa-blink"]'
+									data-on-colors='["#aa6900","red"]' class="larger">
+								</div>
+									<div data-type="label" class="normal narrow">JeeLink</div>
+									</div>
+									<div class="inline">
+												<div data-device="maxlan" data-type="symbol"
+												data-get-on='["initialized|opened","init|disconnected"]'
+												data-icons='["fs-cul_usb","fs-cul_usb fa-blink"]'
+												data-on-colors='["#aa6900","red"]' class="larger">
+												</div>
+												<div data-type="label" class="normal narrow">MaxLan</div>
+												</div>
+												<div class="inline">
+															<div data-device="hueBridge1" data-type="symbol"
+															data-get-on='["initialized|connected","init|disconnected"]'
+												data-icons='["fs-cul_usb","fs-cul_usb fa-blink"]'
+															data-on-colors='["#aa6900","red"]' class="larger">
+															</div>
+															<div data-type="label" class="normal narrow">hueBridge1</div>
+															</div>
+															<div class="inline">
+																		<div data-device="harmony" data-type="symbol"
+																		data-get-on='["initialized|Connected","init|disconnected"]'
+															data-icons='["fs-cul_usb","fs-cul_usb fa-blink"]'
+																		data-on-colors='["#aa6900","red"]' class="larger">
+																		</div>
+																		<div data-type="label" class="normal narrow">harmony</div>
+																		</div>
+											</span>
+								</li>
+					<li data-row="4" data-col="4" data-sizex="2" data-sizey="2" class="semitransparent" >
+					<header>	NETZWERK</header>
+						<div>
+							<div class="cell">Upload:
+							</div>
+							<div data-type="label"
+								 data-device="sysmon"
+								 data-get="eth0"
+								 data-part="2"
+								 data-fix="0"
+								 data-unit=" MB"
+								 class="cell big yellow shadow"
+							</div>
+						</div>
+						<div>
+							<div class="cell">Download:
+							</div>
+							<div data-type="label"
+								 data-device="sysmon"
+								 data-get="eth0"
+								 data-part="5"
+								 data-unit=" MB"
+								 data-fix="0"
+								 class="cell big yellow shadow">
+							</div>
+						</div>
+					</li>
+					<li data-row="4" data-col="6" data-sizex="2" data-sizey="2" class="semitransparent" >
+										<header>WLAN</header>
+						<div class="top-space">
+							<div class="inline cell left-space-2x">
+							<div data-type="switch" data-device="FritzBox"
+								 data-get="box_wlan_2.4GHz"
+								 data-warn="box_wlanCount"
+								 data-set="wlan"
+								 data-icon="-"
+								 data-background-icon="fa-wifi"
+								 class="warn big shadow top-narrow"></div>
+							<div data-type="label" class="shadow">Wlan2.4</div>
+							</div>
+							<div class="inline cell left-space-2x">
+							<div data-type="switch" data-device="FritzBox"
+								 data-get="box_wlan_5GHz"
+								 data-warn="box_wlanCount"
+								 data-set="wlan"
+								 data-icon="-"
+								 data-background-icon="fa-wifi"
+								 class="warn big shadow top-narrow"></div>
+							<div data-type="label" class="shadow">Wlan5</div>
+							</div>
+							<div class="inline cell left-space-2x">
+							<div data-type="switch" data-device="FritzBox"
+								 data-get="box_guestWlan"
+								 data-warn="box_guestWlanCount"
+								 data-set="guestWlan"
+								 data-icon="-"
+								 data-background-icon="fa-wifi"
+								 class="warn big shadow top-narrow"></div>
+							<div data-type="label" class="shadow">Gäste-Wlan</div>
+							</div>
+						</div>
+					</li>
+					<li data-row="2" data-col="6" data-sizex="2" data-sizey="2" class="semitransparent">
+						<header>Reboot</header>
+						<table style=" width:100%">
+							<td  class="C1"><center><div data-type="label" class="inline shadow"><big>Server uptime<br></big></div>
+								</br>
+								<div data-type="label" data-device="sysmon" data-get="uptime_text" class="small shadow"></div>
+							</td>
+							<td  class="C1"><center>
+								<div class="inline">
+									<div data-type="popup" data-draggable="true" data-height="100px" data-width="100px" class="white">
+										<div data-type="button" data-icon="fa-linux" background-icon="-" class="cell shadow"></div>
+										<div class="dialog dialogTransparent">
+										<div data-type="button" data-fhem-cmd="set System.Reboot.Dummy on" data-icon="fa-check" background-icon="fa-circle" class="cell"></div>
+										<div data-type="label">Sicher?</div>
+										</div>
+									</div>
+								</div>
+							</td>
+						</table>
+						<table style="width:100%">
+							<tr>
+								<td style="border:0px solid grey;" class="A1"><center><div data-type="label" class="inline"><big><br>FHEM uptime<br></big></div>
+								<br>
+								<br>
+								<div data-type="label" data-device="sysmon" data-get="fhemuptime_text" class="small"></div>
+								<br>
+								</td>
+								<td style="border:0px solid grey;" class="B1"><center>
+									<div class="inline">
+										<div data-type="popup" data-draggable="true" data-height="100px" data-width="100px" class="white">
+											<div data-type="button" data-icon="fs-system_fhem" background-icon="-" class="cell"></div>
+											<div class="dialog dialogTransparent">
+												<div data-type="button" data-fhem-cmd="shutdown restart" data-icon="fa-check" background-icon="fa-circle" class="cell"></div>
+												<div data-type="label">Sicher?</div>
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</table></li>
+						<li data-row="6" data-col="2" data-sizex="2" data-sizey="2" class="semitransparent" >
+											<header>Batterien</header>
+							<div class="small cell" data-type="readingsgroup" data-device="rg_battery"></div>
+ 						</li>
+						<li data-row="6" data-col="4" data-sizex="2" data-sizey="2" class="semitransparent" >
+											<header>Heizung</header>
+						 <div class="small cell" data-type="readingsgroup" data-device="Heizungswerte"></div>
+						</li>
+						<li data-row="6" data-col="6" data-sizex="2" data-sizey="2" class="semitransparent" >
+						</li>
+				</ul>
+			</div>
+	</body>
+</html>
