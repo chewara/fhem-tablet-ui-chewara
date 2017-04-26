@@ -80,32 +80,26 @@
 						<header>KODI_PI Menü</header>
 					<div class="vbox dsxe" >
 						<div class="hbox">
-							<div data-type="button" data-fhem-cmd="set KODI_PI home" 						data-icon="fa-home" data-on-background-color="37b11b" class="normal top-space shadow"></div>
+							<div data-type="button" data-fhem-cmd="set KODI_PI home" data-icon="fa-home" data-on-background-color="37b11b" class="normal top-space shadow"></div>
 							<div data-type="button" data-fhem-cmd="set KODI_PI activatewindow MovieTitles" 	data-icon="fa-film" data-on-background-color="37b11b" class="normal top-space shadow"></div>
 							<div data-type="button" data-fhem-cmd="set KODI_PI activatewindow MusicFiles" 	data-icon="fa-music" data-on-background-color="37b11b" class="normal top-space shadow"></div>
 							<div data-type="button" data-fhem-cmd="set KODI_PI activatewindow Pictures" 		data-icon="fa-picture-o" data-on-background-color="37b11b" class="normal top-space shadow"></div>
 							<div data-type="button" data-fhem-cmd="set KODI_PI activatewindow InProgressTvShows" data-icon="fa-desktop" data-on-background-color="37b11b" class="normal top-space shadow"></div>
 							<div data-type="button" data-fhem-cmd="set KODI_PI activatewindow Weather" 		data-icon="fa-sun-o" data-on-background-color="37b11b" class="normal top-space shadow"></div>
 						</div>
-						<div class="hbox">
-							<div data-type="button" data-fhem-cmd="set KODI_PI activatewindow Keyboard" 		data-icon="fa-keyboard-o" data-on-background-color="rgba(80,80,80,0.8)" class="normal top-space shadow"></div>
-							<div data-type="button" data-fhem-cmd="set KODI_PI activatewindow Files" 		data-icon="fa-files-o" data-on-background-color="rgba(80,80,80,0.8)" class="normal top-space shadow"></div>
-							<div data-type="button" data-fhem-cmd="set KODI_PI activatewindow Settings" 		data-icon="fa-gears" data-on-background-color="rgba(80,80,80,0.8)" class="normal top-space shadow"></div>
-						</div>
 					</div>
-					</li>
-          <li data-row="6" data-col="5" data-sizex="3" data-sizey="1" class="semitransparent">
+				</li>
+        <li data-row="6" data-col="5" data-sizex="3" data-sizey="2" class="semitransparent">
               <header>Wohnzimmer Radio</header>
-              Senderauswahl <div data-type="select" data-device="DENON2" data-items='["1","2","3","4","5","6","7","8","9"]'  data-alias='["91,4 BR","96,3 Jam","94,3 RS2","KissFM","FluxFM","Fritz","Energy","104,6 RTL","105,5 Spree"]' data-get="tunerPreset" data-set="tunerPreset"></div>
-                <br>
-                Frequenz<div data-type="spinner" data-device="DENON2" data-get="tunerFrequency" data-set="tunerFrequency"
-                data-height="30" data-width="111" data-step="0.1" data-min="87,6" data-max="107,9" class="valueonly centered green"></div>
-          </li>
+              <br>
+              <div data-type="switch"	class="inline green" data-icon="fa-power-off" data-device='DENON2'	data-get-on="on" data-get-off="off"  data-on-color="#37b11b"></div>
+              <div data-type="select" data-device="DENON2" 	class="inline green" data-items='["Cbl/Sat","DVD","Blu-Ray","Game","Mediaplayer","TV","Tuner","Airplay","Spotify","Usb/iPod","Bluetooth"]' data-get="input" data-set="input"></div>
+              Sender <div data-type="select" class="inline green" data-device="DENON2" data-items='["1","2","3","4","5","6","7","8","9"]'  data-alias='["91,4 BR","96,3 Jam","94,3 RS2","KissFM","FluxFM","Fritz","Energy","104,6 RTL","105,5 Spree"]' data-get="tunerPreset" data-set="tunerPreset"></div>
+            <div class="tiny" class="inline" data-type="volume" data-max="68" data-device='DENON2' data-get='volume' data-set='volume'></div>
+            </li>
           <li data-row="7" data-col="2" data-sizex="3" data-sizey="1" class="semitransparent">
               <header>leer</header>
           </li>
-          <li data-row="7" data-col="5" data-sizex="3" data-sizey="1" class="semitransparent">
-              <header>leer</header>
 
           <li data-row="8" data-col="2" data-sizex="3" data-sizey="1" class="semitransparent">
               <header>leer</header>
