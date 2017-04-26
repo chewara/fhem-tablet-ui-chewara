@@ -40,39 +40,12 @@
 					</div>
 					</li>
 
-          <li data-row="2" data-col="4" data-sizex="1" data-sizey="2"  class="semitransparent">
-            <header>KODI Rechner</header>
-          <div class="vbox">
-              <div >
-                <div data-type="push" data-fhem-cmd="set KODIPIWOL on" data-icon="fa-toggle-on" data-device="KODI_PI" data-get="STATE" data-off-background-color="semiblue" data-on-background-color="semiblue" data-on-color="blue" data-off-color="lightblue" class="small semiblue shadow"></div>
-                <div data-type="label" class="small shadow">Einschalten</div>
-              </div>
-              <div >
-                <div data-type="push" data-fhem-cmd="set KODI_PI shutdown" data-icon="fa-power-off" data-off-background-color="semiblue" data-on-background-color="semiblue" data-on-color="blue" data-off-color="lightblue" class="small semiblue shadow"></div>
-                <div data-type="label" class="small shadow">Ausschalten</div>
-              </div>
-              <div >
-                <div data-type="push" data-fhem-cmd="set KODI_PI suspend" data-icon="fa-pause-circle-o" data-off-background-color="semiblue" data-on-background-color="semiblue" data-on-color="blue" data-off-color="lightblue" class="small semiblue shadow"></div>
-                <div data-type="label" class="small shadow">Ruhezustand</div>
-              </div>
-              <div >
-                <div data-type="push" data-fhem-cmd="set KODI_PI reboot" data-icon="fa-repeat" data-off-background-color="semiblue" data-on-background-color="semiblue" data-on-color="blue" data-off-color="lightblue" class="small semiblue shadow"></div>
-                <div data-type="label" class="small shadow">Neustart</div>
-              </div>
-          </div>
-          </li>
-					<li  data-row="2" data-col="6" data-sizex="2" data-sizey="2" class="left-align semitransparent">
-				        <header>Lautsprecher</header>
-                <div data-type="switch"	class="inline big green" data-icon="fa-power-off" data-device='DENON2'	data-get-on="on" data-get-off="off"  data-on-color="#37b11b"></div>
-                Denon Wohnzimmer
-                <br>
-                <div data-type="symbol" class="inline big" data-device="anw_ws150"  data-states='["absent","present"]'
-                data-icons='["fa-power-off","fa-play"]' data-colors='["Crimson","SeaGreen"]'></div>
-                Schlafzimmer (ws150)
-                <br>
-                <div data-type="symbol" class="inline big" data-device="anw_ws300"  data-states='["absent","present"]'
-                data-icons='["fa-power-off","fa-play"]' data-colors='["Crimson","SeaGreen"]'></div>
-                Esszimmer (ws300)
+					<li  data-row="2" data-col="5" data-sizex="2" data-sizey="2" class="semitransparent">
+				<header>	Play</header>
+					<div class="vbox">
+						<br>
+							<div data-type="label"  data-device="KODI_PI" data-get="currentShowtitle"></div>
+							<div data-type="label"  data-device="KODI_PI" data-get="currentTitle"></div>
 
 					</li>
 
