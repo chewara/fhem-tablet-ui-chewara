@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.2, user-scalable=yes" />
-	<meta name="widget_base_width" content="130">
-	<meta name="widget_base_height" content="130">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+	<meta name="widget_base_width" content="128">
+	<meta name="widget_base_height" content="128">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="longpoll" content="1"> <!-- 1=longpoll;0=shortpoll every 30sec -->
     <meta name="debug" content="0"> <!-- 1=output to console;0=not output -->
+    <meta name='toast' content='2'>
    <!--<meta http-equiv="Cache-Control" content="no-store" />-->
 
     <link rel="stylesheet" href="/fhem/tablet/lib/jquery.gridster.min.css" />
@@ -21,19 +22,17 @@
     <!-- define your personal style here, it wont be overwritten  -->
     <!-- link rel="stylesheet" href="/fhem/tablet/css/fhem-green-ui.css" / -->
     <link rel="stylesheet" href="/fhem/tablet/css/fhem-tablet-ui-user.css" />
-
     <script src="/fhem/pgm2/jquery.min.js" defer></script>
     <script src="/fhem/tablet/lib/jquery.toast.min.js" defer></script>
     <script src="/fhem/tablet/lib/jquery.gridster.min.js" defer></script>
     <script src="/fhem/tablet/js/fhem-tablet-ui.min.js" defer></script>
-
     <!-- Remove this line to enable for usage with WebViewControl
     <script defer>var wvcDevices = {'12345': 'Tablet'}; var wvcUserCssFile="webviewcontrol.css"</script>
     <script src="/fhem/pgm2/cordova-2.3.0.js" defer></script>
     <script src="/fhem/pgm2/webviewcontrol.js" defer></script>
     <!-- End for WebViewControl -->
     <meta name="widget_margin" content="2">
-    <title>smarthome</title>
+    <title>fhem smart home</title>
 </head>
 <body>
     <div class="gridster">
