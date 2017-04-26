@@ -99,29 +99,9 @@
    data-items='["16.5","17","17,5","18.0","18.5","19.0","19.5","20.0","20,5","21.0","21.5","22.0","eco","comfort","auto","boost","off"]'
    data-get="desiredTemperature" data-set="desiredTemperature"></div>
 </li>
-<li data-row="3" data-col="2" data-sizex="2" data-sizey="1" class="semitransparent">
-    <header>Lautsprecher</header>
-      <div data-type="symbol" class="inline big" data-device="anw_ws150"  data-states='["absent","present"]'
-      data-icons='["fa-power-off","fa-play"]' data-colors='["Crimson","SeaGreen"]'></div>
-       Schlafzimmer (ws150)
-       <div data-type="label" data-pre-text="Status: " data-device="anw_ws150"
-       data-get="state" class="inline"></div>
-</li>
-<li data-row="3" data-col="4" data-sizex="2" data-sizey="1" class="semitransparent">
-    <header>Lautsprecher</header>
-           <div data-type="symbol" class="inline big" data-device="anw_ws300"  data-states='["absent","present"]'
-       data-icons='["fa-power-off","fa-play"]' data-colors='["Crimson","SeaGreen"]'></div>
-         Esszimmer (ws300)
-        <div data-type="label" data-pre-text="Status: " data-device="anw_ws300"
-        data-get="state"  class="inline"></div>
-</li>
-<li data-row="3" data-col="6" data-sizex="1" data-sizey="1" class="semitransparent">
-  <header>Urlausbmodus</header><br>
-  <div data-type="switch" data-icon="fa-suitcase" data-device="dy_Heizung_Urlaub" class="green invert"></div>
-
-</li>
-    <li data-row="3" data-col="4" data-sizex="1" data-sizey="3" class="semitransparent" >
+    <li data-row="2" data-col="6" data-sizex="1" data-sizey="3" class="semitransparent" >
         <header>    Kalender</header><br>
+          <div class="small">
             <div data-type="label" data-device="myCalView" data-get="t_001_bdate" class="inline"></div>
             <div data-type="label" data-device="myCalView" data-get="t_001_btime" style="color:#00aa69;"  class="inline"></div><br>
             <div data-type="label" data-device="myCalView" data-get="t_001_summary" style="color:#00aa69;"  class="inline"></div>
@@ -157,7 +137,10 @@
             <br>
             <div data-type="label" data-device="myCalView" data-get="t_009_bdate" class="inline"></div>
             <div data-type="label" data-device="myCalView" data-get="t_009_btime" style="color:#00aa69;"  class="inline"></div><br>
-            <div data-type="label" data-device="myCalView" data-get="t_009_summary" style="color:#00aa69;" class="inline"></div>    </li>
+            <div data-type="label" data-device="myCalView" data-get="t_009_summary" style="color:#00aa69;" class="inline"></div> </div>
+            <header>Urlausbmodus</header><br>
+            <div data-type="switch" data-icon="fa-suitcase" data-device="dy_Heizung_Urlaub" class="green invert"></div>
+          </li>
 <li data-row="5" data-col="2" data-sizex="1" data-sizey="2" class="semitransparent">
     <header>Infos</header>
       <div data-type="label" class="top-space darker">Sonnenaufgang</div>
@@ -259,7 +242,7 @@
           </div>
           </li>
 
-          <li data-row="5" data-col="4" data-sizex="4" data-sizey="2" class="semitransparent">
+          <li data-row="5" data-col="4" data-sizex="3" data-sizey="2" class="semitransparent">
             <header>Heizungswerte</header>
                       <div data-type="readingsgroup" data-device="Heizungswerte"></div>
           </li>
