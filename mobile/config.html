@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FHEM - Konfiguration</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!--<meta name="shortpoll-interval" content="120">-->
+	<!--<meta name="shortpoll-only-interval" content="30">-->
+	<meta name="longpoll-delay" content="0">
+    <meta name="longpoll" content="1"> <!-- 1= LongPoll; 0= Shortpoll every 30s -->
+    <meta name="debug" content="0"> <!-- 1= Output to console; 0= No output -->
+	<meta name="toast" content="1"> <!-- 1,2,3...= n Toast-Messages, 0: No Toast-Messages -->
+	<!-- Cache -->
+    <meta http-equiv="Cache-Control" content="no-store" />
+	<!-- Style CSS -->
+    <link rel="stylesheet" href="css/fhem-tablet-ui.css" />
+    <link rel="stylesheet" href="lib/font-awesome.min.css" />
+	<link rel="stylesheet" href="lib/material-icons.min.css" />
+    <link rel="stylesheet" href="lib/jquery.toast.min.css" />
+	<link rel="stylesheet" href="lib/fhemSVG.css" />
+	<link rel="stylesheet" href="lib/openautomation.css" />
+	<link rel="stylesheet" href="css/fhem-tablet-ui-wdtimer.css" />
+	<!-- Custom Fonts -->
+	<link rel="stylesheet" href="fonts/roman/style.css" />
+	<link rel="stylesheet" href="fonts/material/style.css" />
+	<!-- Custom CSS -->
+    <link rel="stylesheet" href="css/fhem-mobil-ui.css" />
+    <link rel="stylesheet" href="css/fhem-tablet-ui-user.css" />
+	<!-- Scripts -->
+    <script src="../pgm2/jquery.min.js"></script>
+    <script src="lib/jquery.toast.min.js"></script>
+    <script src="js/fhem-tablet-ui.js" defer></script>
+	
+
+	
+</head>
+<body style="margin-top:3px;">
+<div data-type="loading" data-icon="fa-hourglass" data-color="firebrick" data-effect="fa-pulse" class="big" style="position:absolute;top:13px;left:50%;margin-left:-17.38px;"></div>
+	<nav id="menu">
+		<div data-type="link" class="default large top-space-mobile-2 left-space-2"
+			 data-width="205"
+			 data-icon-left="fa-cogs"
+			 data-color="white"
+			 data-text-align="center"
+			 data-load="div#config_home"
+			 data-url="#config_home.html"
+			 data-active-color="#0088CC"
+			 data-active-pattern="(.*config.html|.*#config_home.html)">Konfiguration
+		</div>
+		<div style="display:inline-block;height:1px;width:80%;background-color:darkorange;"></div>
+		<!--<div data-type="link" class="large top-space-mobile left-space-2"
+			 data-width="205"
+			 data-icon-left="fa-wrench"
+			 data-color="white"
+			 data-text-align="center"
+			 data-load="div#config_heizung"
+			 data-url="#config_heizung.html"
+			 data-active-color="#0088CC"
+			 data-active-pattern=".*#config_heizung.html">Heizung
+		</div>
+		<div style="display:inline-block;height:1px;width:80%;background-color:darkorange;"></div>-->
+		<div data-type="link" class="large top-space-mobile left-space-2"
+			 data-width="205"
+			 data-icon-left="fs-system_fhem"
+			 data-color="white"
+			 data-text-align="center"
+			 data-load="div#config_befehl"
+			 data-url="#config_befehl.html"
+			 data-active-color="#0088CC"
+			 data-active-pattern=".*#config_befehl.html">Befehl
+		</div>
+		<div data-type="link" class="large top-space-mobile left-space-2"
+			 data-width="205"
+			 data-icon-left="fs-system_fhem"
+			 data-color="white"
+			 data-text-align="center"
+			 data-url="../fhem"
+			 data-active-color="#0088CC">FHEM
+		</div>
+		<div style="display:inline-block;height:1px;width:80%;background-color:darkorange;"></div>
+		<div data-type="link" class="large top-space-mobile left-space-2"
+			 data-width="205"
+			 data-icon-left="fa-home"
+			 data-color="white"
+			 data-text-align="center"
+			 data-url="index.html">Home
+		</div>
+	</nav>
+
+	<header id="header-nav" class="fixed row">
+		<table width="100%">
+			<tr>
+				<td width="6%">
+					<div onclick="fully.loadStartUrl()"
+						 data-type="symbol"
+						 data-icon="mi-arrow_back"
+						 class="big">
+					</div>
+				</td>
+				<td width="25%" style="border-left:1px solid black;">
+					<div data-type="clock"
+						 data-format="H:i"
+						 data-interval="1000"
+						 class="big"
+						 style="color:darkorange;">
+					</div>
+				</td>
+				<td width="60%" style="border-left:1px solid black;">
+					<div id="linkname"
+						 class="large bold right-align centered">
+					</div>
+				</td>
+				<td width="6%">
+					<div data-type="slideout"
+						 data-position="right"
+						 class="large left-align notouch">
+					</div>
+				</td>
+			</tr>
+		</table>
+	</header>
+	
+	<main id="panel" class="">
+        <div class="page" id="config_home"></div>
+        <div class="page" id="config_heizung"></div>
+        <div class="page" id="config_befehl"></div>
+    </main>
+</body>
+</html>

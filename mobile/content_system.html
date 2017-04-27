@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+	<div class="page" id="content_system">
+		<section>
+			<table width="100%">
+				<tr>
+					<td rowspan="2" width="25%">
+						<div class="large left-align">Temperatur
+						</div>
+					</td>
+					<td width="25%">
+						<div class="">RPi 3<br />Büro
+						</div>
+					</td>
+					<td width="25%">
+						<div class="">RPi 3<br />Flur
+						</div>
+					</td>
+					<td width="25%">
+						<div class="">RPi Z<br />Garage
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div data-type="label"
+							 data-device="rpi_sys"
+							 data-get="cpu_temp"
+							 data-unit="%B0C%0A"
+							 data-limits='[0,40,60]'
+							 data-colors='["green","#aa6900","firebrick"]'
+							 data-fix="1"
+							 class="large thin">
+						</div>
+					</td>
+					<td>
+						<div data-type="label"
+							 data-device="rpi_sys_flur"
+							 data-get="cpu_temp"
+							 data-unit="%B0C%0A"
+							 data-limits='[0,40,60]'
+							 data-colors='["green","#aa6900","firebrick"]'
+							 data-fix="1"
+							 class="large thin">
+						</div>
+					</td>
+					<td>
+						<div data-type="label"
+							 data-device="rpi_sys_garage"
+							 data-get="cpu_temp"
+							 data-unit="%B0C%0A"
+							 data-limits='[0,40,60]'
+							 data-colors='["green","#aa6900","firebrick"]'
+							 data-fix="1"
+							 class="large thin">
+						</div>
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section>
+			<table width="100%">
+				<tr>
+					<td rowspan="2" width="25%">
+						<div class="large left-align">Temperatur&nbsp;&Oslash;
+						</div>
+					</td>
+					<td width="25%">
+						<div class="">RPi 3<br />Büro
+						</div>
+					</td>
+					<td width="25%">
+						<div class="">RPi 3<br />Flur
+						</div>
+					</td>
+					<td width="25%">
+						<div class="">RPi Z<br />Garage
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div data-type="label"
+							 data-device="rpi_sys"
+							 data-get="cpu_temp_avg"
+							 data-unit="%B0C%0A"
+							 data-limits='[0,40,60]'
+							 data-colors='["green","#aa6900","firebrick"]'
+							 data-fix="1"
+							 class="large thin">
+						</div>
+					</td>
+					<td>
+						<div data-type="label"
+							 data-device="rpi_sys_flur"
+							 data-get="cpu_temp_avg"
+							 data-unit="%B0C%0A"
+							 data-limits='[0,40,60]'
+							 data-colors='["green","#aa6900","firebrick"]'
+							 data-fix="1"
+							 class="large thin">
+						</div>
+					</td>
+					<td>
+						<div data-type="label"
+							 data-device="rpi_sys_garage"
+							 data-get="cpu_temp_avg"
+							 data-unit="%B0C%0A"
+							 data-limits='[0,40,60]'
+							 data-colors='["green","#aa6900","firebrick"]'
+							 data-fix="1"
+							 class="large thin">
+						</div>
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section>
+			<table width="100%">
+				<tr>
+					<td rowspan="2" width="25%">
+						<div class="large left-align">Auslastung
+						</div>
+					</td>
+					<td width="25%">
+						<div class="">RPi 3<br />Büro
+						</div>
+					</td>
+					<td width="25%">
+						<div class="">RPi 3<br />Flur
+						</div>
+					</td>
+					<td width="25%">
+						<div class="">RPi Z<br />Garage
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div data-type="label"
+							 data-device="rpi_sys"
+							 data-get="stat_cpu_percent"
+							 data-part="1"
+							 data-unit="%"
+							 data-limits='[0,25]'
+							 data-colors='["green","firebrick"]'
+							 class="large thin">
+						</div>
+					</td>
+					<td>
+						<div data-type="label"
+							 data-device="rpi_sys_flur"
+							 data-get="stat_cpu_percent"
+							 data-part="1"
+							 data-unit="%"
+							 data-limits='[0,25]'
+							 data-colors='["green","firebrick"]'
+							 class="large thin">
+						</div>
+					</td>
+					<td>
+						<div data-type="label"
+							 data-device="rpi_sys_garage"
+							 data-get="stat_cpu_percent"
+							 data-part="1"
+							 data-unit="%"
+							 data-limits='[0,25]'
+							 data-colors='["green","firebrick"]'
+							 class="large thin">
+						</div>
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section>
+			<table width="100%">
+				<tr>
+					<td rowspan="2" width="25%">
+						<div class="large left-align">RAM
+						</div>
+					</td>
+					<td width="25%">
+						<div class="">RPi 3<br />Büro
+						</div>
+					</td>
+					<td width="25%">
+						<div class="">RPi 3<br />Flur
+						</div>
+					</td>
+					<td width="25%">
+						<div class="">RPi Z<br />Garage
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div data-type="label"
+							 data-device="rpi_sys"
+							 data-get="ram"
+							 data-part="5"
+							 data-unit="MB"
+							 data-limits='["0","462.89","694.34"]'
+							 data-colors='["#32a054","#aa6900","firebrick"]'
+							 class="large thin">
+						</div>
+						<div data-type="level"
+							 data-device="rpi_sys"
+							 data-get="ram"
+							 data-part="5"
+							 data-min="0"
+							 data-max="925.52"
+							 data-width="100"
+							 data-limits='["0","462.89","694.34"]'
+							 data-colors='["#32a054","#aa6900","firebrick"]'
+							 data-background-color="#aaa"
+							 class="horizontal top-space centered">
+						</div>
+					</td>
+					<td>
+						<div data-type="label"
+							 data-device="rpi_sys_flur"
+							 data-get="ram"
+							 data-part="5"
+							 data-unit="MB"
+							 data-limits='["0","462.89","694.34"]'
+							 data-colors='["#32a054","#aa6900","firebrick"]'
+							 class="large thin">
+						</div>
+						<div data-type="level"
+							 data-device="rpi_sys_flur"
+							 data-get="ram"
+							 data-part="5"
+							 data-min="0"
+							 data-max="925.52"
+							 data-width="100"
+							 data-limits='["0","462.89","694.34"]'
+							 data-colors='["#32a054","#aa6900","firebrick"]'
+							 class="horizontal top-space centered">
+						</div>
+					</td>
+					<td>
+						<div data-type="label"
+							 data-device="rpi_sys_garage"
+							 data-get="ram"
+							 data-part="5"
+							 data-unit="MB"
+							 data-limits='["0","217.38","326.08"]'
+							 data-colors='["#32a054","#aa6900","firebrick"]'
+							 class="large thin">
+						</div>
+						<div data-type="level"
+							 data-device="rpi_sys_garage"
+							 data-get="ram"
+							 data-part="5"
+							 data-min="0"
+							 data-max="434.77"
+							 data-width="100"
+							 data-limits='["0","217.38","326.08"]'
+							 data-colors='["#32a054","#aa6900","firebrick"]'
+							 class="horizontal top-space centered">
+						</div>
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section>
+			<table width="100%">
+				<tr>
+					<td rowspan="2" width="25%">
+						<div class="medium left-align">FHEM2FHEM
+						</div>
+					</td>
+					<td width="25%">
+						<div class="">RPi 3<br />Büro
+						</div>
+					</td>
+					<td width="25%">
+						<div class="">RPi B<br />Flur
+						</div>
+					</td>
+					<td width="25%">
+						<div class="">RPi Z<br />Garage
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div data-type="symbol"
+							 data-device="doif_fhem2fhem"
+							 data-get="value"
+							 data-states='["connected","disconnected","semiconnected"]'
+							 data-icons='["fs-system_fhem","fs-system_fhem","fs-system_fhem"]'
+							 data-colors='["green","firebrick","#aa6900"]'
+							 class="big">
+						</div>
+					</td>
+					<td>
+						<div data-type="symbol"
+							 data-device="fhem_flur"
+							 data-states='["connected","disconnected"]'
+							 data-icons='["fs-system_fhem","fs-system_fhem"]'
+							 data-colors='["green","firebrick"]'
+							 class="big">
+						</div>
+					</td>
+					<td>
+						<div data-type="symbol"
+							 data-device="fhem_garage"
+							 data-states='["connected","disconnected"]'
+							 data-icons='["fs-system_fhem","fs-system_fhem"]'
+							 data-colors='["green","firebrick"]'
+							 class="big">
+						</div>
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section>
+			<table width="100%">
+				<tr>
+					<td rowspan="3" width="25%">
+						<div class="large left-align">Config
+						</div>
+					</td>
+					<td width="25%">
+						<div class="">RPi 3<br />Büro
+						</div>
+					</td>
+					<td width="25%">
+						<div class="">RPi B<br />Flur
+						</div>
+					</td>
+					<td width="25%">
+						<div class="">RPi Z<br />Garage
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div onclick="ftui.setFhemStatus('save')"
+							 data-type="symbol"
+							 data-device="notify_savestate"
+							 data-get="savestate"
+							 data-states='["0","1"]'
+							 data-icons='["fa-cogs","fa-cogs"]'
+							 data-colors='["green","firebrick"]'
+							 class="big">
+						</div>
+					</td>
+					<td>
+						<div onclick="ftui.setFhemStatus('trigger fhem_save_flur')"
+							 data-type="symbol"
+							 data-device="notify_savestate_flur"
+							 data-get="savestate"
+							 data-states='["0","1"]'
+							 data-icons='["fa-cogs","fa-cogs"]'
+							 data-colors='["green","firebrick"]'
+							 class="big">
+						</div>
+					</td>
+					<td>
+						<div onclick="ftui.setFhemStatus('trigger fhem_save_garage')"
+							 data-type="symbol"
+							 data-device="notify_savestate_garage"
+							 data-get="savestate"
+							 data-states='["0","1"]'
+							 data-icons='["fa-cogs","fa-cogs"]'
+							 data-colors='["green","firebrick"]'
+							 class="big">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div data-type="label"
+							 data-device="notify_savestate"
+							 data-get="text"
+							 data-color="notify_savestate:color"
+							 class="">
+						</div>
+					</td>
+					<td>
+						<div data-type="label"
+							 data-device="notify_savestate_flur"
+							 data-get="text"
+							 data-color="notify_savestate_flur:color"
+							 class="">
+						</div>
+					</td>
+					<td>
+						<div data-type="label"
+							 data-device="notify_savestate_garage"
+							 data-get="text"
+							 data-color="notify_savestate_garage:color"
+							 class="">
+						</div>
+					</td>
+				</tr>
+			</table>
+		</section>		<section>
+			<table width="100%">
+				<tr>
+					<td rowspan="3" width="25%">
+						<div class="large left-align">Reboot
+						</div>
+					</td>
+					<td width="25%">
+						<div class="">RPi 3<br />Büro
+						</div>
+					</td>
+					<td width="25%">
+						<div class="">RPi B<br />Flur
+						</div>
+					</td>
+					<td width="25%">
+						<div class="">RPi Z<br />Garage
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div onclick="var answer = confirm('FHEM Neustart...\nBitte bestätigen!',''); function delay () { $('#fhem1').removeClass('invalid'); } if (answer) { ftui.setFhemStatus('shutdown restart'); $.toast({heading:'Neustart!',text:'FHEM wird neu gestartet...',textAlign:'center',hideAfter:30000,icon:'success',loader:true,loaderBg:'#0088CC'}); } else { $('#fhem1').addClass('invalid'); setTimeout(delay,500); }"
+							 id="fhem1"
+							 data-type="push"
+							 data-icon="fs-system_fhem"
+							 class="big">
+						</div>
+					</td>
+					<td>
+						<div onclick="var answer = confirm('FHEM Neustart...\nBitte bestätigen!',''); function delay () { $('#fhem2').removeClass('invalid'); } if (answer) { ftui.setFhemStatus('trigger fhem_reboot_flur'); $.toast({heading:'Neustart!',text:'FHEM wird neu gestartet...',textAlign:'center',hideAfter:30000,icon:'success',loader:true,loaderBg:'#0088CC'}); } else { $('#fhem2').addClass('invalid'); setTimeout(delay,500); }"
+							 id="fhem2"
+							 data-type="push"
+							 data-icon="fs-system_fhem"
+							 class="big">
+						</div>
+					</td>
+					<td>
+						<div onclick="var answer = confirm('FHEM Neustart...\nBitte bestätigen!',''); function delay () { $('#fhem3').removeClass('invalid'); } if (answer) { ftui.setFhemStatus('trigger fhem_reboot_garage'); $.toast({heading:'Neustart!',text:'FHEM wird neu gestartet...',textAlign:'center',hideAfter:30000,icon:'success',loader:true,loaderBg:'#0088CC'}); } else { $('#fhem3').addClass('invalid'); setTimeout(delay,500); }"
+							 id="fhem3"
+							 data-type="push"
+							 data-icon="fs-system_fhem"
+							 class="big">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div onclick="var answer = confirm('RaspPi Neustart...\nBitte bestätigen!',''); function delay () { $('#raspi1').removeClass('invalid'); } if (answer) { ftui.setFhemStatus('{system(\'sudo reboot &\')}'); $.toast({heading:'Neustart!',text:'RaspPi wird neu gestartet...',textAlign:'center',hideAfter:30000,icon:'success',loader:true,loaderBg:'#0088CC'}); } else { $('#raspi1').addClass('invalid'); setTimeout(delay,500); }"
+							 id="raspi1"
+							 data-type="push"
+							 data-icon="ro-raspi"
+							 class="big top-space">
+						</div>
+					</td>
+					<td>
+						<div onclick="var answer = confirm('RaspPi Neustart...\nBitte bestätigen!',''); function delay () { $('#raspi2').removeClass('invalid'); } if (answer) { ftui.setFhemStatus('trigger rpi_reboot_flur'); $.toast({heading:'Neustart!',text:'RaspPi wird neu gestartet...',textAlign:'center',hideAfter:30000,icon:'success',loader:true,loaderBg:'#0088CC'}); } else { $('#raspi2').addClass('invalid'); setTimeout(delay,500); }"
+							 id="raspi2"
+							 data-type="push"
+							 data-icon="ro-raspi"
+							 class="big top-space">
+						</div>
+					</td>
+					<td>
+						<div onclick="var answer = confirm('RaspPi Neustart...\nBitte bestätigen!',''); function delay () { $('#raspi3').removeClass('invalid'); } if (answer) { ftui.setFhemStatus('trigger rpi_reboot_garage'); $.toast({heading:'Neustart!',text:'RaspPi wird neu gestartet...',textAlign:'center',hideAfter:30000,icon:'success',loader:true,loaderBg:'#0088CC'}); } else { $('#raspi3').addClass('invalid'); setTimeout(delay,500); }"
+							 id="raspi3"
+							 data-type="push"
+							 data-icon="ro-raspi"
+							 class="big top-space">
+						</div>
+					</td>
+				</tr>
+			</table>
+		</section>
+	</div>
+</body>
+</html>

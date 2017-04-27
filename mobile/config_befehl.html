@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+    <div class="page" id="config_befehl">
+        <section>
+			<table width="100%">
+				<tr>
+					<td width="50%">
+						<div class="large left-align">Befehl:
+						</div>
+					</td>
+					<td width="50%">
+						<div data-type="input"
+							 id="cmd"
+							 class="notransmit">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="50%">
+						<div class="large left-align">&nbsp;
+						</div>
+					</td>
+					<td width="50%">
+						<div data-type="link"
+							 data-width="60"
+							 data-height="30"
+							 data-color="#eee"
+							 data-background-color="darkorange"
+							 data-device="#cmd"
+							 class="centered round">senden
+						</div>
+					</td>
+				</tr>
+			</table>
+        </section>
+        <section>
+			<table width="100%">
+				<tr>
+					<td width="50%">
+						<div class="large left-align">Gerät:
+						</div>
+					</td>
+					<td width="50%">
+						<div data-type="select"
+							 data-items='["cul_433"]'
+							 data-alias='["CUL 433 MHz"]'
+							 id="dev"
+							 class="notransmit">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="50%">
+						<div class="large left-align">Parameter:
+						</div>
+					</td>
+					<td width="50%">
+						<div data-type="select"
+							 data-items='["raw"]'
+							 id="param"
+							 class="notransmit">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="50%">
+						<div class="large left-align">Wert:
+						</div>
+					</td>
+					<td width="50%">
+						<div data-type="select"
+							 data-items='["it180"]'
+							 data-alias='["ITclock 180ms"]'
+							 id="val"
+							 class="notransmit">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="50%">
+						<div class="large left-align">&nbsp;
+						</div>
+					</td>
+					<td width="50%">
+						<div data-type="link"
+							 data-width="60"
+							 data-height="30"
+							 data-color="#eee"
+							 data-background-color="darkorange"
+							 data-device="#dev"
+							 data-set="#param"
+							 data-value="#val"
+							 class="centered round">senden
+						</div>
+					</td>
+				</tr>
+			</table>
+        </section>
+    </div>
+</body>
+</html>

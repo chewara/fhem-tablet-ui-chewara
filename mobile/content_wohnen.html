@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+	<div class="page" id="content_wohnen">	
+		<section>
+			<table width="100%">
+				<tr>
+					<td width="30%">
+						<div class="large left-align">Ist-Temperatur
+						</div>
+					</td>
+					<td width="10%">
+						<div data-type="symbol"
+							 data-device="wz_SC"
+							 data-get="onoff"
+							 data-get-on="1"
+							 data-get-off="0"
+							 data-on-color="firebrick"
+							 data-off-color="#888"
+							 data-icon="ftui-window"
+							 class="big">
+						</div>
+					</td>
+					<td width="10%">
+						<div data-type="label"
+							 data-device="wz_WT2"
+							 data-get="temperature"
+							 data-limits='[-70,20,25]'
+							 data-colors='["#0088CC","green","firebrick"]'
+							 data-unit="°C"
+							 class="large thin">
+						</div>
+					</td>
+					<td width="50%">
+						<div data-type="label"
+							 data-device="wz_WT"
+							 data-get="temperature"
+							 data-limits='[-70,20,25]'
+							 data-colors='["#0088CC","green","firebrick"]'
+							 data-unit="°C"
+							 class="big thin">
+						</div>
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section>
+			<table width="100%">
+				<tr>
+					<td colspan="2">
+						<div class="large left-align">Soll-Temperatur
+						</div>
+					</td>
+					<td width="50%">
+						<div data-type="spinner"
+							 data-device="wz_WT"
+							 data-get="desiredTemperature"
+							 data-set="desiredTemperature"
+							 data-background-color="#888"
+							 data-icon-left-color="#0088CC"
+							 data-icon-right-color="firebrick"
+							 data-text-color="#eee"
+							 data-min="4.5"
+							 data-max="25.0"
+							 data-step="0.5"
+							 data-unit="°"
+							 data-shortdelay="50"
+							 data-longdelay="5000"
+							 data-off="4.5"
+							 data-on="25.0"
+							 class="valueonly centered">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="25%">
+						<div data-type="push"
+							 data-fhem-cmd="{Heating_Control_SetTemp('wz_heatingcontrol')}"
+							 data-icon="oa-time_statistic"
+							 class="top-space">
+						</div>
+					</td>
+					<td width="25%">
+						<div data-type="push"
+							 data-device="wz_WT"
+							 data-set="desiredTemperature"
+							 data-set-on="boost"
+							 data-icon="fs-sani_heating_boost"
+							 class="top-space">
+						</div>
+					</td>
+					<td>
+						<div data-type="select"
+							 data-device="wz_WT"
+							 data-get="desiredTemperature"
+							 data-set="desiredTemperature"
+							 data-items='["off","5.0","15.0",    "18.0","20.0","22.0",        "25.0"]'
+							 data-alias='["AUS","5°C","15°C ECO","18°C","20°C","22°C KOMFORT","25°C MAX"]'
+							 class="top-space">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="">Programm
+						</div>
+					</td>
+					<td>
+						<div class="">Boost
+						</div>
+					</td>
+					<td>
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section>
+			<table width="100%">
+				<tr>
+					<td width="50%">
+						<div class="large left-align">Lichtscene
+						</div>
+					</td>
+					<td>
+						<div data-type="select"
+							 data-device="wz_lightscene"
+							 data-get="state"
+							 data-set="scene"
+							 data-items='["aus","fernsehen","weiss","rot","gelb","gruen","tuerkis","blau","pink"]'
+							 data-alias='["AUS","Fernsehen","Weiß", "Rot","Gelb","Grün", "Türkis", "Blau","Pink"]'
+							 class="bottom-space">
+						</div>
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section>
+			<table width="100%">
+				<tr>
+					<td width="50%" rowspan="2">
+						<div onclick="if ($('#droplicht').is(':hidden')) { $('#droplicht').slideDown(250); $('#dropdownlicht > i.fa').addClass('fa-rotate-180'); } else { $('#droplicht').slideUp(250); $('#dropdownlicht > i.fa').removeClass('fa-rotate-180'); }"
+							 id="dropdownlicht"
+							 class="large left-align">Decke
+							<i class="fa fa-angle-double-down large cell"></i>
+						</div>
+					</td>
+					<td width="25%">
+						<div data-type="switch"
+							 data-device="wz_ilight_decke"
+							 data-get="state"
+							 data-get-on="on.*"
+							 data-get-off="off"
+							 data-set="hsv"
+							 data-set-on="0,0,100"
+							 data-set-off="0,0,0"
+							 data-icon="oa-light_pendant_light_round"
+							 data-on-color="#eee"
+							 data-off-color="#eee"
+							 data-on-background-color="#0088CC"
+							 data-off-background-color="#888"
+							 class="big">
+						</div>
+					</td>
+					<td width="25%">
+						<div data-type="push"
+							 data-device="wz_ilight_decke"
+							 data-set="hsv"
+							 data-set-on="0,0,100"
+							 data-icon="fa-paint-brush"
+							 data-off-background-color="#FFFFFF"
+							 class="big">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="">An/Aus
+						</div>
+					</td>
+					<td>
+						<div class="">Weiß
+						</div>
+					</td>
+				</tr>
+			</table>
+			<div id="droplicht">
+				<table width="100%">
+					<tr>
+						<td colspan="6">
+							<div data-type="volume"
+								 data-device="wz_ilight_decke"
+								 data-get="hue"
+								 data-set="hue"
+								 data-min="0"
+								 data-max="360"
+								 data-unit="°"
+								 data-tickstep="10"
+								 class="hue-tick big top-space">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="6">
+							<div class="">Helligkeit:
+							</div>
+							<div data-type="slider"
+								 data-device="wz_ilight_decke"
+								 data-get="brightness"
+								 data-set="brightness"
+								 data-min="0"
+								 data-max="100"
+								 data-on="100"
+								 data-off="0"
+								 data-width="200"
+								 data-color="#0088CC"
+								 class="horizontal tap top-space bottom-space-2 centered">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div data-type="push"
+								 data-device="wz_ilight_decke"
+								 data-set="hsv"
+								 data-set-on="0,100,100"
+								 data-icon="fa-paint-brush"
+								 data-off-background-color="#FF0000"
+								 class="big">
+							</div>
+						</td>
+						<td>
+							<div data-type="push"
+								 data-device="wz_ilight_decke"
+								 data-set="hsv"
+								 data-set-on="60,100,100"
+								 data-icon="fa-paint-brush"
+								 data-off-background-color="#FFFF00"
+								 class="big">
+							</div>
+						</td>
+						<td>
+							<div data-type="push"
+								 data-device="wz_ilight_decke"
+								 data-set="hsv"
+								 data-set-on="120,100,100"
+								 data-icon="fa-paint-brush"
+								 data-off-background-color="#00FF00"
+								 class="big">
+							</div>
+						</td>
+						<td>
+							<div data-type="push"
+								 data-device="wz_ilight_decke"
+								 data-set="hsv"
+								 data-set-on="180,100,100"
+								 data-icon="fa-paint-brush"
+								 data-off-background-color="#00FFFF"
+								 class="big">
+							</div>
+						</td>
+						<td>
+							<div data-type="push"
+								 data-device="wz_ilight_decke"
+								 data-set="hsv"
+								 data-set-on="240,100,100"
+								 data-icon="fa-paint-brush"
+								 data-off-background-color="#0000FF"
+								 class="big">
+							</div>
+						</td>
+						<td>
+							<div data-type="push"
+								 data-device="wz_ilight_decke"
+								 data-set="hsv"
+								 data-set-on="300,100,100"
+								 data-icon="fa-paint-brush"
+								 data-off-background-color="#FF00FF"
+								 class="big">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="">Rot
+							</div>
+						</td>
+						<td>
+							<div class="">Gelb
+							</div>
+						</td>
+						<td>
+							<div class="">Grün
+							</div>
+						</td>
+						<td>
+							<div class="">Türkis
+							</div>
+						</td>
+						<td>
+							<div class="">Blau
+							</div>
+						</td>
+						<td>
+							<div class="">Pink
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</section>
+		<section>
+			<table width="100%">
+				<tr>
+					<td width="50%" rowspan="2">
+						<div onclick="if ($('#dropsofa').is(':hidden')) { $('#dropsofa').slideDown(250); $('#dropdownsofa > i.fa').addClass('fa-rotate-180'); } else { $('#dropsofa').slideUp(250); $('#dropdownsofa > i.fa').removeClass('fa-rotate-180'); }"
+							 id="dropdownsofa"
+							 class="large left-align">Sofaecke
+							<i class="fa fa-angle-double-down large cell"></i>
+						</div>
+					</td>
+					<td width="25%">
+						<div data-type="switch"
+							 data-device="wz_ilight_sofa"
+							 data-get="state"
+							 data-get-on="on.*"
+							 data-get-off="off"
+							 data-set="hsv"
+							 data-set-on="300,100,100"
+							 data-set-off="0,0,0"
+							 data-icon="oa-light_led"
+							 data-on-color="#eee"
+							 data-off-color="#eee"
+							 data-on-background-color="#0088CC"
+							 data-off-background-color="#888"
+							 class="big">
+						</div>
+					</td>
+					<td width="25%">
+						<div data-type="push"
+							 data-device="wz_ilight_sofa"
+								 data-set="hsv"
+								 data-set-on="0,0,100"
+							 data-icon="fa-paint-brush"
+							 data-off-background-color="#FFFFFF"
+							 class="big">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="">An/Aus
+						</div>
+					</td>
+					<td>
+						<div class="">Weiß
+						</div>
+					</td>
+				</tr>
+			</table>
+			<div id="dropsofa">
+				<table width="100%">
+					<tr>
+						<td colspan="6">
+							<div data-type="volume"
+								 data-device="wz_ilight_sofa"
+								 data-get="hue"
+								 data-set="hue"
+								 data-min="0"
+								 data-max="360"
+								 data-unit="°"
+								 data-tickstep="10"
+								 class="hue-tick big top-space">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="6">
+							<div class="">Helligkeit:
+							</div>
+							<div data-type="slider"
+								 data-device="wz_ilight_sofa"
+								 data-get="brightness"
+								 data-set="brightness"
+								 data-min="0"
+								 data-max="100"
+								 data-on="100"
+								 data-off="0"
+								 data-width="200"
+								 data-color="#0088CC"
+								 class="horizontal tap top-space bottom-space-2 centered">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div data-type="push"
+								 data-device="wz_ilight_sofa"
+								 data-set="hsv"
+								 data-set-on="0,100,100"
+								 data-icon="fa-paint-brush"
+								 data-off-background-color="#FF0000"
+								 class="big">
+							</div>
+						</td>
+						<td>
+							<div data-type="push"
+								 data-device="wz_ilight_sofa"
+								 data-set="hsv"
+								 data-set-on="60,100,100"
+								 data-icon="fa-paint-brush"
+								 data-off-background-color="#FFFF00"
+								 class="big">
+							</div>
+						</td>
+						<td>
+							<div data-type="push"
+								 data-device="wz_ilight_sofa"
+								 data-set="hsv"
+								 data-set-on="120,100,100"
+								 data-icon="fa-paint-brush"
+								 data-off-background-color="#00FF00"
+								 class="big">
+							</div>
+						</td>
+						<td>
+							<div data-type="push"
+								 data-device="wz_ilight_sofa"
+								 data-set="hsv"
+								 data-set-on="180,100,100"
+								 data-icon="fa-paint-brush"
+								 data-off-background-color="#00FFFF"
+								 class="big">
+							</div>
+						</td>
+						<td>
+							<div data-type="push"
+								 data-device="wz_ilight_sofa"
+								 data-set="hsv"
+								 data-set-on="240,100,100"
+								 data-icon="fa-paint-brush"
+								 data-off-background-color="#0000FF"
+								 class="big">
+							</div>
+						</td>
+						<td>
+							<div data-type="push"
+								 data-device="wz_ilight_sofa"
+								 data-set="hsv"
+								 data-set-on="300,100,100"
+								 data-icon="fa-paint-brush"
+								 data-off-background-color="#FF00FF"
+								 class="big">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="">Rot
+							</div>
+						</td>
+						<td>
+							<div class="">Gelb
+							</div>
+						</td>
+						<td>
+							<div class="">Grün
+							</div>
+						</td>
+						<td>
+							<div class="">Türkis
+							</div>
+						</td>
+						<td>
+							<div class="">Blau
+							</div>
+						</td>
+						<td>
+							<div class="">Pink
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</section>
+		<section>
+			<table width="100%">
+				<tr>
+					<td width="50%" rowspan="2">
+						<div onclick="if ($('#dropsteh').is(':hidden')) { $('#dropsteh').slideDown(250); $('#dropdownsteh > i.fa').addClass('fa-rotate-180'); } else { $('#dropsteh').slideUp(250); $('#dropdownsteh > i.fa').removeClass('fa-rotate-180'); }"
+							 id="dropdownsteh"
+							 class="large left-align">Stehlampe
+							<i class="fa fa-angle-double-down large cell"></i>
+						</div>
+					</td>
+					<td width="25%">
+						<div data-type="switch"
+							 data-device="wz_ilight_stehlampe"
+							 data-get="state"
+							 data-get-on="on.*"
+							 data-get-off="off"
+							 data-set="hsv"
+							 data-set-on="60,100,100"
+							 data-set-off="0,0,0"
+							 data-icon="oa-light_floor_lamp"
+							 data-on-color="#eee"
+							 data-off-color="#eee"
+							 data-on-background-color="#0088CC"
+							 data-off-background-color="#888"
+							 class="big">
+						</div>
+					</td>
+					<td width="25%">
+						<div data-type="push"
+							 data-device="wz_ilight_stehlampe"
+								 data-set="hsv"
+								 data-set-on="0,0,100"
+							 data-icon="fa-paint-brush"
+							 data-off-background-color="#FFFFFF"
+							 class="big">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="">An/Aus
+						</div>
+					</td>
+					<td>
+						<div class="">Weiß
+						</div>
+					</td>
+				</tr>
+			</table>
+			<div id="dropsteh">
+				<table width="100%">
+					<tr>
+						<td colspan="6">
+							<div data-type="volume"
+								 data-device="wz_ilight_stehlampe"
+								 data-get="hue"
+								 data-set="hue"
+								 data-min="0"
+								 data-max="360"
+								 data-unit="°"
+								 data-tickstep="10"
+								 class="hue-tick big top-space">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="6">
+							<div class="">Helligkeit:
+							</div>
+							<div data-type="slider"
+								 data-device="wz_ilight_stehlampe"
+								 data-get="brightness"
+								 data-set="brightness"
+								 data-min="0"
+								 data-max="100"
+								 data-on="100"
+								 data-off="0"
+								 data-width="200"
+								 data-color="#0088CC"
+								 class="horizontal tap top-space bottom-space-2 centered">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div data-type="push"
+								 data-device="wz_ilight_stehlampe"
+								 data-set="hsv"
+								 data-set-on="0,100,100"
+								 data-icon="fa-paint-brush"
+								 data-off-background-color="#FF0000"
+								 class="big">
+							</div>
+						</td>
+						<td>
+							<div data-type="push"
+								 data-device="wz_ilight_stehlampe"
+								 data-set="hsv"
+								 data-set-on="60,100,100"
+								 data-icon="fa-paint-brush"
+								 data-off-background-color="#FFFF00"
+								 class="big">
+							</div>
+						</td>
+						<td>
+							<div data-type="push"
+								 data-device="wz_ilight_stehlampe"
+								 data-set="hsv"
+								 data-set-on="120,100,100"
+								 data-icon="fa-paint-brush"
+								 data-off-background-color="#00FF00"
+								 class="big">
+							</div>
+						</td>
+						<td>
+							<div data-type="push"
+								 data-device="wz_ilight_stehlampe"
+								 data-set="hsv"
+								 data-set-on="180,100,100"
+								 data-icon="fa-paint-brush"
+								 data-off-background-color="#00FFFF"
+								 class="big">
+							</div>
+						</td>
+						<td>
+							<div data-type="push"
+								 data-device="wz_ilight_stehlampe"
+								 data-set="hsv"
+								 data-set-on="240,100,100"
+								 data-icon="fa-paint-brush"
+								 data-off-background-color="#0000FF"
+								 class="big">
+							</div>
+						</td>
+						<td>
+							<div data-type="push"
+								 data-device="wz_ilight_stehlampe"
+								 data-set="hsv"
+								 data-set-on="300,100,100"
+								 data-icon="fa-paint-brush"
+								 data-off-background-color="#FF00FF"
+								 class="big">
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</section>
+		<section>
+			<table width="100%">
+				<tr>
+					<td width="50%" rowspan="2">
+						<div onclick="if ($('#dropglas').is(':hidden')) { $('#dropglas').slideDown(250); $('#dropdownglas > i.fa').addClass('fa-rotate-180'); } else { $('#dropglas').slideUp(250); $('#dropdownglas > i.fa').removeClass('fa-rotate-180'); }"
+							 id="dropdownglas"
+							 class="large left-align">Glasböden
+							<i class="fa fa-angle-double-down large cell"></i>
+						</div>
+					</td>
+					<td width="25%">
+						<div data-type="switch"
+							 data-device="wz_ilight_glasboeden"
+							 data-get="state"
+							 data-get-on="on.*"
+							 data-get-off="off"
+							 data-set="hsv"
+							 data-set-on="240,100,100"
+							 data-set-off="0,0,0"
+							 data-icon="oa-light_cabinet"
+							 data-on-color="#eee"
+							 data-off-color="#eee"
+							 data-on-background-color="#0088CC"
+							 data-off-background-color="#888"
+							 class="big">
+						</div>
+					</td>
+					<td width="25%">
+						<div data-type="push"
+							 data-device="wz_ilight_glasboeden"
+								 data-set="hsv"
+								 data-set-on="0,0,100"
+							 data-icon="fa-paint-brush"
+							 data-off-background-color="#FFFFFF"
+							 class="big">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="">An/Aus
+						</div>
+					</td>
+					<td>
+						<div class="">Weiß
+						</div>
+					</td>
+				</tr>
+			</table>
+			<div id="dropglas">
+				<table width="100%">
+					<tr>
+						<td colspan="6">
+							<div data-type="volume"
+								 data-device="wz_ilight_glasboeden"
+								 data-get="hue"
+								 data-set="hue"
+								 data-min="0"
+								 data-max="360"
+								 data-unit="°"
+								 data-tickstep="10"
+								 class="hue-tick big top-space">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="6">
+							<div class="">Helligkeit:
+							</div>
+							<div data-type="slider"
+								 data-device="wz_ilight_glasboeden"
+								 data-get="brightness"
+								 data-set="brightness"
+								 data-min="0"
+								 data-max="100"
+								 data-on="100"
+								 data-off="0"
+								 data-width="200"
+								 data-color="#0088CC"
+								 class="horizontal tap top-space bottom-space-2 centered">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div data-type="push"
+								 data-device="wz_ilight_glasboeden"
+								 data-set="hsv"
+								 data-set-on="0,100,100"
+								 data-icon="fa-paint-brush"
+								 data-off-background-color="#FF0000"
+								 class="big">
+							</div>
+						</td>
+						<td>
+							<div data-type="push"
+								 data-device="wz_ilight_glasboeden"
+								 data-set="hsv"
+								 data-set-on="60,100,100"
+								 data-icon="fa-paint-brush"
+								 data-off-background-color="#FFFF00"
+								 class="big">
+							</div>
+						</td>
+						<td>
+							<div data-type="push"
+								 data-device="wz_ilight_glasboeden"
+								 data-set="hsv"
+								 data-set-on="120,100,100"
+								 data-icon="fa-paint-brush"
+								 data-off-background-color="#00FF00"
+								 class="big">
+							</div>
+						</td>
+						<td>
+							<div data-type="push"
+								 data-device="wz_ilight_glasboeden"
+								 data-set="hsv"
+								 data-set-on="180,100,100"
+								 data-icon="fa-paint-brush"
+								 data-off-background-color="#00FFFF"
+								 class="big">
+							</div>
+						</td>
+						<td>
+							<div data-type="push"
+								 data-device="wz_ilight_glasboeden"
+								 data-set="hsv"
+								 data-set-on="240,100,100"
+								 data-icon="fa-paint-brush"
+								 data-off-background-color="#0000FF"
+								 class="big">
+							</div>
+						</td>
+						<td>
+							<div data-type="push"
+								 data-device="wz_ilight_glasboeden"
+								 data-set="hsv"
+								 data-set-on="300,100,100"
+								 data-icon="fa-paint-brush"
+								 data-off-background-color="#FF00FF"
+								 class="big">
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</section>
+		<section>
+			<table width="100%">
+				<tr>
+					<td width="50%" rowspan="2">
+						<div class="large left-align">Jägermeister
+						</div>
+					</td>
+					<td width="50%">
+						<div data-type="switch"
+							 data-device="wz_jaegermeister"
+							 data-icon="fa-lightbulb-o"
+							 data-on-color="#eee"
+							 data-off-color="#eee"
+							 data-on-background-color="#0088CC"
+							 data-off-background-color="#888"
+							 class="big">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>An/Aus
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section>
+			<table width="100%">
+				<tr>
+					<td width="50%" rowspan="2">
+						<div class="large left-align">Ladegerät
+						</div>
+					</td>
+					<td width="50%">
+						<div data-type="switch"
+							 data-device="IT_00F0FFFF01"
+							 data-icon="fa-mobile"
+							 data-on-color="#eee"
+							 data-off-color="#eee"
+							 data-on-background-color="#0088CC"
+							 data-off-background-color="#888"
+							 class="big">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>An/Aus
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section>
+			<table width="100%">
+				<tr>
+					<td width="50%" rowspan="2">
+						<div onclick="if ($('#dropvsx').is(':hidden')) { $('#dropvsx').slideDown(250); $('#dropdownvsx > i.fa').addClass('fa-rotate-180'); } else { $('#dropvsx').slideUp(250); $('#dropdownvsx > i.fa').removeClass('fa-rotate-180'); }"
+							 id="dropdownvsx"
+							 class="large left-align">VSX-510
+							<i class="fa fa-angle-double-down large cell"></i>
+						</div>
+					</td>
+					<td width="50%">
+						<div data-type="switch"
+							 data-device="vsx_510"
+							 data-icon="fa-power-off"
+							 data-on-color="#eee"
+							 data-off-color="#eee"
+							 data-on-background-color="#0088CC"
+							 data-off-background-color="#888"
+							 class="big">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>An/Aus
+					</td>
+				</tr>
+			</table>
+			<table width="100%">
+				<tr>
+					<td width="20%">&nbsp;
+					</td>
+					<td width="20%">&nbsp;
+					</td>
+					<td width="20%">
+						<div data-type="switch"
+							 data-device="vsx_510"
+							 data-get="mute"
+							 data-set="mute"
+							 data-states='["on","off"]'
+							 data-icons='["ro-volume-mute2","ro-volume-high"]'
+							 data-colors='["#eee","#eee"]'
+							 data-background-colors='["#0088CC","#888"]'
+							 class="big top-space">
+						</div>
+					</td>
+					<td width="20%">
+						<div data-type="push"
+							 data-device="vsx_510"
+							 data-set-on="volumeDown"
+							 data-icon="ro-volume-decrease"
+							 class="big top-space">
+						</div>
+					</td>
+					<td width="20%">
+						<div data-type="push"
+							 data-device="vsx_510"
+							 data-set-on="volumeUp"
+							 data-icon="ro-volume-increase"
+							 class="big top-space">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>&nbsp;
+					</td>
+					<td>&nbsp;
+					</td>
+					<td>Mute
+					</td>
+					<td colspan="2">Volume
+					</td>
+				</tr>
+			</table>
+			<div id="dropvsx">
+				<table width="100%">
+					<tr>
+						<td width="20%">
+							<div data-type="switch"
+								 data-device="vsx_510"
+								 data-get="input"
+								 data-set="input"
+								 data-get-on="cblSat"
+								 data-get-off="^(?!cblSat).*"
+								 data-set-on="cblSat"
+								 data-set-off=""
+								 data-icon="ro-tv2"
+								 data-on-color="#eee"
+								 data-off-color="#eee"
+								 data-on-background-color="#0088CC"
+								 data-off-background-color="#888"
+								 class="big top-space">
+							</div>
+						</td>
+						<td width="20%">
+							<div data-type="switch"
+								 data-device="vsx_510"
+								 data-get="input"
+								 data-set="input"
+								 data-get-on="dvd"
+								 data-get-off="^(?!dvd).*"
+								 data-set-on="dvd"
+								 data-set-off=""
+								 data-icon="fa-amazon"
+								 data-on-color="#eee"
+								 data-off-color="#eee"
+								 data-on-background-color="#0088CC"
+								 data-off-background-color="#888"
+								 class="big top-space">
+							</div>
+						</td>
+						<td width="20%">
+							<div data-type="switch"
+								 data-device="vsx_510"
+								 data-get="input"
+								 data-set="input"
+								 data-get-on="bd"
+								 data-get-off="^(?!bd).*"
+								 data-set-on="bd"
+								 data-set-off=""
+								 data-icon="ro-bluray"
+								 data-on-color="#eee"
+								 data-off-color="#eee"
+								 data-on-background-color="#0088CC"
+								 data-off-background-color="#888"
+								 class="big top-space">
+							</div>
+						</td>
+						<td width="20%">
+							<div data-type="switch"
+								 data-device="vsx_510"
+								 data-get="input"
+								 data-set="input"
+								 data-get-on="internetRadio"
+								 data-get-off="^(?!internetRadio).*"
+								 data-set-on="internetRadio"
+								 data-set-off=""
+								 data-icon="fa-globe"
+								 data-on-color="#eee"
+								 data-off-color="#eee"
+								 data-on-background-color="#0088CC"
+								 data-off-background-color="#888"
+								 class="big top-space">
+							</div>
+						</td>
+						<td width="20%">
+							<div data-type="switch"
+								 data-device="vsx_510"
+								 data-get="input"
+								 data-set="input"
+								 data-get-on="tuner"
+								 data-get-off="^(?!tuner).*"
+								 data-set-on="tuner"
+								 data-set-off=""
+								 data-icon="ro-radio"
+								 data-on-color="#eee"
+								 data-off-color="#eee"
+								 data-on-background-color="#0088CC"
+								 data-off-background-color="#888"
+								 class="big top-space">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>TV
+						</td>
+						<td>FireTV
+						</td>
+						<td>HTPC
+						</td>
+						<td>I-Radio
+						</td>
+						<td>Radio
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div data-type="switch"
+								 data-device="vsx_510"
+								 data-get="input"
+								 data-set="input"
+								 data-get-on="game"
+								 data-get-off="^(?!game).*"
+								 data-set-on="game"
+								 data-set-off=""
+								 data-icon="ro-gamepad"
+								 data-on-color="#eee"
+								 data-off-color="#eee"
+								 data-on-background-color="#0088CC"
+								 data-off-background-color="#888"
+								 class="big top-space">
+							</div>
+						</td>
+						<td>
+							<div data-type="switch"
+								 data-device="vsx_510"
+								 data-get="input"
+								 data-set="input"
+								 data-get-on="iPodUsb"
+								 data-get-off="^(?!iPodUsb).*"
+								 data-set-on="iPodUsb"
+								 data-set-off=""
+								 data-icon="fa-usb"
+								 data-on-color="#eee"
+								 data-off-color="#eee"
+								 data-on-background-color="#0088CC"
+								 data-off-background-color="#888"
+								 class="big top-space">
+							</div>
+						</td>
+						<td>
+							<div data-type="switch"
+								 data-device="vsx_510"
+								 data-get="input"
+								 data-set="input"
+								 data-get-on="adapterPort"
+								 data-get-off="^(?!adapterPort).*"
+								 data-set-on="adapterPort"
+								 data-set-off=""
+								 data-icon="fa-bluetooth"
+								 data-on-color="#eee"
+								 data-off-color="#eee"
+								 data-on-background-color="#0088CC"
+								 data-off-background-color="#888"
+								 class="big top-space">
+							</div>
+						</td>
+						<td>
+							<div data-type="switch"
+								 data-device="vsx_510"
+								 data-get="input"
+								 data-set="input"
+								 data-get-on="cd"
+								 data-get-off="^(?!cd).*"
+								 data-set-on="cd"
+								 data-set-off=""
+								 data-icon="ma-input"
+								 data-on-color="#eee"
+								 data-off-color="#eee"
+								 data-on-background-color="#0088CC"
+								 data-off-background-color="#888"
+								 class="big top-space">
+							</div>
+						</td>
+						<td>
+							<div data-type="switch"
+								 data-device="vsx_510"
+								 data-get="input"
+								 data-set="input"
+								 data-get-on="mhl"
+								 data-get-off="^(?!mhl).*"
+								 data-set-on="mhl"
+								 data-set-off=""
+								 data-icon="ma-settings_input_hdmi"
+								 data-on-color="#eee"
+								 data-off-color="#eee"
+								 data-on-background-color="#0088CC"
+								 data-off-background-color="#888"
+								 class="big top-space">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>Game
+						</td>
+						<td>USB
+						</td>
+						<td>BT
+						</td>
+						<td>AUX
+						</td>
+						<td>Front
+						</td>
+					</tr>
+				</table>
+			</div>
+		</section>
+		<section>
+			<table width="100%">
+				<tr>
+					<td width="50%" rowspan="2">
+						<div class="large left-align">LG-TV
+						</div>
+					</td>
+					<td width="25%">
+						<div data-type="switch"
+							 data-device="dummy_wz_tv_auto"
+							 data-icon="ro-tv2"
+							 data-on-color="#eee"
+							 data-off-color="#eee"
+							 data-on-background-color="#0088CC"
+							 data-off-background-color="#888"
+							 class="big">
+						</div>
+					</td>
+					<td width="25%">
+						<div data-type="switch"
+							 data-device="wz_lgtv"
+							 data-icon="ro-tv2"
+							 data-on-color="#eee"
+							 data-off-color="#eee"
+							 data-on-background-color="#0088CC"
+							 data-off-background-color="#888"
+							 class="big">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>Auto<br />An/Aus
+					</td>
+					<td>An/Aus
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section>
+			<table width="100%">
+				<tr>
+					<td width="50%" rowspan="2">
+						<div class="large left-align">Subwoofer
+						</div>
+					</td>
+					<td width="25%">
+						<div data-type="switch"
+							 data-device="dummy_wz_subs_auto"
+							 data-icon="ma-speaker"
+							 data-on-color="#eee"
+							 data-off-color="#eee"
+							 data-on-background-color="#0088CC"
+							 data-off-background-color="#888"
+							 class="big">
+						</div>
+					</td>
+					<td width="25%">
+						<div data-type="switch"
+							 data-device="wz_subwoofer"
+							 data-icon="ma-speaker"
+							 data-on-color="#eee"
+							 data-off-color="#eee"
+							 data-on-background-color="#0088CC"
+							 data-off-background-color="#888"
+							 class="big">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>Auto<br />An/Aus
+					</td>
+					<td>An/Aus
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section>
+			<table width="100%">
+				<tr>
+					<td>
+						<div data-type="symbol"
+							 data-device="wz_WT2"
+							 data-get="battery"
+							 data-states='["ok","low"]'
+							 data-icons='["fa-battery-4","fa-battery-1 fa-blink"]'
+							 data-colors='["green","firebrick"]'
+							 class="">
+						</div>
+						<div class="narrow">Thermostat A
+						</div>
+					</td>
+					<td>
+						<div data-type="symbol"
+							 data-device="wz_WT"
+							 data-get="battery"
+							 data-states='["ok","low"]'
+							 data-icons='["fa-battery-4","fa-battery-1 fa-blink"]'
+							 data-colors='["green","firebrick"]'
+							 class="">
+						</div>
+						<div class="narrow">Thermostat B
+						</div>
+					</td>
+					<td>
+						<div data-type="symbol"
+							 data-device="wz_HT"
+							 data-get="battery"
+							 data-states='["ok","low"]'
+							 data-icons='["fa-battery-4","fa-battery-1 fa-blink"]'
+							 data-colors='["green","firebrick"]'
+							 class="">
+						</div>
+						<div class="narrow">Heizung
+						</div>
+					</td>
+					<td>
+						<div data-type="symbol"
+							 data-device="wz_SC"
+							 data-get="battery"
+							 data-states='["ok","low"]'
+							 data-icons='["fa-battery-4","fa-battery-1 fa-blink"]'
+							 data-colors='["green","firebrick"]'
+							 class="">
+						</div>
+						<div class="narrow">Fenster
+						</div>
+					</td>
+				</tr>
+			</table>
+			<table width="100%">
+				<tr>
+					<td>
+						<div data-type="symbol"
+							 data-device="wz_taster_a"
+							 data-get="battery"
+							 data-states='["ok","low"]'
+							 data-icons='["fa-battery-4","fa-battery-1 fa-blink"]'
+							 data-colors='["green","firebrick"]'
+							 class="">
+						</div>
+						<div class="narrow">Taster A
+						</div>
+					</td>
+					<td>
+						<div data-type="symbol"
+							 data-device="wz_taster_b"
+							 data-get="battery"
+							 data-states='["ok","low"]'
+							 data-icons='["fa-battery-4","fa-battery-1 fa-blink"]'
+							 data-colors='["green","firebrick"]'
+							 class="">
+						</div>
+						<div class="narrow">Taster B
+						</div>
+					</td>
+					<td>
+						<div>
+							<div data-type="symbol"
+								 data-device="wz_S5_amad"
+								 data-get="powerLevel"
+								 data-states='["[0-5]","([6-9]|[1][0-9]|[2][0-5])","([2][6-9]|[3][0-9]|[4][0-9]|50)","([5][1-9]|[6][0-9]|[7][0-5])","([7][6-9]|[8][0-9]|[9][0-9])","100"]'
+								 data-icons='["fa-battery-0 fa-blink","fa-battery-1 warn","fa-battery-2 warn","fa-battery-3 warn","fa-battery-4 warn","fa-battery-4"]'
+								 data-colors='["firebrick","firebrick","gold","green","green","green"]'
+								 class="">
+							</div>
+							<div data-type="symbol"
+								 data-device="wz_S5_amad"
+								 data-get="powerPlugged"
+								 data-states='["0","1"]'
+								 data-icons='["fa-plug","fa-plug"]'
+								 data-colors='["#888","green"]'
+								 class="small left-narrow">
+							</div>
+							<div class="narrow">Display
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</section>		
+	</div>	
+</body>
+</html>

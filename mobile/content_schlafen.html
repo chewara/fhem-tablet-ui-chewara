@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+	<div class="page" id="content_schlafen">
+		<section>
+			<table width="100%">
+				<tr>
+					<td width="40%">
+						<div class="large left-align">Ist-Temperatur
+						</div>
+					</td>
+					<td width="10%">
+						<div data-type="symbol"
+							 data-device="sz_SC"
+							 data-get="onoff"
+							 data-get-on="1"
+							 data-get-off="0"
+							 data-on-color="firebrick"
+							 data-off-color="#888"
+							 data-icon="ftui-window"
+							 class="big">
+						</div>
+					</td>
+					<td width="50%">
+						<div data-type="label"
+							 data-device="sz_WT"
+							 data-get="temperature"
+							 data-limits='[-70,20,25]'
+							 data-colors='["#0088CC","green","firebrick"]'
+							 data-unit="°C"
+							 class="big thin">
+						</div>
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section>
+			<table width="100%">
+				<tr>
+					<td colspan="2">
+						<div class="large left-align">Soll-Temperatur
+						</div>
+					</td>
+					<td width="50%">
+						<div data-type="spinner"
+							 data-device="sz_WT"
+							 data-get="desiredTemperature"
+							 data-set="desiredTemperature"
+							 data-background-color="#888"
+							 data-icon-left-color="#0088CC"
+							 data-icon-right-color="firebrick"
+							 data-text-color="#eee"
+							 data-min="4.5"
+							 data-max="25.0"
+							 data-step="0.5"
+							 data-unit="°"
+							 data-shortdelay="50"
+							 data-longdelay="5000"
+							 data-off="4.5"
+							 data-on="25.0"
+							 class="valueonly centered">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="25%">
+						<div data-type="push"
+							 data-fhem-cmd="{Heating_Control_SetTemp('sz_heatingcontrol')}"
+							 data-icon="oa-time_statistic"
+							 class="top-space">
+						</div>
+					</td>
+					<td width="25%">
+						<div data-type="push"
+							 data-device="sz_WT"
+							 data-set="desiredTemperature"
+							 data-set-on="boost"
+							 data-icon="fs-sani_heating_boost"
+							 class="top-space">
+						</div>
+					</td>
+					<td>
+						<div data-type="select"
+							 data-device="sz_WT"
+							 data-get="desiredTemperature"
+							 data-set="desiredTemperature"
+							 data-items='["off","5.0","15.0",    "18.0","20.0","22.0",        "25.0"]'
+							 data-alias='["AUS","5°C","15°C ECO","18°C","20°C","22°C KOMFORT","25°C MAX"]'
+							 class="top-space">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="">Programm
+						</div>
+					</td>
+					<td>
+						<div class="">Boost
+						</div>
+					</td>
+					<td>
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section>
+			<table width="100%">
+				<tr>
+					<td width="50%" rowspan="2">
+						<div class="large left-align">Licht
+						</div>
+					</td>
+					<td width="50%">
+						<div data-type="switch"
+							 data-device="sz_aktor_licht"
+							 data-on-color="#eee"
+							 data-off-color="#eee"
+							 data-on-background-color="#0088CC"
+							 data-off-background-color="#888"
+							 class="big">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>An/Aus
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section>
+			<table width="100%">
+				<tr>
+					<td width="50%" rowspan="2">
+						<div class="large left-align">Wärmeunterbett
+						</div>
+					</td>
+					<td width="50%">
+						<div data-type="switch"
+							 data-device="sz_ZS"
+							 data-icon="fa-bed"
+							 data-on-color="#eee"
+							 data-off-color="#eee"
+							 data-on-background-color="#0088CC"
+							 data-off-background-color="#888"
+							 class="big">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>An/Aus
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section>
+			<table width="100%">
+				<tr>
+					<td width="33.33%">
+						<div data-type="symbol"
+							 data-device="sz_WT"
+							 data-get="battery"
+							 data-states='["ok","low"]'
+							 data-icons='["fa-battery-4","fa-battery-1 fa-blink"]'
+							 data-colors='["green","firebrick"]'
+							 class="">
+						</div>
+						<div class="narrow">Thermostat
+						</div>
+					</td>
+					<td width="33.33%">
+						<div data-type="symbol"
+							 data-device="sz_HT"
+							 data-get="battery"
+							 data-states='["ok","low"]'
+							 data-icons='["fa-battery-4","fa-battery-1 fa-blink"]'
+							 data-colors='["green","firebrick"]'
+							 class="">
+						</div>
+						<div class="narrow">Heizung
+						</div>
+					</td>
+					<td width="33.33%">
+						<div data-type="symbol"
+							 data-device="sz_SC"
+							 data-get="battery"
+							 data-states='["ok","low"]'
+							 data-icons='["fa-battery-4","fa-battery-1 fa-blink"]'
+							 data-colors='["green","firebrick"]'
+							 class="">
+						</div>
+						<div class="narrow">Fenster
+						</div>
+					</td>
+				</tr>
+			</table>
+		</section>
+	</div>
+</body>
+</html>
