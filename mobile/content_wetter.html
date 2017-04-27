@@ -12,7 +12,7 @@
 					</td>
 					<td width="40%">
 						<div data-type="label"
-							 data-device="Wetter_Pro"
+							 data-device="Weather"
 							 data-get="temperature"
 							 data-limits='[-70,20,25]'
 							 data-colors='["#0088CC","green","firebrick"]'
@@ -22,7 +22,7 @@
 					</td>
 					<td width="10%">
 						<div data-type="klimatrend"
-							 data-device="Wetter_Pro"
+							 data-device="Weather"
 							 data-get="statTemperatureTendency"
 							 data-refperiod="1"
 							 class="large">
@@ -30,7 +30,7 @@
 					</td>
 					<td width="10%">
 						<div data-type="klimatrend"
-							 data-device="Wetter_Pro"
+							 data-device="Weather"
 							 data-get="statTemperatureTendency"
 							 data-refperiod="2"
 							 class="large">
@@ -48,7 +48,7 @@
 					</td>
 					<td width="40%">
 						<div data-type="label"
-							 data-device="Wetter_Pro"
+							 data-device="Weather"
 							 data-get="humidity"
 							 data-limits='[0,40,71]'
 							 data-colors='["#0088CC","green","firebrick"]'
@@ -58,7 +58,7 @@
 					</td>
 					<td width="10%">
 						<div data-type="klimatrend"
-							 data-device="Wetter_Pro"
+							 data-device="Weather"
 							 data-get="statHumidityTendency"
 							 data-refperiod="1"
 							 class="large">
@@ -66,44 +66,8 @@
 					</td>
 					<td width="10%">
 						<div data-type="klimatrend"
-							 data-device="Wetter_Pro"
+							 data-device="Weather"
 							 data-get="statHumidityTendency"
-							 data-refperiod="2"
-							 class="large">
-						</div>
-					</td>
-				</tr>
-			</table>
-		</section>
-		<section>
-			<table width="100%">
-				<tr>
-					<td width="40%">
-						<div class="large left-align">Taupunkt
-						</div>
-					</td>
-					<td width="40%">
-						<div data-type="label"
-							 data-device="Wetter_Pro"
-							 data-get="dewPoint"
-							 data-limits='[-73,18,28]'
-							 data-colors='["#0088CC","green","firebrick"]'
-							 data-unit="°C"
-							 class="big thin">
-						</div>
-					</td>
-					<td width="10%">
-						<div data-type="klimatrend"
-							 data-device="Wetter_Pro"
-							 data-get="statDewPointTendency"
-							 data-refperiod="1"
-							 class="large">
-						</div>
-					</td>
-					<td width="10%">
-						<div data-type="klimatrend"
-							 data-device="Wetter_Pro"
-							 data-get="statDewPointTendency"
 							 data-refperiod="2"
 							 class="large">
 						</div>
@@ -121,7 +85,7 @@
 					</td>
 					<td width="40%">
 						<div data-type="label"
-							 data-device="Wetter_Pro"
+							 data-device="Weather"
 							 data-get="pressure"
 							 data-limits='[0,1005,1015]'
 							 data-colors='["#0088CC","green","firebrick"]'
@@ -131,7 +95,7 @@
 					</td>
 					<td width="10%">
 						<div data-type="klimatrend"
-							 data-device="Wetter_Pro"
+							 data-device="Weather"
 							 data-get="statPressureTendency"
 							 data-refperiod="1"
 							 class="large">
@@ -139,7 +103,7 @@
 					</td>
 					<td width="10%">
 						<div data-type="klimatrend"
-							 data-device="Wetter_Pro"
+							 data-device="Weather"
 							 data-get="statPressureTendency"
 							 data-refperiod="2"
 							 class="large">
@@ -147,7 +111,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td>gemessen:
+					<td>
 					</td>
 					<td>
 						<div data-type="label"
@@ -190,8 +154,8 @@
 					</td>
 					<td width="21.66%">
 						<div data-type="label"
-							 data-device="Wetter_Pro"
-							 data-get="fc0_tempMin"
+							 data-device="Weather"
+							 data-get="fc1_low_c"
 							 data-limits='[-70,20,25]'
 							 data-colors='["#0088CC","green","firebrick"]'
 							 data-unit="°C"
@@ -200,8 +164,8 @@
 					</td>
 					<td width="21.66%">
 						<div data-type="label"
-							 data-device="Wetter_Pro"
-							 data-get="fc0_tempMax"
+							 data-device="Weather"
+							 data-get="fc1_high_c"
 							 data-limits='[-70,20,25]'
 							 data-colors='["#0088CC","green","firebrick"]'
 							 data-unit="°C"
@@ -210,10 +174,10 @@
 					</td>
 					<td width="21.66%">
 						<div data-type="weather"
-							 data-device="Wetter_Pro"
+							 data-device="Weather"
 							 data-get="weather"
 							 data-imageset="kleinklima"
-							 class="centered " 
+							 class="centered "
 							 style="width:70px;">
 						</div>
 					</td>
@@ -225,7 +189,7 @@
 					</td>
 					<td>
 						<div data-type="label"
-							 data-device="Wetter_Pro"
+							 data-device="Weather"
 							 data-get="weather"
 							 class="">
 						</div>
@@ -247,7 +211,7 @@
 					<tr>
 						<td>
 							<div data-type="label"
-								 data-device="Wetter_Pro"
+								 data-device="Weather"
 								 data-get="wind"
 								 data-unit="km/h"
 								 data-limits="[0, 20, 29, 39, 50, 62, 75, 89, 103, 117]"
@@ -256,8 +220,8 @@
 							</div>
 						</td>
 						<td>
-							<div data-type="wind_direction" 
-								 data-device="Wetter_Pro"
+							<div data-type="wind_direction"
+								 data-device="Weather"
 								 data-direction="windDir"
 								 data-speed="wind"
 								 data-fgcolor="#888"
@@ -280,16 +244,16 @@
 					<tr>
 						<td>
 							<div data-type="label"
-								 data-device="Wetter_Pro"
-								 data-get="fc0_chOfRainDay"
+								 data-device="Weather"
+								 data-get="fc1_chOfRainDay"
 								 data-limits='[0,40,80]'
 								 data-colors='["green","orange","firebrick"]'
 								 data-unit="%"
 								 class="large thin">
 							</div>
 							<div data-type="label"
-								 data-device="Wetter_Pro"
-								 data-get="fc0_rain"
+								 data-device="Weather"
+								 data-get="fc1_rain"
 								 data-limits='[0,10,20]'
 								 data-colors='["green","orange","firebrick"]'
 								 data-unit="mm"
@@ -298,7 +262,7 @@
 						</td>
 						<td>
 							<div data-type="label"
-								 data-device="Wetter_Pro"
+								 data-device="Weather"
 								 data-get="visibility"
 								 data-unit="km"
 								 class="large thin" >
@@ -318,24 +282,24 @@
 					<tr>
 						<td>
 							<div data-type="label"
-								 data-device="Wetter_Pro"
-								 data-get="fc0_sun"
+								 data-device="Weather"
+								 data-get="fc1_sun"
 								 data-limits='[0,40,80]'
 								 data-colors='["firebrick","orange","green"]'
 								 data-unit="%"
 								 class="large thin">
 							</div>
 							<div data-type="label"
-								 data-device="Wetter_Pro"
-								 data-get="fc0_rad"
+								 data-device="Weather"
+								 data-get="fc1_rad"
 								 data-unit="kWh/m²"
 								 class="large thin">
 							</div>
 						</td>
 						<td>
 							<div data-type="label"
-								 data-device="Wetter_Pro"
-								 data-get="fc0_uv"
+								 data-device="Weather"
+								 data-get="fc1_uv"
 								 data-limits="[0,4,8,11]"
 								 data-colors='["green","orange","firebrick","red"]'
 								 class="large thin">
@@ -345,670 +309,7 @@
 				</table>
 			</div>
 		</section>
-		<section id="sectionPollen">
-			<table width="100%">
-				<tr>
-					<td width="25%" rowspan="2">
-						<div class="large left-align">Pollen
-						</div>
-					</td>
-					<td width="25%">
-						<div onclick="$('html, body').animate({scrollTop: $('#sectionPollen').offset().top}, 500); if ($('#droppollen0').is(':hidden')) { $('#droppollen0').slideDown(500); } else { $('#droppollen0').slideUp(500); }"
-							 data-type="symbol"
-							 data-device="pollen0"
-							 data-get="Max"
-							 data-states='["0","1","2","3"]'
-							 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-							 data-colors='["#888","green","#aa6900","firebrick"]'
-							 class="big">
-						</div>
-					</td>
-					<td width="25%">
-						<div onclick="$('html, body').animate({scrollTop: $('#sectionPollen').offset().top}, 500); if ($('#droppollen1').is(':hidden')) { $('#droppollen1').slideDown(500); } else { $('#droppollen1').slideUp(500); }"
-							 data-type="symbol"
-							 data-device="pollen1"
-							 data-get="Max"
-							 data-states='["0","1","2","3"]'
-							 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-							 data-colors='["#888","green","#aa6900","firebrick"]'
-							 class="big">
-						</div>
-					</td>
-					<td width="25%">
-						<div onclick="$('html, body').animate({scrollTop: $('#sectionPollen').offset().top}, 500); if ($('#droppollen2').is(':hidden')) { $('#droppollen2').slideDown(500); } else { $('#droppollen2').slideUp(500); }"
-							 data-type="symbol"
-							 data-device="pollen2"
-							 data-get="Max"
-							 data-states='["0","1","2","3"]'
-							 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-							 data-colors='["#888","green","#aa6900","firebrick"]'
-							 class="big">
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td>Heute
-					</td>
-					<td>Morgen
-					</td>
-					<td>Übermorgen
-					</td>
-				</tr>
-			</table>
-		</section>
-		<div id="droppollen0">
-			<section>
-				<table width="100%">
-					<tr>
-						<td colspan="5">
-							<div class="large">Heute
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td width="20%">
-							<div data-type="symbol"
-								 data-device="pollen0"
-								 data-get="Beifuss"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-						<td width="20%">
-							<div data-type="symbol"
-								 data-device="pollen0"
-								 data-get="Birke"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-						<td width="20%">
-							<div data-type="symbol"
-								 data-device="pollen0"
-								 data-get="Buche"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-						<td width="20%">
-							<div data-type="symbol"
-								 data-device="pollen0"
-								 data-get="Erle"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-						<td width="20%">
-							<div data-type="symbol"
-								 data-device="pollen0"
-								 data-get="Esche"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td>Beifuß
-						</td>
-						<td>Birke
-						</td>
-						<td>Buche
-						</td>
-						<td>Erle
-						</td>
-						<td>Esche
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<div data-type="symbol"
-								 data-device="pollen0"
-								 data-get="Flieder"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-						<td>
-							<div data-type="symbol"
-								 data-device="pollen0"
-								 data-get="Gerste"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-						<td>
-							<div data-type="symbol"
-								 data-device="pollen0"
-								 data-get="Graeser"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-						<td>
-							<div data-type="symbol"
-								 data-device="pollen0"
-								 data-get="Hasel"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-						<td>
-							<div data-type="symbol"
-								 data-device="pollen0"
-								 data-get="Pappel"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td>Flieder
-						</td>
-						<td>Gerste
-						</td>
-						<td>Gräser
-						</td>
-						<td>Hasel
-						</td>
-						<td>Pappel
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<div data-type="symbol"
-								 data-device="pollen0"
-								 data-get="Platane"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-						<td>
-							<div data-type="symbol"
-								 data-device="pollen0"
-								 data-get="Raps"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-						<td>
-							<div data-type="symbol"
-								 data-device="pollen0"
-								 data-get="Roggen"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-						<td>
-							<div data-type="symbol"
-								 data-device="pollen0"
-								 data-get="Weide"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-						<td>
-							<div data-type="symbol"
-								 data-device="pollen0"
-								 data-get="Weizen"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td>Platane
-						</td>
-						<td>Raps
-						</td>
-						<td>Roggen
-						</td>
-						<td>Weide
-						</td>
-						<td>Weizen
-						</td>
-					</tr>
-				</table>
-			</section>
-		</div>
-		<div id="droppollen1">
-			<section>
-				<table width="100%">
-					<tr>
-						<td colspan="5">
-							<div class="large">Morgen
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td width="20%">
-							<div data-type="symbol"
-								 data-device="pollen1"
-								 data-get="Beifuss"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-						<td width="20%">
-							<div data-type="symbol"
-								 data-device="pollen1"
-								 data-get="Birke"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-						<td width="20%">
-							<div data-type="symbol"
-								 data-device="pollen1"
-								 data-get="Buche"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-						<td width="20%">
-							<div data-type="symbol"
-								 data-device="pollen1"
-								 data-get="Erle"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-						<td width="20%">
-							<div data-type="symbol"
-								 data-device="pollen1"
-								 data-get="Esche"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td>Beifuß
-						</td>
-						<td>Birke
-						</td>
-						<td>Buche
-						</td>
-						<td>Erle
-						</td>
-						<td>Esche
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<div data-type="symbol"
-								 data-device="pollen1"
-								 data-get="Flieder"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-						<td>
-							<div data-type="symbol"
-								 data-device="pollen1"
-								 data-get="Gerste"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-						<td>
-							<div data-type="symbol"
-								 data-device="pollen1"
-								 data-get="Graeser"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-						<td>
-							<div data-type="symbol"
-								 data-device="pollen1"
-								 data-get="Hasel"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-						<td>
-							<div data-type="symbol"
-								 data-device="pollen1"
-								 data-get="Pappel"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td>Flieder
-						</td>
-						<td>Gerste
-						</td>
-						<td>Gräser
-						</td>
-						<td>Hasel
-						</td>
-						<td>Pappel
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<div data-type="symbol"
-								 data-device="pollen1"
-								 data-get="Platane"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-						<td>
-							<div data-type="symbol"
-								 data-device="pollen1"
-								 data-get="Raps"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-						<td>
-							<div data-type="symbol"
-								 data-device="pollen1"
-								 data-get="Roggen"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-						<td>
-							<div data-type="symbol"
-								 data-device="pollen1"
-								 data-get="Weide"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-						<td>
-							<div data-type="symbol"
-								 data-device="pollen1"
-								 data-get="Weizen"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td>Platane
-						</td>
-						<td>Raps
-						</td>
-						<td>Roggen
-						</td>
-						<td>Weide
-						</td>
-						<td>Weizen
-						</td>
-					</tr>
-				</table>
-			</section>
-		</div>
-		<div id="droppollen2">
-			<section>
-				<table width="100%">
-					<tr>
-						<td colspan="5">
-							<div class="large">Übermorgen
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td width="20%">
-							<div data-type="symbol"
-								 data-device="pollen2"
-								 data-get="Beifuss"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-						<td width="20%">
-							<div data-type="symbol"
-								 data-device="pollen2"
-								 data-get="Birke"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-						<td width="20%">
-							<div data-type="symbol"
-								 data-device="pollen2"
-								 data-get="Buche"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-						<td width="20%">
-							<div data-type="symbol"
-								 data-device="pollen2"
-								 data-get="Erle"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-						<td width="20%">
-							<div data-type="symbol"
-								 data-device="pollen2"
-								 data-get="Esche"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td>Beifuß
-						</td>
-						<td>Birke
-						</td>
-						<td>Buche
-						</td>
-						<td>Erle
-						</td>
-						<td>Esche
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<div data-type="symbol"
-								 data-device="pollen2"
-								 data-get="Flieder"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-						<td>
-							<div data-type="symbol"
-								 data-device="pollen2"
-								 data-get="Gerste"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-						<td>
-							<div data-type="symbol"
-								 data-device="pollen2"
-								 data-get="Graeser"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-						<td>
-							<div data-type="symbol"
-								 data-device="pollen2"
-								 data-get="Hasel"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-						<td>
-							<div data-type="symbol"
-								 data-device="pollen2"
-								 data-get="Pappel"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td>Flieder
-						</td>
-						<td>Gerste
-						</td>
-						<td>Gräser
-						</td>
-						<td>Hasel
-						</td>
-						<td>Pappel
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<div data-type="symbol"
-								 data-device="pollen2"
-								 data-get="Platane"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-						<td>
-							<div data-type="symbol"
-								 data-device="pollen2"
-								 data-get="Raps"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-						<td>
-							<div data-type="symbol"
-								 data-device="pollen2"
-								 data-get="Roggen"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-						<td>
-							<div data-type="symbol"
-								 data-device="pollen2"
-								 data-get="Weide"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-						<td>
-							<div data-type="symbol"
-								 data-device="pollen2"
-								 data-get="Weizen"
-								 data-states='["0","1","2","3"]'
-								 data-icons='["fa-forumbee","fa-forumbee","fa-forumbee","fa-forumbee"]'
-								 data-colors='["#888","green","#aa6900","firebrick"]'
-								 class="big">
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td>Platane
-						</td>
-						<td>Raps
-						</td>
-						<td>Roggen
-						</td>
-						<td>Weide
-						</td>
-						<td>Weizen
-						</td>
-					</tr>
-				</table>
-			</section>
-		</div>
-		<section id="sectionVorher">
+			<section id="sectionVorher">
 			<table width="100%">
 				<tr>
 					<td colspan="4">
@@ -1021,51 +322,30 @@
 						<div class="small inline">Morgen,
 						</div>
 						<div data-type="label"
-							 data-device="Wetter_Pro"
-							 data-get="fc1_date"
-							 data-substitution="toDate().ddmm()"
-							 class="small inline">
-						</div>
-					</td>
-					<td width="25%">
-						<div data-type="label"
-							 data-device="Wetter_Pro"
+							 data-device="Weather"
 							 data-get="fc2_date"
-							 data-substitution="toDate().ee()+','"
-							 class="small inline">
-						</div>
-						<div data-type="label"
-							 data-device="Wetter_Pro"
-							 data-get="fc2_date"
-							 data-substitution="toDate().ddmm()"
+
 							 class="small inline">
 						</div>
 					</td>
 					<td width="25%">
 						<div data-type="label"
-							 data-device="Wetter_Pro"
+							 data-device="Weather"
 							 data-get="fc3_date"
-							 data-substitution="toDate().ee()+','"
-							 class="small inline">
-						</div>
-						<div data-type="label"
-							 data-device="Wetter_Pro"
-							 data-get="fc3_date"
-							 data-substitution="toDate().ddmm()"
 							 class="small inline">
 						</div>
 					</td>
 					<td width="25%">
 						<div data-type="label"
-							 data-device="Wetter_Pro"
+							 data-device="Weather"
 							 data-get="fc4_date"
-							 data-substitution="toDate().ee()+','"
 							 class="small inline">
 						</div>
+					</td>
+					<td width="25%">
 						<div data-type="label"
-							 data-device="Wetter_Pro"
-							 data-get="fc4_date"
-							 data-substitution="toDate().ddmm()"
+							 data-device="Weather"
+							 data-get="fc5_date"
 							 class="small inline">
 						</div>
 					</td>
@@ -1074,40 +354,40 @@
 					<td>
 						<div onclick="$('html, body').animate({scrollTop: $('#sectionVorher').offset().top}, 500); if ($('#dropvorher1').is(':hidden')) { $('#dropvorher1').slideDown(500); } else { $('#dropvorher1').slideUp(500); }"
 							 data-type="weather"
-							 data-device="Wetter_Pro"
-							 data-get="fc1_weatherDay"
+							 data-device="Weather"
+							 data-get="fc1_condition"
 							 data-imageset="kleinklima"
-							 class="centered" 
+							 class="centered"
 							 style="width:70px;">
 						</div>
 					</td>
 					<td>
 						<div onclick="$('html, body').animate({scrollTop: $('#sectionVorher').offset().top}, 500); if ($('#dropvorher2').is(':hidden')) { $('#dropvorher2').slideDown(500); } else { $('#dropvorher2').slideUp(500); }"
 							 data-type="weather"
-							 data-device="Wetter_Pro"
-							 data-get="fc2_weatherDay"
+							 data-device="Weather"
+							 data-get="fc2_condition"
 							 data-imageset="kleinklima"
-							 class="centered" 
+							 class="centered"
 							 style="width:70px;">
 						</div>
 					</td>
 					<td>
 						<div onclick="$('html, body').animate({scrollTop: $('#sectionVorher').offset().top}, 500); if ($('#dropvorher3').is(':hidden')) { $('#dropvorher3').slideDown(500); } else { $('#dropvorher3').slideUp(500); }"
 							 data-type="weather"
-							 data-device="Wetter_Pro"
-							 data-get="fc3_weatherDay"
+							 data-device="Weather"
+							 data-get="fc3_condition"
 							 data-imageset="kleinklima"
-							 class="centered" 
+							 class="centered"
 							 style="width:70px;">
 						</div>
 					</td>
 					<td>
 						<div onclick="$('html, body').animate({scrollTop: $('#sectionVorher').offset().top}, 500); if ($('#dropvorher4').is(':hidden')) { $('#dropvorher4').slideDown(500); } else { $('#dropvorher4').slideUp(500); }"
 							 data-type="weather"
-							 data-device="Wetter_Pro"
-							 data-get="fc4_weatherDay"
+							 data-device="Weather"
+							 data-get="fc4_condition"
 							 data-imageset="kleinklima"
-							 class="centered" 
+							 class="centered"
 							 style="width:70px;">
 						</div>
 					</td>
@@ -1115,29 +395,29 @@
 				<tr>
 					<td>
 						<div data-type="label"
-							 data-device="Wetter_Pro"
-							 data-get="fc1_weatherDay"
+							 data-device="Weather"
+							 data-get="fc1_condition"
 							 class="small">
 						</div>
 					</td>
 					<td>
 						<div data-type="label"
-							 data-device="Wetter_Pro"
-							 data-get="fc2_weatherDay"
+							 data-device="Weather"
+							 data-get="fc2_condition"
 							 class="small">
 						</div>
 					</td>
 					<td>
 						<div data-type="label"
-							 data-device="Wetter_Pro"
-							 data-get="fc3_weatherDay"
+							 data-device="Weather"
+							 data-get="fc3_condition"
 							 class="small">
 						</div>
 					</td>
 					<td>
 						<div data-type="label"
-							 data-device="Wetter_Pro"
-							 data-get="fc4_weatherDay"
+							 data-device="Weather"
+							 data-get="fc4_condition"
 							 class="small">
 						</div>
 					</td>
@@ -1145,8 +425,8 @@
 				<tr>
 					<td>
 						<div data-type="label"
-							 data-device="Wetter_Pro"
-							 data-get="fc1_tempMax"
+							 data-device="Weather"
+							 data-get="fc1_high_c"
 							 data-limits='[-70,20,25]'
 							 data-colors='["#0088CC","green","firebrick"]'
 							 data-unit="°C"
@@ -1155,8 +435,8 @@
 					</td>
 					<td>
 						<div data-type="label"
-							 data-device="Wetter_Pro"
-							 data-get="fc2_tempMax"
+							 data-device="Weather"
+							 data-get="fc2_high_c"
 							 data-limits='[-70,20,25]'
 							 data-colors='["#0088CC","green","firebrick"]'
 							 data-unit="°C"
@@ -1165,8 +445,8 @@
 					</td>
 					<td>
 						<div data-type="label"
-							 data-device="Wetter_Pro"
-							 data-get="fc3_tempMax"
+							 data-device="Weather"
+							 data-get="fc3_high_c"
 							 data-limits='[-70,20,25]'
 							 data-colors='["#0088CC","green","firebrick"]'
 							 data-unit="°C"
@@ -1175,8 +455,8 @@
 					</td>
 					<td>
 						<div data-type="label"
-							 data-device="Wetter_Pro"
-							 data-get="fc4_tempMax"
+							 data-device="Weather"
+							 data-get="fc4_high_c"
 							 data-limits='[-70,20,25]'
 							 data-colors='["#0088CC","green","firebrick"]'
 							 data-unit="°C"
@@ -1194,9 +474,8 @@
 							<div class="large">Morgen,
 							</div>
 							<div data-type="label"
-								 data-device="Wetter_Pro"
+								 data-device="Weather"
 								 data-get="fc1_date"
-								 data-substitution="toDate().ddmm()"
 								 class="large">
 							</div>
 						</td>
@@ -1213,8 +492,8 @@
 					<tr>
 						<td>
 						<div data-type="label"
-							 data-device="Wetter_Pro"
-							 data-get="fc1_tempMin"
+							 data-device="Weather"
+							 data-get="fc1_low_c"
 							 data-limits='[-70,20,25]'
 							 data-colors='["#0088CC","green","firebrick"]'
 							 data-unit="°C"
@@ -1223,8 +502,8 @@
 						</td>
 						<td>
 						<div data-type="label"
-							 data-device="Wetter_Pro"
-							 data-get="fc1_tempMax"
+							 data-device="Weather"
+							 data-get="fc1_high_c"
 							 data-limits='[-70,20,25]'
 							 data-colors='["#0088CC","green","firebrick"]'
 							 data-unit="°C"
@@ -1245,7 +524,7 @@
 					<tr>
 						<td>
 							<div data-type="label"
-								 data-device="Wetter_Pro"
+								 data-device="Weather"
 								 data-get="fc1_chOfRainDay"
 								 data-limits='[0,40,80]'
 								 data-colors='["green","orange","firebrick"]'
@@ -1253,7 +532,7 @@
 								 class="large thin">
 							</div>
 							<div data-type="label"
-								 data-device="Wetter_Pro"
+								 data-device="Weather"
 								 data-get="fc1_rain"
 								 data-limits='[0,10,20]'
 								 data-colors='["green","orange","firebrick"]'
@@ -1263,7 +542,7 @@
 						</td>
 						<td>
 							<div data-type="label"
-								 data-device="Wetter_Pro"
+								 data-device="Weather"
 								 data-get="fc1_chOfRainNight"
 								 data-limits='[0,40,80]'
 								 data-colors='["green","orange","firebrick"]'
@@ -1285,7 +564,7 @@
 					<tr>
 						<td>
 							<div data-type="label"
-								 data-device="Wetter_Pro"
+								 data-device="Weather"
 								 data-get="fc1_sun"
 								 data-limits='[0,40,80]'
 								 data-colors='["firebrick","orange","green"]'
@@ -1293,7 +572,7 @@
 								 class="large thin">
 							</div>
 							<div data-type="label"
-								 data-device="Wetter_Pro"
+								 data-device="Weather"
 								 data-get="fc1_rad"
 								 data-unit="kWh/m²"
 								 class="large thin">
@@ -1301,7 +580,7 @@
 						</td>
 						<td>
 							<div data-type="label"
-								 data-device="Wetter_Pro"
+								 data-device="Weather"
 								 data-get="fc1_uv"
 								 data-limits="[0,4,8,11]"
 								 data-colors='["green","orange","firebrick","red"]'
@@ -1318,15 +597,8 @@
 					<tr>
 						<td colspan="2">
 							<div data-type="label"
-								 data-device="Wetter_Pro"
+								 data-device="Weather"
 								 data-get="fc2_date"
-								 data-substitution="toDate().eeee()+','"
-								 class="large">
-							</div>
-							<div data-type="label"
-								 data-device="Wetter_Pro"
-								 data-get="fc2_date"
-								 data-substitution="toDate().ddmm()"
 								 class="large">
 							</div>
 						</td>
@@ -1343,8 +615,8 @@
 					<tr>
 						<td>
 						<div data-type="label"
-							 data-device="Wetter_Pro"
-							 data-get="fc2_tempMin"
+							 data-device="Weather"
+							 data-get="fc2_low_c"
 							 data-limits='[-70,20,25]'
 							 data-colors='["#0088CC","green","firebrick"]'
 							 data-unit="°C"
@@ -1353,8 +625,8 @@
 						</td>
 						<td>
 						<div data-type="label"
-							 data-device="Wetter_Pro"
-							 data-get="fc2_tempMax"
+							 data-device="Weather"
+							 data-get="fc2_high_c"
 							 data-limits='[-70,20,25]'
 							 data-colors='["#0088CC","green","firebrick"]'
 							 data-unit="°C"
@@ -1375,7 +647,7 @@
 					<tr>
 						<td>
 							<div data-type="label"
-								 data-device="Wetter_Pro"
+								 data-device="Weather"
 								 data-get="fc2_chOfRainDay"
 								 data-limits='[0,40,80]'
 								 data-colors='["green","orange","firebrick"]'
@@ -1383,7 +655,7 @@
 								 class="large thin">
 							</div>
 							<div data-type="label"
-								 data-device="Wetter_Pro"
+								 data-device="Weather"
 								 data-get="fc2_rain"
 								 data-limits='[0,10,20]'
 								 data-colors='["green","orange","firebrick"]'
@@ -1393,7 +665,7 @@
 						</td>
 						<td>
 							<div data-type="label"
-								 data-device="Wetter_Pro"
+								 data-device="Weather"
 								 data-get="fc2_chOfRainNight"
 								 data-limits='[0,40,80]'
 								 data-colors='["green","orange","firebrick"]'
@@ -1415,7 +687,7 @@
 					<tr>
 						<td>
 							<div data-type="label"
-								 data-device="Wetter_Pro"
+								 data-device="Weather"
 								 data-get="fc2_sun"
 								 data-limits='[0,40,80]'
 								 data-colors='["firebrick","orange","green"]'
@@ -1423,7 +695,7 @@
 								 class="large thin">
 							</div>
 							<div data-type="label"
-								 data-device="Wetter_Pro"
+								 data-device="Weather"
 								 data-get="fc2_rad"
 								 data-unit="kWh/m²"
 								 class="large thin">
@@ -1431,7 +703,7 @@
 						</td>
 						<td>
 							<div data-type="label"
-								 data-device="Wetter_Pro"
+								 data-device="Weather"
 								 data-get="fc2_uv"
 								 data-limits="[0,4,8,11]"
 								 data-colors='["green","orange","firebrick","red"]'
@@ -1448,15 +720,8 @@
 					<tr>
 						<td colspan="2">
 							<div data-type="label"
-								 data-device="Wetter_Pro"
+								 data-device="Weather"
 								 data-get="fc3_date"
-								 data-substitution="toDate().eeee()+','"
-								 class="large">
-							</div>
-							<div data-type="label"
-								 data-device="Wetter_Pro"
-								 data-get="fc3_date"
-								 data-substitution="toDate().ddmm()"
 								 class="large">
 							</div>
 						</td>
@@ -1473,8 +738,8 @@
 					<tr>
 						<td>
 						<div data-type="label"
-							 data-device="Wetter_Pro"
-							 data-get="fc3_tempMin"
+							 data-device="Weather"
+							 data-get="fc3_low_c"
 							 data-limits='[-70,20,25]'
 							 data-colors='["#0088CC","green","firebrick"]'
 							 data-unit="°C"
@@ -1483,8 +748,8 @@
 						</td>
 						<td>
 						<div data-type="label"
-							 data-device="Wetter_Pro"
-							 data-get="fc3_tempMax"
+							 data-device="Weather"
+							 data-get="fc3_high_c"
 							 data-limits='[-70,20,25]'
 							 data-colors='["#0088CC","green","firebrick"]'
 							 data-unit="°C"
@@ -1505,7 +770,7 @@
 					<tr>
 						<td>
 							<div data-type="label"
-								 data-device="Wetter_Pro"
+								 data-device="Weather"
 								 data-get="fc3_chOfRainDay"
 								 data-limits='[0,40,80]'
 								 data-colors='["green","orange","firebrick"]'
@@ -1513,7 +778,7 @@
 								 class="large thin">
 							</div>
 							<div data-type="label"
-								 data-device="Wetter_Pro"
+								 data-device="Weather"
 								 data-get="fc3_rain"
 								 data-limits='[0,10,20]'
 								 data-colors='["green","orange","firebrick"]'
@@ -1523,7 +788,7 @@
 						</td>
 						<td>
 							<div data-type="label"
-								 data-device="Wetter_Pro"
+								 data-device="Weather"
 								 data-get="fc3_chOfRainNight"
 								 data-limits='[0,40,80]'
 								 data-colors='["green","orange","firebrick"]'
@@ -1545,7 +810,7 @@
 					<tr>
 						<td>
 							<div data-type="label"
-								 data-device="Wetter_Pro"
+								 data-device="Weather"
 								 data-get="fc3_sun"
 								 data-limits='[0,40,80]'
 								 data-colors='["firebrick","orange","green"]'
@@ -1553,7 +818,7 @@
 								 class="large thin">
 							</div>
 							<div data-type="label"
-								 data-device="Wetter_Pro"
+								 data-device="Weather"
 								 data-get="fc3_rad"
 								 data-unit="kWh/m²"
 								 class="large thin">
@@ -1561,7 +826,7 @@
 						</td>
 						<td>
 							<div data-type="label"
-								 data-device="Wetter_Pro"
+								 data-device="Weather"
 								 data-get="fc3_uv"
 								 data-limits="[0,4,8,11]"
 								 data-colors='["green","orange","firebrick","red"]'
@@ -1578,15 +843,8 @@
 					<tr>
 						<td colspan="2">
 							<div data-type="label"
-								 data-device="Wetter_Pro"
+								 data-device="Weather"
 								 data-get="fc4_date"
-								 data-substitution="toDate().eeee()+','"
-								 class="large">
-							</div>
-							<div data-type="label"
-								 data-device="Wetter_Pro"
-								 data-get="fc4_date"
-								 data-substitution="toDate().ddmm()"
 								 class="large">
 							</div>
 						</td>
@@ -1603,8 +861,8 @@
 					<tr>
 						<td>
 						<div data-type="label"
-							 data-device="Wetter_Pro"
-							 data-get="fc4_tempMin"
+							 data-device="Weather"
+							 data-get="fc4_low_c"
 							 data-limits='[-70,20,25]'
 							 data-colors='["#0088CC","green","firebrick"]'
 							 data-unit="°C"
@@ -1613,8 +871,8 @@
 						</td>
 						<td>
 						<div data-type="label"
-							 data-device="Wetter_Pro"
-							 data-get="fc4_tempMax"
+							 data-device="Weather"
+							 data-get="fc4_high_c"
 							 data-limits='[-70,20,25]'
 							 data-colors='["#0088CC","green","firebrick"]'
 							 data-unit="°C"
@@ -1635,7 +893,7 @@
 					<tr>
 						<td>
 							<div data-type="label"
-								 data-device="Wetter_Pro"
+								 data-device="Weather"
 								 data-get="fc4_chOfRainDay"
 								 data-limits='[0,40,80]'
 								 data-colors='["green","orange","firebrick"]'
@@ -1643,7 +901,7 @@
 								 class="large thin">
 							</div>
 							<div data-type="label"
-								 data-device="Wetter_Pro"
+								 data-device="Weather"
 								 data-get="fc4_rain"
 								 data-limits='[0,10,20]'
 								 data-colors='["green","orange","firebrick"]'
@@ -1653,7 +911,7 @@
 						</td>
 						<td>
 							<div data-type="label"
-								 data-device="Wetter_Pro"
+								 data-device="Weather"
 								 data-get="fc4_chOfRainNight"
 								 data-limits='[0,40,80]'
 								 data-colors='["green","orange","firebrick"]'
@@ -1675,7 +933,7 @@
 					<tr>
 						<td>
 							<div data-type="label"
-								 data-device="Wetter_Pro"
+								 data-device="Weather"
 								 data-get="fc4_sun"
 								 data-limits='[0,40,80]'
 								 data-colors='["firebrick","orange","green"]'
@@ -1683,7 +941,7 @@
 								 class="large thin">
 							</div>
 							<div data-type="label"
-								 data-device="Wetter_Pro"
+								 data-device="Weather"
 								 data-get="fc4_rad"
 								 data-unit="kWh/m²"
 								 class="large thin">
@@ -1691,7 +949,7 @@
 						</td>
 						<td>
 							<div data-type="label"
-								 data-device="Wetter_Pro"
+								 data-device="Weather"
 								 data-get="fc4_uv"
 								 data-limits="[0,4,8,11]"
 								 data-colors='["green","orange","firebrick","red"]'
