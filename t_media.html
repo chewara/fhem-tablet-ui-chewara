@@ -19,7 +19,7 @@
            <li><div data-type="push" data-device="harmony" data-set-on="activity Musik.hören" data-icon="fa-music"></div></li>
            <li><div data-type="push" data-device="harmony" data-set-on="activity Fernsehen" data-icon="fa-tv"></div></li>
           </ul>
-         </div>
+         </div><br>
            <div data-type="label">Mediathek wählen</div>
          <div data-type="select" data-device="harmony" data-get="activity"  data-set="activity"
           data-items='["Fernsehen","Kodi","Apple.tv","Fire.TV.sehen","Musik.hören","PowerOff"]'></div>
@@ -28,7 +28,7 @@
             <header>KODI Rechner</header>
             <br>
                 <div data-type="push" data-fhem-cmd="set KODIPIWOL on" data-icon="fa-toggle-on" data-device="KODI_PI" data-get="STATE" data-off-background-color="semiblue" data-on-background-color="semiblue" data-on-color="blue" data-off-color="lightblue" class="small semiblue shadow"></div>
-                <div data-type="label" class="small shadow">Einschalten</div>
+                <div data-type="label" class="small shadow">Einschalten</div><br>
                 <div data-type="push" data-fhem-cmd="set KODI_PI reboot" data-icon="fa-repeat" data-off-background-color="semiblue" data-on-background-color="semiblue" data-on-color="blue" data-off-color="lightblue" class="small semiblue shadow"></div>
                 <div data-type="label" class="small shadow">Neustart</div>
           </li>
@@ -63,7 +63,7 @@
               <br>
               <div data-type="switch"	class="inline green" data-icon="fa-power-off" data-device='DENON2'	data-get-on="on" data-get-off="off"  data-on-color="#37b11b"></div>
               <div data-type="select" data-device="DENON2" 	class="inline green" data-items='["Cbl/Sat","DVD","Blu-Ray","Game","Mediaplayer","TV","Tuner","Airplay","Spotify","Usb/iPod","Bluetooth"]' data-get="input" data-set="input"></div>
-              Sender <div data-type="select" class="inline green" data-device="DENON2" data-items='["1","2","3","4","5","6","7","8","9"]'  data-alias='["91,4 BR","96,3 Jam","94,3 RS2","KissFM","FluxFM","Fritz","Energy","104,6 RTL","105,5 Spree"]' data-get="tunerPreset" data-set="tunerPreset"></div>
+              Sender <div data-type="select" class="inline green" data-device="DENON2" data-items='["1","2","3","4","5","6","7","8","9"]'  data-alias='["91,4 BR","96,3 Jam","94,3 RS2","KissFM","FluxFM","Fritz","Energy","104,6 RTL","105,5 Spree"]' data-get="tunerPreset" data-set="tunerPreset"></div><br><br><br>
             <div class="tiny" class="inline" data-type="volume" data-max="68" data-device='DENON2' data-get='volume' data-set='volume'></div>
             </li>
           <li data-row="7" data-col="2" data-sizex="3" data-sizey="2" class="semitransparent">
