@@ -6,13 +6,16 @@
 <div class="gridster ">
 <ul>
 <li data-row="1" data-col="1" data-sizex="1" data-sizey="5" data-template="menu.html" class="bg-mint "></li>
-  <li data-row="1" data-col="2" data-sizex="1" data-sizey="2" class="semitransparent">
+  <li data-row="1" data-col="2" data-sizex="1" data-sizey="1" class="semitransparent">
    <header>Kinderzimmer</header>
     <div data-type="label" data-pre-text="aktuell " data-limits='[10,17,20,22]' data-classes='["blue","yellow","green","red"]'
    data-device="Kinderzimmerheizung" data-get="temperature" class="large cell bold squareborder" data-unit="°C"> </div>
    <div data-type="spinner" data-device="Kinderzimmerheizung" data-get="desiredTemperature" data-set="desiredTemperature"
    data-height="30" data-width="111" data-step="0.5" data-min="10" data-max="25" data-unit="&deg;" class="valueonly centered green"></div>
-     <br>
+    </li>
+ <li data-row="2" data-col="2" data-sizex="1" data-sizey="1" class="semitransparent">
+   <header>Kinderzimmer Licht</header>
+   <br>
    <div data-type="dimmer" data-device="HUEDevice2" data-get="onoff" data-get-on="1" data-get-off="0" data-set=""
    data-set-on="on" data-set-off="off" data-dim="pct">
   </div>
@@ -20,23 +23,27 @@
    <div data-type="slider" data-device='HUEDevice2' data-get="pct" data-set="pct"  data-min="0" data-max="100" data-width="100" class="tab centered value horizontal">
    </div>
  </li>
-  <li data-row="1" data-col="3" data-sizex="1" data-sizey="2" class="semitransparent">
+  <li data-row="1" data-col="3" data-sizex="1" data-sizey="1" class="semitransparent">
    <header> Schlafzimmer </header>
    <div data-type="label" data-pre-text="aktuell " data-limits='[10,17,20,22]' data-classes='["blue","yellow","green","red"]'
    data-device="Schlafzimmerheizung" data-get="temperature" class="large cell bold squareborder" data-unit="°C"> </div>
    <div data-type="spinner" data-device="Schlafzimmerheizung" data-get="desiredTemperature" data-set="desiredTemperature"
    data-height="30" data-width="111" data-step="0.5" data-min="10" data-max="25" data-unit="&deg;" class="valueonly centered green"></div>
-   <br>
-   <div data-type="dimmer" data-device="HUEDevice1" data-get="onoff" data-get-on="1" data-get-off="0" data-set=""
-  data-set-on="on" data-set-off="off" data-dim="pct"></div>
+   <div  >
+    <div data-type="label" data-device="LaCrosse_20" data-get="temperature" data-unit="°C / " class="big inline thin"> Temperatur</div>
+    <div data-type="label" data-device="LaCrosse_20" data-get="humidity" data-unit="%" class="big inline thin"> Luftfeuchte</div>
+         </div>
+</li>
+<li data-row="2" data-col="3" data-sizex="1" data-sizey="1" class="semitransparent">
+  <header>Schlafzimmer Licht</header>
   <br>
-   <div data-type="slider" data-device='HUEDevice1' data-get="pct" data-set="pct"  data-min="0" data-max="100" data-width="100" class="tab centered value horizontal">
-   </div>
+  <div data-type="dimmer" data-device="HUEDevice1" data-get="onoff" data-get-on="1" data-get-off="0" data-set=""
+ data-set-on="on" data-set-off="off" data-dim="pct"></div>
  <br>
-  <div  >
-   <div data-type="label" data-device="LaCrosse_20" data-get="temperature" data-unit="°C / " class="big inline thin"> Temperatur</div>
-   <div data-type="label" data-device="LaCrosse_20" data-get="humidity" data-unit="%" class="big inline thin"> Luftfeuchte</div>
-        </div></li>
+  <div data-type="slider" data-device='HUEDevice1' data-get="pct" data-set="pct"  data-min="0" data-max="100" data-width="100" class="tab centered value horizontal">
+  </div>
+
+</li>
   <li data-row="1" data-col="4" data-sizex="1" data-sizey="1" class="semitransparent">
   <header>  Esszimmer </header>
    <div data-type="label" data-pre-text="aktuell " data-limits='[10,17,20,22]' data-classes='["blue","yellow","green","red"]'
@@ -45,18 +52,17 @@
    data-height="30" data-width="111" data-step="0.5" data-min="10" data-max="25" data-unit="&deg;" class="valueonly centered green"></div>
     <br>
    </li>
-  <li data-row="1" data-col="5" data-sizex="1" data-sizey="2" class="semitransparent">
+  <li data-row="1" data-col="5" data-sizex="1" data-sizey="1" class="semitransparent">
    <header> Wohnzimmer </header>
    <div data-type="label" data-pre-text="aktuell " data-limits='[10,17,20,22]' data-classes='["blue","yellow","green","red"]'
    data-device="Wohnzimmerheizung" data-get="temperature" class="large cell bold squareborder" data-unit="°C"> </div>
    <div data-type="spinner" data-device="Wohnzimmerheizung" data-get="desiredTemperature" data-set="desiredTemperature"
    data-height="30" data-width="111" data-step="0.5" data-min="10" data-max="25" data-unit="&deg;" class="valueonly centered green"></div>
    <div class="cell">
-     <br>
     <div data-type="label" data-device="LaCrosse_32" data-get="temperature" data-unit="°C / " class="big inline thin"> Temperatur</div>
     <div data-type="label" data-device="LaCrosse_32" data-get="humidity" data-unit="%" class="big inline thin"> Luftfeuchte</div>
          </div>
-   </li>
+           </li>
   <li data-row="1" data-col="6" data-sizex="1" data-sizey="1" class="semitransparent">
     <header>Badheizung </header>
    <div data-type="label" data-pre-text="aktuell " data-limits='[10,17,20,22]' data-classes='["blue","yellow","green","red"]'
@@ -71,29 +77,30 @@
    <div data-type="switch" data-device="SchreibtischSek"></div>
      15 minuten an: <div data-type="push" data-device="SchreibtischSek" data-set-on="on-for-timer 900" ></div>
   </li>
+  <li data-row="2" data-col="5" data-sizex="1" data-sizey="2" class="semitransparent">
+       <header> Wohnzimmer Media </header><br>
+       <div data-type="circlemenu">
+     <ul>
+      <li><div data-type="push" data-icon="fa-play"></div></li>
+      <li><div data-type="push" data-device="harmony" data-set-on="activity Kodi" data-icon="fa-play-circle-o"></div></li>
+      <li><div data-type="push" data-device="harmony" data-set-on="activity Apple.tv" data-icon="fa-apple"></div></li>
+      <li><div data-type="push" data-device="harmony" data-set-on="activity Fire.TV.sehen" data-icon="fa-amazon"></div></li>
+      <li><div data-type="push" data-device="harmony" data-set-on="activity PowerOff" data-icon="fa-stop"></div></li>
+      <li><div data-type="push" data-device="harmony" data-set-on="activity Musik.hören" data-icon="fa-music"></div></li>
+      <li><div data-type="push" data-device="harmony" data-set-on="activity Fernsehen" data-icon="fa-tv"></div></li>
+     </ul>
+    </div>
+    <div>Mediathek</div>
+    <div data-type="label">wählen</div>
+    <div data-type="select"
+     data-device="harmony"
+     data-items='["Fernsehen","Kodi","Apple.tv","Fire.TV.sehen","Musik.hören","PowerOff"]'
+     data-get="activity"
+     data-set="activity"></div><br><br>
+      <div class="small" data-type="volume" data-device='DENON2' data-get='volume' data-set='volume'></div>
+  </li>
   <li data-row="2" data-col="6" data-sizex="1" data-sizey="2" class="semitransparent">
-   <header> Wohnzimmer Media </header>
-  </br>
-   <div data-type="circlemenu">
- <ul>
-  <li><div data-type="push" data-icon="fa-play"></div></li>
-  <li><div data-type="push" data-device="harmony" data-set-on="activity Kodi" data-icon="fa-play-circle-o"></div></li>
-  <li><div data-type="push" data-device="harmony" data-set-on="activity Apple.tv" data-icon="fa-apple"></div></li>
-  <li><div data-type="push" data-device="harmony" data-set-on="activity Fire.TV.sehen" data-icon="fa-amazon"></div></li>
-  <li><div data-type="push" data-device="harmony" data-set-on="activity PowerOff" data-icon="fa-stop"></div></li>
-  <li><div data-type="push" data-device="harmony" data-set-on="activity Musik.hören" data-icon="fa-music"></div></li>
-  <li><div data-type="push" data-device="harmony" data-set-on="activity Fernsehen" data-icon="fa-tv"></div></li>
- </ul>
-</div>
-<div>Mediathek</div>
-<div data-type="label">wählen</div>
-<div data-type="select"
- data-device="harmony"
- data-items='["Fernsehen","Kodi","Apple.tv","Fire.TV.sehen","Musik.hören","PowerOff"]'
- data-get="activity"
- data-set="activity"></div><br><br>
-  <div class="small" data-type="volume" data-device='DENON2' data-get='volume' data-set='volume'></div>
-   </li>
+     </li>
   <li data-row="3" data-col="2" data-sizex="2" data-sizey="1" class="small semitransparent">
    <header> ANRUFE </header><br>
  <table width="100%"  >
@@ -184,10 +191,6 @@
 <br>
 <div data-type="label" data-device="myCalView" data-get="t_009_summary" style="color:#00aa69;" class="inline"></div>
  </div> </li>
- <li data-row="4" data-col="5" data-sizex="1" data-sizey="1" class="semitransparent"><br>
-  <div class="small">Heizungen: Urlaubs- Modus einschalten!<br>
-  <div data-type="switch" data-icon="fa-suitcase" data-device="dy_Heizung_Urlaub" class="green invert"></div>
- </li>
    <li data-row="5" data-col="2" data-sizex="1" data-sizey="2" class="semitransparent">
     <header>Infos </header>
 
