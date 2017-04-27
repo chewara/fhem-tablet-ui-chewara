@@ -14,4 +14,4 @@ Heating - more Heating information
 
 Media - All Media on one page
 
-Server - Pi infos  
+Server - Pi informations  
