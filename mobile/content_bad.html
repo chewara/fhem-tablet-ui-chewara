@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+	<div class="page" id="content_bad">
+		<section>
+			<table width="100%">
+				<tr>
+					<td width="40%">
+						<div class="large left-align">Ist-Temperatur
+						</div>
+					</td>
+					<td width="10%">
+					</td>
+					<td width="50%">
+						<div data-type="label"
+							 data-device="Badheizung"
+							 data-get="temperature"
+							 data-limits='[-70,20,25]'
+							 data-colors='["#0088CC","green","firebrick"]'
+							 data-unit="°C"
+							 class="big thin">
+						</div>
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section>
+			<table width="100%">
+				<tr>
+					<td colspan="2">
+						<div class="large left-align">Soll-Temperatur
+						</div>
+					</td>
+					<td width="50%">
+						<div data-type="spinner"
+							 data-device="Badheizung"
+							 data-get="desiredTemperature"
+							 data-set="desiredTemperature"
+							 data-background-color="#888"
+							 data-icon-left-color="#0088CC"
+							 data-icon-right-color="firebrick"
+							 data-text-color="#eee"
+							 data-min="4.5"
+							 data-max="25.0"
+							 data-step="0.5"
+							 data-unit="°"
+							 data-shortdelay="50"
+							 data-longdelay="5000"
+							 data-off="4.5"
+							 data-on="25.0"
+							 class="valueonly centered">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="25%">
+					</td>
+					<td width="25%">
+						<div data-type="push"
+							 data-device="Badheizung"
+							 data-set="desiredTemperature"
+							 data-set-on="boost"
+							 data-icon="fs-sani_heating_boost"
+							 class="top-space">
+						</div>
+					</td>
+					<td>
+						<div data-type="select"
+							 data-device="Badheizung"
+							 data-get="desiredTemperature"
+							 data-set="desiredTemperature"
+							 data-items='["16.5","17","17,5","18.0","18.5","19.0","19.5","20.0","20,5","21.0","21.5","22.0","eco","comfort","auto","boost","off"]'
+							 class="top-space">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="">Programm
+						</div>
+					</td>
+					<td>
+						<div class="">Boost
+						</div>
+					</td>
+					<td>
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section>
+			<table width="100%">
+				<tr>
+					<td width="50%" rowspan="2">
+						<div class="large left-align">Licht geht nicht
+						</div>
+					</td>
+					<td width="50%">
+						<div data-type="switch"
+							 data-device="bad_licht"
+							 data-on-color="#eee"
+							 data-off-color="#eee"
+							 data-on-background-color="#0088CC"
+							 data-off-background-color="#888"
+							 class="big">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>An/Aus
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section>
+			<table width="100%">
+				<tr>
+					<td width="50%" rowspan="2">
+						<div class="large left-align">Spiegelschrank geht nicht
+						</div>
+					</td>
+					<td width="50%">
+						<div data-type="switch"
+							 data-device="bad_spiegelschrank"
+							 data-on-color="#eee"
+							 data-off-color="#eee"
+							 data-on-background-color="#0088CC"
+							 data-off-background-color="#888"
+							 class="big">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>An/Aus
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section>
+			<table width="100%">
+				<tr>
+					<td width="25%">
+						<div data-type="symbol"
+							 data-device="Badheizung"
+							 data-get="battery"
+							 data-states='["ok","low"]'
+							 data-icons='["fa-battery-4","fa-battery-1 fa-blink"]'
+							 data-colors='["green","firebrick"]'
+							 class="">
+						</div>
+						<div class="narrow">Thermostat
+						</div>
+					</td>
+					<td width="25%">
+						<div data-type="symbol"
+							 data-device="Badheizung"
+							 data-get="battery"
+							 data-states='["ok","low"]'
+							 data-icons='["fa-battery-4","fa-battery-1 fa-blink"]'
+							 data-colors='["green","firebrick"]'
+							 class="">
+						</div>
+						<div class="narrow">Heizung
+						</div>
+					</td>
+					<td width="25%">
+					</td>
+					<td width="25%">
+					</td>
+				</tr>
+			</table>
+		</section>
+	</div>
+</body>
+</html>

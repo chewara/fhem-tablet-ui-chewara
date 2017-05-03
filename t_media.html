@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>FHEM-Home</title>
+</head>
+	<body>
+			<div class="gridster">
+				<ul>
+<li data-row="1" data-col="1" data-sizex="1" data-sizey="5" data-template="menu.html" class="bg-mint semitransparent"></li>
+					<li  data-row="2" data-col="2" data-sizex="3" data-sizey="2"  class="semitransparent">
+            <header>Wohnzimmer TV Media</header><br>
+            <div data-type="circlemenu" class="big noshade" data-circle-radius="90" data-direction="bottom-half" >
+          <ul>
+            <li><div data-type="push" data-off-color="green" data-icon="fa-play"></div></li>
+           <li><div data-type="push" data-device="harmony" data-set-on="activity Kodi" data-icon="fa-play-circle-o"></div></li>
+           <li><div data-type="push" data-device="harmony" data-set-on="activity Apple.tv" data-icon="fa-apple"></div></li>
+           <li><div data-type="push" data-device="harmony" data-set-on="activity Fire.TV.sehen" data-icon="fa-amazon"></div></li>
+           <li><div data-type="push" data-device="harmony" data-set-on="activity PowerOff" data-icon="fa-stop"></div></li>
+           <li><div data-type="push" data-device="harmony" data-set-on="activity Musik.hören" data-icon="fa-music"></div></li>
+           <li><div data-type="push" data-device="harmony" data-set-on="activity Fernsehen" data-icon="fa-tv"></div></li>
+          </ul>
+         </div><br>
+           <div data-type="label">Mediathek wählen</div>
+         <div data-type="select" data-device="harmony" data-get="activity"  data-set="activity"
+          data-items='["Fernsehen","Kodi","Apple.tv","Fire.TV.sehen","Musik.hören","PowerOff"]'></div>
+          <div data-type="push" class="inline big"
+             data-device="DENON2"
+             data-set-on="volumeDown"
+             data-icon="fa-volume-down"
+             class="big top-space">
+          </div>
+          <div data-type="push" class="inline big"
+             data-device="DENON2"
+             data-set-on="volumeUp"
+             data-icon="fa-volume-up"
+             class="big top-space">
+          </div>
+					</li>
+          <li data-row="2" data-col="4" data-sizex="1" data-sizey="2"  class="semitransparent">
+            <header>KODI Rechner</header>
+            <br>
+                <div data-type="push" data-fhem-cmd="set KODIPIWOL on" data-icon="fa-toggle-on" data-device="KODI_PI" data-get="STATE" data-off-background-color="semiblue" data-on-background-color="semiblue" data-on-color="blue" data-off-color="lightblue" class="small semiblue shadow"></div>
+                <div data-type="label" class="small shadow">Einschalten</div><br>
+                <div data-type="push" data-fhem-cmd="set KODI_PI reboot" data-icon="fa-repeat" data-off-background-color="semiblue" data-on-background-color="semiblue" data-on-color="blue" data-off-color="lightblue" class="small semiblue shadow"></div>
+                <div data-type="label" class="small shadow">Neustart</div>
+          </li>
+					<li  data-row="2" data-col="6" data-sizex="2" data-sizey="2" class="left-align semitransparent">
+				        <header>Lautsprecher</header>
+                <div data-type="switch"	class="inline big green" data-icon="fa-power-off" data-device='DENON2'	data-get-on="on" data-get-off="off"  data-on-color="#37b11b"></div>
+                Denon Wohnzimmer
+                <br>
+                <div data-type="symbol" class="inline big" data-device="anw_ws150"  data-states='["absent","present"]'
+                data-icons='["fa-power-off","fa-play"]' data-colors='["Crimson","SeaGreen"]'></div>
+                Schlafzimmer (ws150)
+                <br>
+                <div data-type="symbol" class="inline big" data-device="anw_ws300"  data-states='["absent","present"]'
+                data-icons='["fa-power-off","fa-play"]' data-colors='["Crimson","SeaGreen"]'></div>
+                Esszimmer (ws300)
+					</li>
+					<li  data-row="6" data-col="2" data-sizex="3" data-sizey="1" class="semitransparent">
+						<header>KODI_PI Menü</header>
+					<div class="vbox dsxe" >
+						<div class="hbox">
+							<div data-type="button" data-fhem-cmd="set KODI_PI home" data-icon="fa-home" data-on-background-color="37b11b" class="normal top-space shadow"></div>
+							<div data-type="button" data-fhem-cmd="set KODI_PI activatewindow MovieTitles" 	data-icon="fa-film" data-on-background-color="37b11b" class="normal top-space shadow"></div>
+							<div data-type="button" data-fhem-cmd="set KODI_PI activatewindow MusicFiles" 	data-icon="fa-music" data-on-background-color="37b11b" class="normal top-space shadow"></div>
+							<div data-type="button" data-fhem-cmd="set KODI_PI activatewindow Pictures" 		data-icon="fa-picture-o" data-on-background-color="37b11b" class="normal top-space shadow"></div>
+							<div data-type="button" data-fhem-cmd="set KODI_PI activatewindow InProgressTvShows" data-icon="fa-desktop" data-on-background-color="37b11b" class="normal top-space shadow"></div>
+							<div data-type="button" data-fhem-cmd="set KODI_PI activatewindow Weather" 		data-icon="fa-sun-o" data-on-background-color="37b11b" class="normal top-space shadow"></div>
+						</div>
+					</div>
+				</li>
+        <li data-row="6" data-col="5" data-sizex="3" data-sizey="2" class="semitransparent">
+              <header>Wohnzimmer Radio Denon</header>
+              <br>
+              <div data-type="switch"	class="inline green" data-icon="fa-power-off" data-device='DENON2'	data-get-on="on" data-get-off="off"  data-on-color="#37b11b"></div>
+              <div data-type="select" data-device="DENON2" 	class="inline green" data-items='["Cbl/Sat","DVD","Blu-Ray","Game","Mediaplayer","TV","Tuner","Airplay","Spotify","Usb/iPod","Bluetooth"]' data-get="input" data-set="input"></div>
+              Sender <div data-type="select" class="inline green" data-device="DENON2" data-items='["1","2","3","4","5","6","7","8","9"]'  data-alias='["91,4 BR","96,3 Jam","94,3 RS2","KissFM","FluxFM","Fritz","Energy","104,6 RTL","105,5 Spree"]' data-get="tunerPreset" data-set="tunerPreset"></div><br><br><br>
+            <div class="tiny" class="inline" data-type="volume" data-max="68" data-device='DENON2' data-get='volume' data-set='volume'></div>
+            </li>
+          <li data-row="7" data-col="2" data-sizex="3" data-sizey="2" class="semitransparent">
+            <header>KODI_PI Remote</header>
+					<div class="vbox shadow">
+						<div class="hbox shadow">
+							<div data-type="button" data-fhem-cmd="set KODI_PI_PI prev"	 		data-background-icon="fa-square-o" data-icon="fa-backward" data-off-background-color="semiorange" data-on-background-color="semiorange" data-off-color="#37b11b" data-on-color="#298514" class="top-space  semiorange"></div>
+							<div data-type="button" data-fhem-cmd="set KODI_PI pause"	 	data-background-icon="fa-square-o" data-icon="fa-pause" data-off-background-color="semiorange" data-on-background-color="semiorange" data-off-color="#37b11b" data-on-color="#298514" class="top-space  semiorange"></div>
+							<div data-type="button" data-fhem-cmd="set KODI_PI play" 		data-background-icon="fa-square-o" data-icon="fa-play" data-off-background-color="semiorange" data-on-background-color="semiorange" data-on-color="#37b11b" data-off-color="#298514" class="top-space  semiorange"></div>
+							<div data-type="button" data-fhem-cmd="set KODI_PI stop" 	 	data-background-icon="fa-square-o" data-icon="fa-stop" data-off-background-color="semiorange" data-on-background-color="semiorange" data-off-color="#37b11b" data-on-color="#298514" class="top-space  semiorange"></div>
+							<div data-type="button" data-fhem-cmd="set KODI_PI next"	 		data-background-icon="fa-square-o" data-icon="fa-forward" data-off-background-color="semiorange" data-on-background-color="semiorange" data-off-color="#37b11b" data-on-color="#298514" class="top-space  semiorange"></div>
+						</div>
+						<div  class="hbox shadow">
+							<div data-type="button" data-fhem-cmd="set KODI_PI back"		 	data-background-icon="fa-square-o" data-icon="fa-arrow-circle-o-left" data-off-background-color="semiorange" data-on-background-color="semiorange" data-off-color="#37b11b" data-on-color="#298514" class="top-space  semiorange"></div>
+							<div data-type="button" data-fhem-cmd="{eventghost('MIST', 'KODI_PI Close')}" 	data-background-icon="fa-square-o" data-icon="fa-times" data-off-background-color="semiorange" data-on-background-color="semiorange" data-off-color="#37b11b" data-on-color="#298514" class="top-space  semiorange"></div>
+							<div data-type="button" data-fhem-cmd="set KODI_PI up"	 		data-background-icon="fa-square-o" data-icon="fa-angle-up" data-off-background-color="semiblue" data-on-background-color="semiblue" data-off-color="#273D5C" data-on-color="#37b11b" class="top-space  semiblue"></div>
+							<div data-type="button" data-fhem-cmd="set KODI_PI showosd" 		data-background-icon="fa-square-o" data-icon="fa-bars" data-off-background-color="semiorange" data-on-background-color="semiorange" data-off-color="#37b11b" data-on-color="#298514" class="top-space  semiorange"></div>
+							<div data-type="button" data-fhem-cmd="set KODI_PI info" 		data-background-icon="fa-square-o" data-icon="fa-info" data-off-background-color="semiorange" data-on-background-color="semiorange" data-off-color="#37b11b" data-on-color="#298514" class="top-space  semiorange"></div>
+						</div>
+						<div class="hbox shadow">
+							<div data-type="button" data-fhem-cmd="set KODI_PI left" 		data-background-icon="fa-square-o" data-icon="fa-angle-left" data-off-background-color="semiblue" data-on-background-color="semiblue" data-off-color="#273D5C" data-on-color="#37b11b" class="top-space  semiblue"></div>
+							<div data-type="button" data-fhem-cmd="set KODI_PI select" 		data-background-icon="fa-square-o" data-icon="fa-check-circle" data-off-background-color="semiblue" data-on-background-color="semiblue" data-off-color="#273D5C" data-on-color="#37b11b" class="top-space  semiblue"></div>
+							<div data-type="button" data-fhem-cmd="set KODI_PI right" 		data-background-icon="fa-square-o" data-icon="fa-angle-right" data-off-background-color="semiblue" data-on-background-color="semiblue" data-off-color="#273D5C" data-on-color="#37b11b" class="top-space  semiblue"></div>
+						</div>
+						<div class="hbox shadow">
+							<div data-type="button" data-fhem-cmd="{eventghost('MIST', 'KODI_PI Fullscreen')}" data-background-icon="fa-square-o" data-icon="fa-desktop" data-off-background-color="semiorange" data-on-background-color="semiorange" data-off-color="#37b11b" data-on-color="#298514" class="top-space  semiorange"></div>
+  							<div data-type="button" data-fhem-cmd="set KODI_PI down" 		data-background-icon="fa-square-o" data-icon="fa-angle-down" data-off-background-color="semiblue" data-on-background-color="semiblue" data-off-color="#273D5C" data-on-color="#37b11b" class="top-space  semiblue"></div>
+							<div data-type="button" data-fhem-cmd="{eventghost('MIST', 'KODI_PI Subtitle')}" data-background-icon="fa-square-o" data-icon="fa-pencil" data-off-background-color="semiorange" data-on-background-color="semiorange" data-off-color="#37b11b" data-on-color="#298514" class="top-space  semiorange"></div>
+						</div>
+						<div class="hbox shadow">
+							<div data-type="slider" data-device="KODI_PI"	data-get="volume"	data-cmd="set" data-set="volume"	data-color="#298514"	class="horizontal shadow"></div>
+						</div>
+					</div>
+
+          </li>
+          <li data-row="8" data-col="5" data-sizex="3" data-sizey="1" class="semitransparent">
+              <header>leer</header>
+					</ul>
+			</div>
+	</body>
+</html>

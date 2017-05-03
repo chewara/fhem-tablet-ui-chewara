@@ -44,7 +44,7 @@ svg > text {
 }
 
 polyline {
-    stroke: #0088CC !important;
+    stroke: #74c535 !important;
 }
 
 .dialog  {
@@ -58,31 +58,31 @@ i#warn-back {
     color: #DB1D1D;
 }
 
-.main-color              { color:#0088CC;}
+.main-color              { color:#74c535;}
 
 .bg-gray,.btn-gray               { background-color:#999999;}
 .bg-lightgray,.btn-lightgray     { background-color:#EDEDED;}
 
 option {background-color: #ffffff;}
-.pagetab.on{color:#eee;background-color:#0088CC;}
+.pagetab.on{color:#eee;background-color:#74c535;}
 .pagetab.off{color:#eee;background-color:#aaa;}
-.dimmer.on{color:#eee;background-color:#0088CC;}
+.dimmer.on{color:#eee;background-color:#74c535;}
 .dimmer.off{color:#eee;background-color:#aaa;}
-.symbol.on{color:#0088CC;background-color:#0088CC;}
+.symbol.on{color:#74c535;background-color:#74c535;}
 .symbol.off{color:#222;background-color:#222;}
-.switch.on{color:#eee;background-color:#0088CC;}
+.switch.on{color:#eee;background-color:#74c535;}
 .switch.off{color:#eee;background-color:#aaa;}
-.push.on{color:#0088CC;background-color:#0088CC;}
+.push.on{color:#74c535;background-color:#74c535;}
 .push.off{color:#888888;background-color:#888888;}
 .thermostat.tkcolor{color:#888;}
 .thermostat.fgcolor{color:#555;}
 .thermostat.input{color:#444;}
-.homestatus.fgcolor{color:#0088CC;}
+.homestatus.fgcolor{color:#74c535;}
 .homestatus.tkcolor{color:#aaa;}
-.slider{color:#0088CC;background-color:#999;}
-.volume.hdcolor{color:#0088CC;}
+.slider{color:#74c535;background-color:#999;}
+.volume.hdcolor{color:#74c535;}
 .volume.fgcolor{color:#555;}
-.checkbox.on {color:#fff;background-color:#0088CC;}
+.checkbox.on {color:#fff;background-color:#74c535;}
 .checkbox.off {color:#fff;background-color:#999;}
-.playstream.on {color:#fff;background-color:#0088CC;}
+.playstream.on {color:#fff;background-color:#74c535;}
 .playstream.off {color:#fff;background-color:#999;}

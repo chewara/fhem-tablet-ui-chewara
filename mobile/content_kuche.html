@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+    <div class="page" id="content_kuche">
+		<section>
+			<table width="100%">
+				<tr>
+					<td width="40%">
+						<div class="large left-align">Ist-Temperatur
+						</div>
+					</td>
+					<td width="10%">
+						<div data-type="symbol"
+							 data-device="ku_SC"
+							 data-get="onoff"
+							 data-get-on="1"
+							 data-get-off="0"
+							 data-on-color="firebrick"
+							 data-off-color="#888"
+							 data-icon="ftui-window"
+							 class="big">
+						</div>
+					</td>
+					<td width="50%">
+						<div data-type="label"
+							 data-device="ku_WT"
+							 data-get="temperature"
+							 data-limits='[-70,20,25]'
+							 data-colors='["#0088CC","green","firebrick"]'
+							 data-unit="°C"
+							 class="big thin">
+						</div>
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section>
+			<table width="100%">
+				<tr>
+					<td colspan="2">
+						<div class="large left-align">Soll-Temperatur
+						</div>
+					</td>
+					<td width="50%">
+						<div data-type="spinner"
+							 data-device="ku_WT"
+							 data-get="desiredTemperature"
+							 data-set="desiredTemperature"
+							 data-background-color="#888"
+							 data-icon-left-color="#0088CC"
+							 data-icon-right-color="firebrick"
+							 data-text-color="#eee"
+							 data-min="4.5"
+							 data-max="25.0"
+							 data-step="0.5"
+							 data-unit="°"
+							 data-shortdelay="50"
+							 data-longdelay="5000"
+							 data-off="4.5"
+							 data-on="25.0"
+							 class="valueonly centered">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="25%">
+						<div data-type="push"
+							 data-fhem-cmd="{Heating_Control_SetTemp('ku_heatingcontrol')}"
+							 data-icon="oa-time_statistic"
+							 class="top-space">
+						</div>
+					</td>
+					<td width="25%">
+						<div data-type="push"
+							 data-device="ku_WT"
+							 data-set="desiredTemperature"
+							 data-set-on="boost"
+							 data-icon="fs-sani_heating_boost"
+							 class="top-space">
+						</div>
+					</td>
+					<td>
+						<div data-type="select"
+							 data-device="ku_WT"
+							 data-get="desiredTemperature"
+							 data-set="desiredTemperature"
+							 data-items='["off","5.0","15.0",    "18.0","20.0","22.0",        "25.0"]'
+							 data-alias='["AUS","5°C","15°C ECO","18°C","20°C","22°C KOMFORT","25°C MAX"]'
+							 class="top-space">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="">Programm
+						</div>
+					</td>
+					<td>
+						<div class="">Boost
+						</div>
+					</td>
+					<td>
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section>
+			<table width="100%">
+				<tr>
+					<td width="50%" rowspan="2">
+						<div class="large left-align">Licht
+						</div>
+					</td>
+					<td width="50%">
+						<div data-type="switch"
+							 data-device="ku_aktor_licht"
+							 data-on-color="#eee"
+							 data-off-color="#eee"
+							 data-on-background-color="#0088CC"
+							 data-off-background-color="#888"
+							 class="big">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>An/Aus
+					</td>
+				</tr>
+			</table>
+		</section>
+		<!--<section>
+			<table width="100%">
+				<tr>
+					<td width="50%" rowspan="2">
+						<div class="large left-align">Lautsprecher
+						</div>
+					</td>
+					<td width="50%">
+						<div data-type="switch"
+							 data-device="IT_00F0FFFF10"
+							 data-icon="ma-speaker"
+							 data-on-color="#eee"
+							 data-off-color="#eee"
+							 data-on-background-color="#0088CC"
+							 data-off-background-color="#888"
+							 class="big">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>An/Aus
+					</td>
+				</tr>
+			</table>
+		</section>-->
+        <section>
+			<table width="100%">
+				<tr>
+					<td width="25%" rowspan="2">
+						<div onclick="if ($('#dropradiokueche').is(':hidden')) { $('#dropradiokueche').slideDown(250); $('#dropdownradiokueche > i.fa').addClass('fa-rotate-180'); } else { $('#dropradiokueche').slideUp(250); $('#dropdownradiokueche > i.fa').removeClass('fa-rotate-180'); }"
+							 id="dropdownradiokueche"
+							 class="large left-align">Radio
+							<i class="fa fa-angle-double-down large cell"></i>
+						</div>
+					</td>
+					<td width="50%">
+						<div data-type="select"
+							 data-device="SONOS_Kueche"
+							 data-get="currentTrackURI"
+							 data-set="PlayURI"
+							 data-items='["http://1live.akacast.akamaistream.net/7/706/119434/v1/gnl.akacast.akamaistream.net/1live","http://1live-diggi.akacast.akamaistream.net/7/965/119435/v1/gnl.akacast.akamaistream.net/1live-diggi","http://stream.antenne.com/antenne-nds/mp3-128/radioplayer/?context=fHA6LTE=","http://stream.89.0rtl.de/live/mp3-128/radioplayerhp/","http://player.ffn.de/ffnstream.mp3","http://ndr-ndr2-nds-mp3.akacast.akamaistream.net/7/400/252763/v1/gnl.akacast.akamaistream.net/ndr_ndr2_nds_mp3","http://ndr-n-joy-mp3.akacast.akamaistream.net/7/665/273752/v1/gnl.akacast.akamaistream.net/ndr_n-joy_mp3","http://188.94.97.91:80/radio21.mp3","http://main-high.rautemusik.fm","http://house-high.rautemusik.fm","http://club-high.rautemusik.fm","http://harder-high.rautemusik.fm"]'
+							 data-alias='["1Live",                                                                                   "1LiveDiggi",                                                                                          "Antenne",                                                                    "89.0RTL",                                             "FFN",                               "NDR2",                                                                                                          "NJoy",                                                                                                    "Radio21",                           "#Musik-Main",                   "#Musik-House",                   "#Musik-Club",                   "#Musik-Harder"]'
+							 class="">
+						</div>
+					</td>
+					<td width="25%">
+						<div data-type="switch"
+							 data-device="SONOS_Kueche"
+							 data-get="transportState"
+							 data-set=""
+							 data-states='["PLAYING","PAUSED_PLAYBACK","STOPPED","ERROR"]'
+							 data-set-states='["Stop","Play","Play",""]'
+							 data-icons='["fa-stop","fa-pause fa-blink","fa-play","fa-exclamation-triangle"]'
+							 data-colors='["#eee","#eee","#eee","firebrick"]'
+							 data-background-icons='["fa-circle","fa-circle","fa-circle","fa-circle"]'
+							 data-background-colors='["#0088CC","#0088CC","#888","#888"]'
+							 class="big">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>&nbsp;
+					</td>
+					<td>Play/Stop
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div data-type="image"
+							 data-device="SONOS_Kueche"
+							 data-get="currentTitle"
+							 data-path="/fhem/tablet_eval/images/"
+							 data-suffix=".png"
+							 data-size="64px"
+							 class="top-space">
+						</div>
+					</td>
+					<td colspan="2">
+						<div class="top-space">
+							<div class="inline">Volume:
+							</div>
+							<div data-type="label"
+								 data-device="SONOS_Kueche"
+								 data-get="Volume"
+								 class="inline">
+							</div>
+						</div>
+						<div class="top-space">
+							<div data-type="push"
+								 data-device="SONOS_Kueche"
+								 data-set-on="VolumeD"
+								 data-icon="ro-volume-decrease"
+								 class="big inline">
+							</div>
+							<div data-type="slider"
+								 data-device="SONOS_Kueche"
+								 data-get="Volume"
+								 data-set="Volume"
+								 data-min="0"
+								 data-max="50"
+								 data-width="100"
+								 data-color="#0088CC"
+								 class="horizontal tap left-space right-space inline">
+							</div>	 
+							<div data-type="push"
+								 data-device="SONOS_Kueche"
+								 data-set-on="VolumeU"
+								 data-icon="ro-volume-increase"
+								 class="big inline">
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+			<div id="dropradiokueche">
+				<table width="100%">
+					<tr>
+						<td width="25%">
+							<div class="top-space-3">Bass:
+							</div>
+						</td>
+						<td width="75%">
+							<div data-type="slider"
+								 data-device="SONOS_Kueche"
+								 data-get="Bass"
+								 data-set="Bass"
+								 data-min="-10"
+								 data-max="10"
+								 data-width="200"
+								 data-color="#0088CC"
+								 class="horizontal tap top-space-3 centered">
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="top-space">Treble:
+							</div>
+						</td>
+						<td colspan="2">
+							<div data-type="slider"
+								 data-device="SONOS_Kueche"
+								 data-get="Treble"
+								 data-set="Treble"
+								 data-min="-10"
+								 data-max="10"
+								 data-width="200"
+								 data-color="#0088CC"
+								 class="horizontal tap top-space centered">
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</section>
+		<section>
+			<table width="100%">
+				<tr>
+					<td width="25%">
+						<div data-type="symbol"
+							 data-device="ku_WT"
+							 data-get="battery"
+							 data-states='["ok","low"]'
+							 data-icons='["fa-battery-4","fa-battery-1 fa-blink"]'
+							 data-colors='["green","firebrick"]'
+							 class="">
+						</div>
+						<div class="narrow">Thermostat
+						</div>
+					</td>
+					<td width="25%">
+						<div data-type="symbol"
+							 data-device="ku_HT"
+							 data-get="battery"
+							 data-states='["ok","low"]'
+							 data-icons='["fa-battery-4","fa-battery-1 fa-blink"]'
+							 data-colors='["green","firebrick"]'
+							 class="">
+						</div>
+						<div class="narrow">Heizung
+						</div>
+					</td>
+					<td width="25%">
+						<div data-type="symbol"
+							 data-device="ku_SC"
+							 data-get="battery"
+							 data-states='["ok","low"]'
+							 data-icons='["fa-battery-4","fa-battery-1 fa-blink"]'
+							 data-colors='["green","firebrick"]'
+							 class="">
+						</div>
+						<div class="narrow">Fenster
+						</div>
+					</td>
+					<td width="25%">
+						<div>
+							<div data-type="symbol"
+								 data-device="ku_S3_amad"
+								 data-get="powerLevel"
+								 data-states='["[0-5]","([6-9]|[1][0-9]|[2][0-5])","([2][6-9]|[3][0-9]|[4][0-9]|50)","([5][1-9]|[6][0-9]|[7][0-5])","([7][6-9]|[8][0-9]|[9][0-9])","100"]'
+								 data-icons='["fa-battery-0 fa-blink","fa-battery-1 warn","fa-battery-2 warn","fa-battery-3 warn","fa-battery-4 warn","fa-battery-4"]'
+								 data-colors='["firebrick","firebrick","gold","green","green","green"]'
+								 class="">
+							</div>
+							<div data-type="symbol"
+								 data-device="ku_S3_amad"
+								 data-get="powerPlugged"
+								 data-states='["0","1"]'
+								 data-icons='["fa-plug","fa-plug"]'
+								 data-colors='["#888","green"]'
+								 class="small left-narrow">
+							</div>
+							<div class="narrow">Display
+							</div>
+						</div
+					</td>
+				</tr>
+			</table>
+		</section>
+    </div>
+</body>
+</html>

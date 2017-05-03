@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FHEM - mobile</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!--<meta name="shortpoll-interval" content="120">-->
+	<!--<meta name="shortpoll-only-interval" content="30">-->
+	<meta name="longpoll-delay" content="0">
+    <meta name="longpoll" content="1"> <!-- 1= LongPoll; 0= Shortpoll every 30s -->
+    <meta name="debug" content="0"> <!-- 1= Output to console; 0= No output -->
+	<meta name="toast" content="1"> <!-- 1,2,3...= n Toast-Messages, 0: No Toast-Messages -->
+	<!-- Cache -->
+    <meta http-equiv="Cache-Control" content="no-store" />
+	<!-- Style CSS -->
+    <link rel="stylesheet" href="../css/fhem-tablet-ui.css" />
+    <link rel="stylesheet" href="../lib/font-awesome.min.css" />
+	<link rel="stylesheet" href="../lib/material-icons.min.css" />
+    <link rel="stylesheet" href="../lib/jquery.toast.min.css" />
+	<link rel="stylesheet" href="../lib/fhemSVG.css" />
+	<link rel="stylesheet" href="../lib/openautomation.css" />
+	<link rel="shortcut icon" type="image/x-icon" href="../images/home.ico" />
+	<!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/fhem-mobil-ui.css" />
+    <link rel="stylesheet" href="../css/fhem-tablet-ui-user.css" />
+	<!-- Scripts -->
+    <script src="../pgm2/jquery.min.js"></script>
+    <script src="../lib/jquery.toast.min.js"></script>
+    <script src="../js/fhem-tablet-ui.js" defer></script>
+</head>
+<body style="margin-top:3px;">
+<div data-type="loading" data-icon="fa-hourglass" data-color="firebrick" data-effect="fa-pulse" class="bigger" style="position:absolute;top:50%;left:50%;margin-left:-17.38px;"></div>
+	<nav id="menu">
+		<div data-type="link" class="default medium top-space-mobile-2 left-space-2"
+			 data-width="205"
+			 data-icon-left="fa-home"
+			 data-color="white"
+			 data-text-align="center"
+			 data-load="div#content_home"
+			 data-url="#content_home.html"
+			 data-active-color="#0088CC"
+			 data-active-pattern="(.*index.html|.*#content_home.html)">Home
+		</div>
+		<div style="display:inline-block;height:1px;width:80%;background-color:darkorange;"></div>
+		<div data-type="link" class="prefetch medium top-space-mobile-2 left-space-2"
+			 data-width="205"
+			 data-icon-left="fa-cutlery"
+			 data-color="white"
+			 data-text-align="center"
+			 data-load="div#content_buro"
+			 data-url="#content_buro.html"
+			 data-active-color="#0088CC"
+			 data-active-pattern=".*#content_buro.html">Esszimmer
+		</div>
+		<div data-type="link" class="prefetch medium top-space-mobile-2 left-space-2"
+			 data-width="205"
+			 data-icon-left="fa-bed"
+			 data-color="white"
+			 data-text-align="center"
+			 data-load="div#content_schlafen"
+			 data-url="#content_schlafen.html"
+			 data-active-color="#0088CC"
+			 data-active-pattern=".*#content_schlafen.html">Schlafen
+		</div>
+		<div data-type="link" class="prefetch medium top-space-mobile-2 left-space-2"
+			 data-width="205"
+			 data-icon-left="fa-bed"
+			 data-color="white"
+			 data-text-align="center"
+			 data-load="div#content_kind"
+			 data-url="#content_kind.html"
+			 data-active-color="#0088CC"
+			 data-active-pattern=".*#content_kind.html">Kind
+		</div>
+		<div data-type="link" class="prefetch medium top-space-mobile-2 left-space-2"
+			 data-width="205"
+			 data-icon-left="fa-television"
+			 data-color="white"
+			 data-text-align="center"
+			 data-load="div#content_wohnen"
+			 data-url="#content_wohnen.html"
+			 data-active-color="#0088CC"
+			 data-active-pattern=".*#content_wohnen.html">Wohnen
+		</div>
+		<div data-type="link" class="prefetch medium top-space-mobile left-space-2"
+			 data-width="205"
+			 data-icon-left="fa-bath"
+			 data-color="white"
+			 data-text-align="center"
+			 data-load="div#content_bad"
+			 data-url="#content_bad.html"
+			 data-active-color="#0088CC"
+			 data-active-pattern=".*#content_bad.html">Bad
+		</div>
+		<div data-type="link" class="prefetch medium top-space-mobile-2 left-space-2"
+			 data-width="205"
+			 data-icon-left="fa-cutlery"
+			 data-color="white"
+			 data-text-align="center"
+			 data-load="div#content_kuche"
+			 data-url="#content_kuche.html"
+			 data-active-color="#0088CC"
+			 data-active-pattern=".*#content_kuche.html">Küche
+		</div>
+		<div style="display:inline-block;height:1px;width:80%;background-color:darkorange;"></div>
+			<div data-type="link" class="medium top-space-mobile left-space-2"
+			 data-width="205"
+			 data-icon-left="fa-cloud"
+			 data-color="white"
+			 data-text-align="center"
+			 data-load="div#content_wetter"
+			 data-url="#content_wetter.html"
+			 data-active-color="#0088CC"
+			 data-active-pattern=".*#content_wetter.html">Wetter
+		</div>
+		<div data-type="link" class="prefetch medium top-space-mobile-2 left-space-2"
+			 data-width="205"
+			 data-icon-left="fa-bolt"
+			 data-color="white"
+			 data-text-align="center"
+			 data-load="div#content_dwd"
+			 data-url="#content_dwd.html"
+			 data-active-color="#0088CC"
+			 data-active-pattern=".*#content_dwd.html">DWD
+		</div>
+		<div style="display:inline-block;height:1px;width:80%;background-color:darkorange;"></div>
+		<div data-type="link" class="prefetch medium top-space-mobile left-space-2"
+			 data-width="205"
+			 data-icon-left="mi-local_gas_station"
+			 data-color="white"
+			 data-text-align="center"
+			 data-load="div#content_sprit"
+			 data-url="#content_sprit.html"
+			 data-active-color="#0088CC"
+			 data-active-pattern=".*#content_sprit.html">Spritpreise
+		</div>
+		<div style="display:inline-block;height:1px;width:80%;background-color:darkorange;"></div>
+		<div data-type="link" class="medium top-space-mobile left-space-2"
+			 data-width="205"
+			 data-icon-left="fa-server"
+			 data-color="white"
+			 data-text-align="center"
+			 data-load="div#content_system"
+			 data-url="#content_system.html"
+			 data-active-color="#0088CC"
+			 data-active-pattern=".*#content_system.html">System
+		</div>
+		<div style="display:inline-block;height:1px;width:80%;background-color:darkorange;"></div>
+		<div data-type="link" class="medium top-space-mobile left-space-2"
+			 data-width="205"
+			 data-icon-left="fa-cogs"
+			 data-color="white"
+			 data-text-align="center"
+			 data-url="config.html">Konfiguration
+		</div>
+	</nav>
+
+	<header id="header-nav" class="fixed row">
+		<table width="100%">
+			<tr>
+				<td width="6%">
+					<div onclick="fully.exit()"
+						 data-type="symbol"
+						 data-icon="mi-close"
+						 class="big">
+					</div>
+				</td>
+				<td width="25%" style="border-left:1px solid black;">
+					<div data-type="clock"
+						 data-format="H:i"
+						 data-interval="1000"
+						 class="big"
+						 style="color:darkorange;">
+					</div>
+				</td>
+				<td width="10%" style="border-left:1px solid black;">
+					<div data-type="symbol"
+						 data-device="gds"
+						 data-get="a_count"
+						 data-states='["0","[1-9]{1}|[0-9]{2}"]'
+						 data-icons='["fa-bolt","fa-bolt warn"]'
+						 data-colors='["#aaa","firebrick"]'
+						 class="large">
+					</div>
+				</td>
+				<td width="50%" style="border-left:1px solid black;">
+					<div id="linkname"
+						 class="large bold right-align centered">
+					</div>
+				</td>
+				<td width="6%">
+					<div data-type="slideout"
+						 data-position="right"
+						 class="large left-align notouch">
+					</div>
+				</td>
+			</tr>
+		</table>
+	</header>
+
+	<main id="panel" class="">
+        <div class="page" id="content_home"></div>
+        <div class="page" id="content_buro"></div>
+        <div class="page" id="content_kuche"></div>
+        <div class="page" id="content_schlafen"></div>
+			  <div class="page" id="content_kind"></div>
+        <div class="page" id="content_wohnen"></div>
+				<div class="page" id="content_bad"></div>
+        <div class="page" id="content_wetter"></div>
+        <div class="page" id="content_dwd"></div>
+        <div class="page" id="content_system"></div>
+        <div class="page" id="content_sprit"></div>
+    </main>
+</body>
+</html>
