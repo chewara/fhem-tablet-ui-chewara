@@ -15,6 +15,8 @@
       data-device="Kinderzimmerheizung" data-get="temperature" class="large cell bold squareborder" data-unit="°C"> </div>
  <div data-type="spinner" data-device="Kinderzimmerheizung" data-get="desiredTemperature" data-set="desiredTemperature" data-height="30" data-width="111" data-step="0.5" data-min="10" data-max="25" data-unit="&deg;" class="valueonly centered green"></div>
     <div data-type="select" data-device="Kinderzimmerheizung"  data-items='["16.5","17","17,5","18.0","18.5","19.0","19.5","20.0","20,5","21.0","21.5","22.0","eco","comfort","auto","boost","off"]' data-get="desiredTemperature" data-set="desiredTemperature"></div>
+    <br><br><br>
+    <div data-type="push" data-device="Kinderzimmerheizung" data-set="desiredTemperature" data-set-on="boost" data-icon="fs-sani_heating_boost" class="big top-space"></div>
   </li>
     <li data-row="1" data-col="3" data-sizex="1" data-sizey="3" class="semitransparent">
     <header>  Schlafzimmer</header>
@@ -37,6 +39,7 @@
         <div data-type="label" data-device="LaCrosse_20" data-get="temperature" data-unit="°C / " class="big inline thin"> Temperatur</div>
         <div data-type="label" data-device="LaCrosse_20" data-get="humidity" data-unit="%" class="big inline thin"> Luftfeuchte</div>
         </div>
+        <div data-type="push" data-device="Schlafzimmerheizung" data-set="desiredTemperature" data-set-on="boost" data-icon="fs-sani_heating_boost" class="big top-space"></div>
 </li>
     <li data-row="1" data-col="4" data-sizex="1" data-sizey="3" class="semitransparent">
     <header>  Esszimmer</header>
@@ -49,7 +52,8 @@
          <div data-type="select" data-device="Esszimmerheizung"
                         data-items='["16.5","17","17,5","18.0","18.5","19.0","19.5","20.0","20,5","21.0","21.5","22.0","eco","comfort","auto","boost","off"]'
                         data-get="desiredTemperature" data-set="desiredTemperature"></div>
-
+      <br><br><br>
+    <div data-type="push" data-device="Esszimmerheizung" data-set="desiredTemperature" data-set-on="boost" data-icon="fs-sani_heating_boost" class="big top-space"></div>
         </li>
     <li data-row="1" data-col="5" data-sizex="1" data-sizey="3" class="semitransparent">
       <header>Wohnzimmer</header>
@@ -72,6 +76,7 @@
         <div data-type="label" data-device="LaCrosse_32" data-get="temperature" data-unit="°C / " class="big inline thin"> Temperatur</div>
         <div data-type="label" data-device="LaCrosse_32" data-get="humidity" data-unit="%" class="big inline thin"> Luftfeuchte</div>
              </div>
+    <div data-type="push" data-device="Wohnzimmerheizung" data-set="desiredTemperature" data-set-on="boost" data-icon="fs-sani_heating_boost" class="big top-space"></div>
       </li>
     <li data-row="1" data-col="6" data-sizex="1" data-sizey="3" class="semitransparent">
     <header>  Badheizung</header>
@@ -90,6 +95,9 @@
   <div data-type="select" data-device="Badheizung"
    data-items='["16.5","17","17,5","18.0","18.5","19.0","19.5","20.0","20,5","21.0","21.5","22.0","eco","comfort","auto","boost","off"]'
    data-get="desiredTemperature" data-set="desiredTemperature"></div>
+
+     <br><br><br>
+       <div data-type="push" data-device="Badheizung" data-set="desiredTemperature" data-set-on="boost" data-icon="fs-sani_heating_boost" class="big top-space"></div>
 </li>
   <li data-row="5" data-col="2" data-sizex="1" data-sizey="2" class="semitransparent">
     <header>Infos</header>
