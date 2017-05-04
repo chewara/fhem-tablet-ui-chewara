@@ -165,35 +165,36 @@ class=" green" ></div></span>
 <header>HEUTE</header>
 	<table width="100%">
 		<tr>
-			<td rowspan="5" style="text-align:center;vertical-align:top">
-				<div data-type="weather"
-						data-device="Weather"
-						data-get="fc1_condition"
-						data-imageset="kleinklima"
-						style="width:100px"></div>
-	<br>
-				<div data-type="label"
-					data-device="Weather"
-					data-get="fc1_condition"></div>
-	<br>
-			Temp: <div data-type="label"
-					data-device="Weather"
-					data-get="fc1_low_c"
-					data-limits="[-50,-30,40]"
-					 					data-unit=" %B0C%0A"
-					class="inline green"></div>
-				/ <div data-type="label"
-					data-device="Weather"
-					data-get="fc1_high_c"
-					data-limits="[-50,-30,40]"
-					 					data-unit=" %B0C%0A"
-					class="inline green"></div>
-			</td>
-		</tr>
+			<td rowspan="5" class="big" style="text-align:center;vertical-align:top">
+<div data-type="label" class="inline thin">0 Uhr: </div>
+<div data-type="label" class="inline green"	data-device="Wetter_Pro" data-get="fc0_temp00" data-unit=" °C"></div>
+<br>
+<div data-type="label" class="inline thin">3 Uhr: </div>
+<div data-type="label" class="inline green"	data-device="Wetter_Pro" data-get="fc0_temp03" data-unit=" °C"></div>
+<br>
+<div data-type="label" class="inline thin">6 Uhr: </div>
+<div data-type="label" class="inline green"	data-device="Wetter_Pro" data-get="fc0_temp06" data-unit=" °C"></div>
+<br>
+<div data-type="label" class="inline thin">9 Uhr: </div>
+<div data-type="label" class="inline green"	data-device="Wetter_Pro" data-get="fc0_temp09" data-unit=" °C"></div>
+<br>
+<div data-type="label" class="inline thin">12 Uhr: </div>
+<div data-type="label" class="inline green"	data-device="Wetter_Pro" data-get="fc0_temp12" data-unit=" °C"></div>
+<br>
+<div data-type="label" class="inline thin">15 Uhr: </div>
+<div data-type="label" class="inline green"	data-device="Wetter_Pro" data-get="fc0_temp15" data-unit=" °C"></div>
+<br>
+<div data-type="label" class="inline thin">18 Uhr: </div>
+<div data-type="label" class="inline green"	data-device="Wetter_Pro" data-get="fc0_temp18" data-unit=" °C"></div>
+<br>
+<div data-type="label" class="inline thin">21 Uhr: </div>
+<div data-type="label" class="inline green"	data-device="Wetter_Pro" data-get="fc0_temp21" data-unit=" °C"></div>
+<br>
+</td>
+</tr>
 	</table>
 </div>
 </li>
-
 <li data-row="4" data-col="3" data-sizex="1" data-sizey="2" class="semitransparent">
 <div class="container weather">
 <header><div data-type="label"
@@ -351,9 +352,6 @@ class=" green" ></div></span>
 	<div data-type="label" class=" w1x inline " data-device="Wetter_Pro" data-get="visibility" data-limits="[-50,0,10,25,30,40]" data-colors='["#9999ff","#ffbdff","#FAA460","#ff6900","#ff3333","#ff0000"]' data-unit=" km"></div>
 		<div class="compressed   inline" data-type="symbol" data-icon="wi wi-humidity" data-off-color="#999"></div>
 		<div data-type="label" class=" w1x inline " data-device="Wetter_Pro"	data-get="humidity"	data-part="1" data-limits="[0,40,60]" data-colors='["#9999ff","#FAA460","#ff6900"]' data-unit="%"></div>
-		<div class="compressed   inline" data-type="symbol" data-icon="wi wi-thermometer-exterior" data-off-color="#999"></div>
-		<div class="compressed   inline left-narrow" data-type="symbol" data-icon="wi wi-raindrops" data-off-color="#999"></div>
-		<div data-type="label" class=" inline w1x left-narrow " data-device="Wetter_Pro" data-get="dewpoint" data-limits='[-73,0,100]' data-colors='["#6699FF","#FAA460","#FF0000"]' data-unit="%B0C%0A"></div>
 		<div class="compressed   inline" data-type="symbol" data-icon="wi wi-barometer" data-off-color="#999"></div>
 		<div data-type="label"	class=" w1x inline " data-device="Wetter_Pro" data-get="pressure" data-part="1"	data-unit="hPa" data-limits="[0,950,1000]" data-colors='["#ff9999","#FAA460","#9999ff"]'></div>
 		<div class="compressed   inline" data-type="symbol" data-icon="wi wi-strong-wind" data-off-color="#999"></div>
