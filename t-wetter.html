@@ -102,7 +102,7 @@
                         data-limits='[-73,0,30]'
                         data-colors='["#6699FF","#AA6900","#FF0000"]'
                         data-unit=" %B0C%0A"
-                        class="top-space big inline">
+                        class="top-space  inline">
                 </div>
         </td>
          <td>
@@ -112,7 +112,7 @@
                         data-limits='[-73,0,100]'
                         data-colors='["#6699FF","#AA6900","#FF0000"]'
                         data-unit=" %"
-                        class="top-space big inline ">
+                        class="top-space  inline ">
                 </div>
         </td>
          <td>
@@ -122,7 +122,7 @@
                         data-limits='[-73,0,100]'
                         data-colors='["#6699FF","#AA6900","#FF0000"]'
                         data-unit=" %B0C%0A"
-                        class="top-space big inline">
+                        class="top-space  inline">
                 </div>
         </td></tr>
         <tr><td>
@@ -155,10 +155,10 @@
 		<header>Sonne</header>
 <div data-type="label" class="top-space  darker">Sonnenaufgang</div>
 <span style="color:#aa6900"><div data-type="label"
-data-device="twilight" data-get="sr_civil" data-colors="orange" class="large green" ></div></span>
+data-device="twilight" data-get="sr_civil" data-colors="orange" class=" green" ></div></span>
 <div data-type="label" class="top-space darker">Sonnenuntergang</div>
 <span style="color:#aa6900"><div data-type="label" data-device="twilight" data-get="ss_civil" data-colors="orange"
-class="large green" ></div></span>
+class=" green" ></div></span>
 </li>
 <li data-row="4" data-col="2" data-sizex="1" data-sizey="2" class="semitransparent">
 <div class="container weather">
@@ -342,6 +342,22 @@ class="large green" ></div></span>
 </div>
 </li>
 <li data-row="5" data-col="2" data-sizex="5" data-sizey="1" class="semitransparent">
+	<header class="">Proplanta  - Heute um <div data-type="label" data-device="Wetter_Pro" data-get="obsTime" style="display:inline"></div> Uhr</header>
+<div class="normal" data-type="weather" data-device="Wetter_Pro" data-get="weatherIcon" data-imageset="kleinklima"></div>
+<div class=" top-narrow" data-type="label" data-device="Wetter_Pro" data-get="weather" ></div>
+	<div class="compressed   inline" data-type="symbol" data-icon="wi wi-thermometer" data-off-color="#999"></div>
+	<div data-type="label" class=" w1x inline " data-device="Wetter_Pro" data-get="temperature" data-limits="[-50,0,10,25,30,40]" data-colors='["#9999ff","#ffbdff","#FAA460","#ff6900","#ff3333","#ff0000"]' data-unit=" °C"></div>
+	<div class="compressed   inline" data-type="symbol" data-icon="fa-eye-slash" data-off-color="#999"></div>
+	<div data-type="label" class=" w1x inline " data-device="Wetter_Pro" data-get="visibility" data-limits="[-50,0,10,25,30,40]" data-colors='["#9999ff","#ffbdff","#FAA460","#ff6900","#ff3333","#ff0000"]' data-unit=" km"></div>
+		<div class="compressed   inline" data-type="symbol" data-icon="wi wi-humidity" data-off-color="#999"></div>
+		<div data-type="label" class=" w1x inline " data-device="Wetter_Pro"	data-get="humidity"	data-part="1" data-limits="[0,40,60]" data-colors='["#9999ff","#FAA460","#ff6900"]' data-unit="%"></div>
+		<div class="compressed   inline" data-type="symbol" data-icon="wi wi-thermometer-exterior" data-off-color="#999"></div>
+		<div class="compressed   inline left-narrow" data-type="symbol" data-icon="wi wi-raindrops" data-off-color="#999"></div>
+		<div data-type="label" class=" inline w1x left-narrow " data-device="Wetter_Pro" data-get="dewpoint" data-limits='[-73,0,100]' data-colors='["#6699FF","#FAA460","#FF0000"]' data-unit="%B0C%0A"></div>
+		<div class="compressed   inline" data-type="symbol" data-icon="wi wi-barometer" data-off-color="#999"></div>
+		<div data-type="label"	class=" w1x inline " data-device="Wetter_Pro" data-get="pressure" data-part="1"	data-unit="hPa" data-limits="[0,950,1000]" data-colors='["#ff9999","#FAA460","#9999ff"]'></div>
+		<div class="compressed   inline" data-type="symbol" data-icon="wi wi-strong-wind" data-off-color="#999"></div>
+		<div data-type="label" class=" w1x inline " data-device="Wetter_Pro" data-get="wind" data-part="1" data-unit=" km/h" data-limits="[0, 19, 28, 38, 49, 74, 102, 117]" data-colors='["#ffffff","#dddddd","#FAA460","#FAA460","#ff9999","#ff6666","#ff3333","#ff0000"]'></div>
 </li>
 </ul>
 </div>
