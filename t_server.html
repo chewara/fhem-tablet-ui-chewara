@@ -260,7 +260,95 @@
 											<header>Heizung</header>
 						 <div class="small cell" data-type="readingsgroup" data-device="Heizungswerte"></div>
 						</li>
-						<li data-row="6" data-col="6" data-sizex="2" data-sizey="2" class="semitransparent" >
+						<li data-row="6" data-col="6" data-sizex="2" data-sizey="2" class="small semitransparent" >
+							<header> Anrufe </header><br>
+						<table width="100%"  >
+							<tr>
+								<td>
+									<!-- Zuordnung des Status zu entsprechendem Icon -->
+									<div class="narrow" data-type="symbol" data-device="calllist"
+										 data-get="1-state" data-states='["=>","=> X","=> ((o))","=> [=]","=> O_O"]'
+										 data-icons='["oa-phone_call_end_in","oa-phone_missed_in","oa-phone_ring fa-blink","oa-phone_ring_in fa-blink","oa-phone_answersing"]'
+										 data-colors='["green","firebrick","firebrick","green","#00aa69"]'></div>
+								</td>
+								<td>
+									<div data-type="label" data-device="calllist" data-get="1-timestamp" data-part="5"  ></div>
+									<div data-type="label" data-device="calllist" data-get="1-timestamp" data-part="1" class="inline"></div>
+									<div data-type="label" data-device="calllist" data-get="1-timestamp" data-part="2" class="inline"></div>
+									<div data-type="label" data-device="calllist" data-get="1-timestamp" data-part="3" class="inline"></div>
+								</td>
+								<td>
+									<div data-type="label" data-device="calllist" data-get="1-name"></div>
+									<div data-type="label" data-device="calllist" data-get="1-number"></div>
+								</td>
+								<td>
+									<div data-type="label" data-device="calllist" data-get="1-duration"></div>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="narrow" data-type="symbol" data-device="calllist"
+										 data-get="2-state" data-states='["=>","=> X","=> ((o))","=> [=]","=> O_O"]'
+										 data-icons='["oa-phone_call_end_in","oa-phone_missed_in","oa-phone_ring fa-blink","oa-phone_ring_in fa-blink","oa-phone_answersing"]'
+										 data-colors='["green","firebrick","firebrick","green","#00aa69"]'></div>
+								</td>
+								<td>
+									<div data-type="label" data-device="calllist" data-get="2-timestamp" data-part="5"  ></div>
+									<div data-type="label" data-device="calllist" data-get="2-timestamp" data-part="1" class="inline"></div>
+									<div data-type="label" data-device="calllist" data-get="2-timestamp" data-part="2" class="inline"></div>
+									<div data-type="label" data-device="calllist" data-get="2-timestamp" data-part="3" class="inline"></div>
+								</td>
+								<td>
+									<div data-type="label" data-device="calllist" data-get="2-name"></div>
+									<div data-type="label" data-device="calllist" data-get="2-number"></div>
+								</td>
+								<td>
+									<div data-type="label" data-device="calllist" data-get="2-duration"></div>
+								</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="narrow" data-type="symbol" data-device="calllist"
+											 data-get="2-state" data-states='["=>","=> X","=> ((o))","=> [=]","=> O_O"]'
+											 data-icons='["oa-phone_call_end_in","oa-phone_missed_in","oa-phone_ring fa-blink","oa-phone_ring_in fa-blink","oa-phone_answersing"]'
+											 data-colors='["green","firebrick","firebrick","green","#00aa69"]'></div>
+									</td>
+									<td>
+										<div data-type="label" data-device="calllist" data-get="3-timestamp" data-part="5"  ></div>
+										<div data-type="label" data-device="calllist" data-get="3-timestamp" data-part="1" class="inline"></div>
+										<div data-type="label" data-device="calllist" data-get="3-timestamp" data-part="2" class="inline"></div>
+										<div data-type="label" data-device="calllist" data-get="3-timestamp" data-part="3" class="inline"></div>
+									</td>
+									<td>
+										<div data-type="label" data-device="calllist" data-get="3-name"></div>
+										<div data-type="label" data-device="calllist" data-get="3-number"></div>
+									</td>
+									<td>
+										<div data-type="label" data-device="calllist" data-get="3-duration"></div>
+									</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="narrow" data-type="symbol" data-device="calllist"
+												 data-get="2-state" data-states='["=>","=> X","=> ((o))","=> [=]","=> O_O"]'
+												 data-icons='["oa-phone_call_end_in","oa-phone_missed_in","oa-phone_ring fa-blink","oa-phone_ring_in fa-blink","oa-phone_answersing"]'
+												 data-colors='["green","firebrick","firebrick","green","#00aa69"]'></div>
+										</td>
+										<td>
+											<div data-type="label" data-device="calllist" data-get="4-timestamp" data-part="5"  ></div>
+											<div data-type="label" data-device="calllist" data-get="4-timestamp" data-part="1" class="inline"></div>
+											<div data-type="label" data-device="calllist" data-get="4-timestamp" data-part="2" class="inline"></div>
+											<div data-type="label" data-device="calllist" data-get="4-timestamp" data-part="3" class="inline"></div>
+										</td>
+										<td>
+											<div data-type="label" data-device="calllist" data-get="4-name"></div>
+											<div data-type="label" data-device="calllist" data-get="4-number"></div>
+										</td>
+										<td>
+											<div data-type="label" data-device="calllist" data-get="4-duration"></div>
+										</td>
+										</tr>
+						</table>
 						</li>
 				</ul>
 			</div>
