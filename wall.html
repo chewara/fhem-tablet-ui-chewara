@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="widget_base_width" content="74">
+    <meta name="widget_base_height" content="71">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="gridster_disable" content="1">
+    <meta name="longpoll" content="1"> <!-- 1=longpoll;0=shortpoll every 30sec -->
+    <meta name="debug" content="0"> <!-- verbose level 1-6 = output to console;0 = not output -->
+    <meta http-equiv="Cache-Control" content="no-store" />
+
+
+    <link rel="stylesheet" href="lib/jquery.gridster.min.css" />
+    <link rel="stylesheet" href="css/fhem-tablet-ui.css" />
+    <link rel="stylesheet" href="lib/font-awesome.min.css" />
+    <link rel="stylesheet" href="lib/jquery.toast.min.css" />
+    <link rel="stylesheet" href="css/ftui_chart.css" />
+
+    <!-- define your personal style here, it wont be overwritten  -->
+    <!-- link rel="stylesheet" href="css/fhem-green-ui.css" / -->
+    <!-- link rel="stylesheet" href="css/fhem-tablet-ui-user.css" / -->
+
+    <script src="../pgm2/jquery.min.js"></script>
+    <script src="lib/jquery.toast.min.js"></script>
+    <script src="lib/jquery.gridster.min.js"></script>
+    <script src="js/fhem-tablet-ui.js" defer></script>
+
+    <title>fhem wall lenn1</title>
+</head>
+<body>
+<div class="gridster">
+<ul>
+<li  data-row="1" data-col="1" data-sizex="4" data-sizey="2">
+	<header>Datum und Uhrzeit</header>
+	<div data-type="clock" data-format="H:i:s" class="great thin"></div>
+        <div data-type="clock" data-format="d.m.Y" class="bigger thin"></div>
+
+</li>
+
+
+<li data-row="1" data-col="1" data-sizex="2" data-sizey="2">
+<header>Weather</header>
+        <div data-type="weather" data-device="Weather" data-get="condition" class="large"></div>
+        <div data-type="label" data-device="Weather" data-get="AussenTemperatur:temperature" data-unit="%B0C%0A" class="tall thin"></div>
+	<div data-type="label" data-device="Weather" data-get="condition" class="thin"></div>
+
+</li>
+
+<li data-row="1" data-col="3" data-sizex="1" data-sizey="2">
+        <div data-type="weather" data-device="Weather" data-get="fc2_condition" class="cell large"></div>
+        <div class="inline">
+                <div data-type="label" data-device="Weather" data-get="fc2_low_c" data-unit="%B0C%0A" class="large"></div>
+        </div>
+        <div class="inline">
+                <div data-type="label" data-device="Weather" data-get="fc2_high_c" data-unit="%B0C%0A" class=" large"></div>
+        </div>
+                <div data-type="label" data-device="Weather" data-get="fc2_day_of_week"  class="cell bigger thin"></div>
+
+</li>
+
+<li data-row="1" data-col="4" data-sizex="1" data-sizey="2">
+        <div data-type="weather" data-device="Weather" data-get="fc3_condition" class="cell large"></div>
+        <div class="inline">
+                <div data-type="label" data-device="Weather" data-get="fc3_low_c" data-unit="%B0C%0A" class="large"></div>
+        </div>
+        <div class="inline">
+                <div data-type="label" data-device="Weather" data-get="fc3_high_c" data-unit="%B0C%0A" class=" large"></div>
+        </div>
+                <div data-type="label" data-device="Weather" data-get="fc3_day_of_week"  class="cell bigger thin"></div>
+
+</li>
+<li data-row="1" data-col="5" data-sizex="1" data-sizey="2">
+        <div data-type="weather" data-device="Weather" data-get="fc4_condition" class="cell large"></div>
+        <div class="inline">
+                <div data-type="label" data-device="Weather" data-get="fc4_low_c" data-unit="%B0C%0A" class="large"></div>
+        </div>
+        <div class="inline">
+                <div data-type="label" data-device="Weather" data-get="fc4_high_c" data-unit="%B0C%0A" class="large"></div>
+        </div>
+                <div data-type="label" data-device="Weather" data-get="fc4_day_of_week"  class="cell bigger thin"></div>
+
+
+</li>
+<li data-row="1" data-col="6" data-sizex="1" data-sizey="2">
+        <div data-type="weather" data-device="Weather" data-get="fc5_condition" class="cell large"></div>
+        <div class="inline">
+                <div data-type="label" data-device="Weather" data-get="fc5_low_c" data-unit="%B0C%0A" class="large"></div>
+        </div>
+        <div class="inline">
+                <div data-type="label" data-device="Weather" data-get="fc5_high_c" data-unit="%B0C%0A" class="large"></div>
+        </div>
+                <div data-type="label" data-device="Weather" data-get="fc5_day_of_week"  class="cell bigger thin"></div>
+
+
+</li>
+<li data-row="1" data-col="7" data-sizex="1" data-sizey="2">
+        <div data-type="weather" data-device="Weather" data-get="fc6_condition" class="cell large"></div>
+        <div class="inline">
+                <div data-type="label" data-device="Weather" data-get="fc6_low_c" data-unit="%B0C%0A" class="large"></div>
+        </div>
+        <div class="inline">
+                <div data-type="label" data-device="Weather" data-get="fc6_high_c" data-unit="%B0C%0A" class="large"></div>
+        </div>
+                <div data-type="label" data-device="Weather" data-get="fc6_day_of_week"  class="cell bigger thin"></div>
+
+
+</li>
+<li data-row="1" data-col="8" data-sizex="1" data-sizey="2">
+        <div data-type="weather" data-device="Weather" data-get="fc7_condition" class="cell large"></div>
+        <div class="inline">
+                <div data-type="label" data-device="Weather" data-get="fc7_low_c" data-unit="%B0C%0A" class="large"></div>
+        </div>
+        <div class="inline">
+                <div data-type="label" data-device="Weather" data-get="fc7_high_c" data-unit="%B0C%0A" class="large"></div>
+        </div>
+                <div data-type="label" data-device="Weather" data-get="fc7_day_of_week"  class="cell bigger thin"></div>
+
+
+</li>
+<li  data-row="3" data-col="1" data-sizex="3" data-sizey="2">
+<header>Pollenflug</header>
+<div class="row">
+	<div class="col bigger thin left-align">Gr&auml;ser</div>
+	<div data-type="label" data-device="pollenflug" data-get="fc1_Graeser" class="col bigger thin"></div>
+</div>
+<div class="row">
+        <div class="col bigger thin left-align">Beifu&szlig;</div>
+        <div data-type="label" data-device="pollenflug" data-get="fc1_Beifuss" class="col bigger thin"></div>
+</div>
+<div class="row">
+        <div class="col bigger thin left-align">Birke</div>
+        <div data-type="label" data-device="pollenflug" data-get="fc1_Birke"  class="col bigger thin"></div>
+</div>
+<div class="row">
+        <div class="col bigger thin left-align">Wegerich</div>
+        <div data-type="label" data-device="pollenflug" data-get="fc1_Wegerich" class="col bigger thin"></div>
+</div>
+</li>
+<li data-row="3" data-col="4" data-sizex="8" data-sizey="2">
+<header>Licht</header>
+	<div class="center">
+								<div class="inline left-space-2x">
+                  <div data-type="dimmer" data-device="HUEDevice2" data-get="onoff" data-get-on="1" data-get-off="0" data-set="" data-set-on="on" data-set-off="off" data-dim="pct"></div>
+                  <div class="thin">Kinderzimmer</div>
+                </div>
+	<div class="center top-space">
+		<div class="inline">
+      <div data-type="dimmer" data-device="HUEDevice1" data-get="onoff" data-get-on="1" data-get-off="0" data-set=""
+     data-set-on="on" data-set-off="off" data-dim="pct"></div>
+                	<div class="thin">Schlafzimmer</div>
+                </div>
+	</div>
+</li>
+<li data-row="3" data-col="12" data-sizex="1" data-sizey="2">
+<header>Verstärker</header>
+<div data-type="slider" data-device="DENON2" data-get="volume" data-set="volume" class="small"></div>
+</li>
+<li data-row="5" data-col="1" data-sizex="1" data-sizey="3">
+<header>Heizungs-<br/>automatik</header>
+	<div class="inline top-space">
+	  	<div data-type='switch'
+		data-device='HCAutomatik'
+		data-off-background-color='red'
+		data-on-background-color='green'
+		data-icon='fa-thermometer-half'></div>
+        </div>
+</li>
+
+<li data-row="5" data-col="2" data-sizex="8" data-sizey="3">
+<header>Heizung</header>
+ <div class="inline">
+	<div class="row">
+                <div data-type="symbol" data-device="Wohnzimmerheizung"
+                data-get="battery"
+        	data-colors='["red","green"]'
+                data-states='["low","ok"]'
+                data-icons='["fa-battery-1","fa-battery-4"]'
+                class="small col"></div>
+	</div>
+  <div data-type="thermostat" data-device="Wohnzimmerheizung" data-valve="valveposition" data-step="0.5" data-get="desiredTemperature" data-height="60" data-width="60" data-temp="temperature" data-set="desiredTemperature" class="cell small"></div>
+        <div data-type="label" class="">Wohnzimmer</div>
+</div>
+ <div class="inline">
+	<div class="row">
+          <div data-type="symbol" data-device="Schlafzimmerheizung"
+          data-get="battery"
+    data-colors='["red","green"]'
+          data-states='["low","ok"]'
+          data-icons='["fa-battery-1","fa-battery-4"]'
+          class="small col"></div>
+	</div>
+  <div data-type="thermostat" data-device="Schlafzimmerheizung" data-valve="valveposition" data-step="0.5" data-get="desiredTemperature" data-height="60" data-width="60" data-temp="temperature" data-set="desiredTemperature" class="cell small"></div>
+        <div data-type="label" class="">Schlafzimmer</div>
+</div>
+ <div class="inline">
+	<div class="row">
+
+          <div data-type="symbol" data-device="Badheizung"
+          data-get="battery"
+    data-colors='["red","green"]'
+          data-states='["low","ok"]'
+          data-icons='["fa-battery-1","fa-battery-4"]'
+          class="small col"></div>
+	</div>
+  <div data-type="thermostat" data-device="Badheizung" data-valve="valveposition" data-step="0.5" data-get="desiredTemperature" data-height="60" data-width="60" data-temp="temperature" data-set="desiredTemperature" class="cell small"></div>
+        <div data-type="label" class="">Badezimmer</div>
+</div>
+ <div class="inline">
+	 <div class="row">
+     <div data-type="symbol" data-device="Kinderzimmerheizung"
+     data-get="battery"
+data-colors='["red","green"]'
+     data-states='["low","ok"]'
+     data-icons='["fa-battery-1","fa-battery-4"]'
+     class="small col"></div>
+        </div>
+        <div data-type="thermostat" data-device="Kinderzimmerheizung" data-valve="valveposition" data-step="0.5" data-get="desiredTemperature" data-height="60" data-width="60" data-temp="temperature" data-set="desiredTemperature" class="cell small"></div>
+        <div data-type="label" class="">Kinderzimmer</div>
+</div>
+<div class="inline">
+  <div class="row">
+    <div data-type="symbol" data-device="Esszimmerheizung"
+    data-get="battery"
+data-colors='["red","green"]'
+    data-states='["low","ok"]'
+    data-icons='["fa-battery-1","fa-battery-4"]'
+    class="small col"></div>
+       </div>
+       <div data-type="thermostat" data-device="Esszimmerheizung" data-valve="valveposition" data-step="0.5" data-get="desiredTemperature" data-height="60" data-width="60" data-temp="temperature" data-set="desiredTemperature" class="cell small"></div>
+      <div data-type="label" class="">Esszimmer</div>
+</div>
+</li>
+</li>
+<li data-row="6" data-col="10" data-sizex="3" data-sizey="3">
+<header>M&uuml;ll</header>
+<br/>
+<div class="row">
+        <div data-type="label" data-device="muellTermineView"
+	data-get="t_001_daysleftLong"
+        data-colors='["green","red"]'
+        data-states='["morgen","heute"]'
+	class=" col bg-limit"></div>
+	<div data-type="label" data-device="muellTermineView" data-get="t_001_summary" data-substitution="toString().split('(')[0]" class="col bg-limit"></div>
+</div>
+<br/>
+<div class="row">
+        <div data-type="label"
+        data-colors='["green","red"]'
+        data-states='["morgen","heute"]'
+	data-device="muellTermineView" data-get="t_002_daysleftLong" class=" col bg-limit"></div>
+        <div data-type="label" data-device="muellTermineView" data-get="t_002_summary" data-substitution="toString().split('(')[0]" class="col bg-limit"></div>
+</div>
+<br/>
+<div class="row">
+        <div data-type="label"
+        data-colors='["green","red"]'
+        data-states='["morgen","heute"]'
+	data-device="muellTermineView" data-get="t_003_daysleftLong" class=" col bg-limit"></div>
+        <div data-type="label" data-device="muellTermineView" data-get="t_003_summary" data-substitution="toString().split('(')[0]" class="col bg-limit"></div>
+</div>
+<br/>
+<div class="row">
+        <div data-type="label"
+	data-device="muellTermineView" data-get="t_004_bdate" class=" col bg-limit"></div>
+        <div data-type="label" data-device="muellTermineView" data-get="t_004_summary" data-substitution="toString().split('(')[0]" class="col bg-limit"></div>
+</div>
+<br/>
+<div class="row">
+        <div data-type="label" data-device="muellTermineView" data-get="t_005_bdate" class=" col bg-limit"></div>
+        <div data-type="label" data-device="muellTermineView" data-get="t_005_summary" data-substitution="toString().split('(')[0]" class="col bg-limit"></div>
+</div>
+</li>
+</ul>
+</div>
+</body>
+</html>
