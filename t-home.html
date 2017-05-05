@@ -227,14 +227,13 @@
       <header>HEUTE </header>
      	<table width="100%">
      		<tr>
-     			<td rowspan="5" style="text-align:center;vertical-align:top">
+     			<td rowspan="5" style="">
      				<div data-type="weather"
             class="centered"
      						data-device="Weather"
      						data-get="condition"
-     						data-imageset="meteocons"
-     						style="width:100px"></div>
-     	<br>
+     						 data-imageset="kleinklima"
+     						style="width:65px"></div>
      				<div data-type="label"
      					data-device="Weather"
      					data-get="condition"
@@ -310,48 +309,80 @@
      <li data-row="5" data-col="4" data-sizex="1" data-sizey="2" class="semitransparent">
           <header>Tagestemperaturen</header>
      <div class="container weather">
-       <table width="100%">
-         <tr>
-           <td rowspan="5" class="big" style="text-align:center;vertical-align:top">
-      <div data-type="label" class="inline thin">0 Uhr: </div>
+  <table width="100%" border="0">
+  <tr>
+    <td>
+      <div data-type="label" class="inline thin">00:00 </div>
+      <br>
+      <div data-type="label" class="inline thin">06:00 </div>
+    </td>
+    <td>
       <div data-type="label" class="inline green"	data-device="Wetter_Pro" data-get="fc0_temp00" data-unit=" °C"></div>
       <br>
-      <div data-type="label" class="inline thin">3 Uhr: </div>
-      <div data-type="label" class="inline green"	data-device="Wetter_Pro" data-get="fc0_temp03" data-unit=" °C"></div>
-      <br>
-      <div data-type="label" class="inline thin">6 Uhr: </div>
       <div data-type="label" class="inline green"	data-device="Wetter_Pro" data-get="fc0_temp06" data-unit=" °C"></div>
+</td>
+    <td>
+      <div data-type="weather" class="" data-device="Wetter_Pro" data-get="fc0_weatherMorning" data-imageset="kleinklima" style="left-aligned;width:50px"></div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div data-type="label" class="inline thin">09:00 </div>
       <br>
-      <div data-type="label" class="inline thin">9 Uhr: </div>
+      <div data-type="label" class="inline thin">12:00 </div>
+    </td>
+    <td>
       <div data-type="label" class="inline green"	data-device="Wetter_Pro" data-get="fc0_temp09" data-unit=" °C"></div>
       <br>
-      <div data-type="label" class="inline thin">12 Uhr: </div>
       <div data-type="label" class="inline green"	data-device="Wetter_Pro" data-get="fc0_temp12" data-unit=" °C"></div>
+</td>
+    <td>
+      <div data-type="weather" class="centered" data-device="Wetter_Pro" data-get="fc0_weatherDay" data-imageset="kleinklima" style="width:50px"></div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div data-type="label" class="inline thin">15:00 </div>
       <br>
-      <div data-type="label" class="inline thin">15 Uhr: </div>
+      <div data-type="label" class="inline thin">18:00 </div>
+    </td>
+    <td>
       <div data-type="label" class="inline green"	data-device="Wetter_Pro" data-get="fc0_temp15" data-unit=" °C"></div>
       <br>
-      <div data-type="label" class="inline thin">18 Uhr: </div>
       <div data-type="label" class="inline green"	data-device="Wetter_Pro" data-get="fc0_temp18" data-unit=" °C"></div>
+</td>
+    <td>
+    <div data-type="weather" class="centered" data-device="Wetter_Pro" data-get="fc0_weatherEvening"  data-imageset="kleinklima" style="width:50px"></div>
+  </td>
+  </tr>
+  <tr>
+    <td>
+      <div data-type="label" class="inline thin">21:00 </div>
       <br>
-      <div data-type="label" class="inline thin">21 Uhr: </div>
+    </td>
+    <td>
       <div data-type="label" class="inline green"	data-device="Wetter_Pro" data-get="fc0_temp21" data-unit=" °C"></div>
-      <div data-type="pagetab" data-url="t-wetter.html" data-icon="fa-info-circle" class="small inline"></div>
-      </td>
-      </tr>
-       </table>
-     </li>
+      <br>
+</td>
+<td>
+<div data-type="weather" class="centered" data-device="Wetter_Pro" data-get="fc0_weatherNight" data-imageset="kleinklima" style="width:50px"></div>
+</td>
+</tr>
+</table>
+<div data-type="pagetab" data-url="t-wetter.html" data-icon="fa-info-circle" class="small inline"></div>
+
+</div>
+</li>
      <li data-row="5" data-col="5" data-sizex="1" data-sizey="2" class="semitransparent">
-              <header><div data-type="label" data-device="Weather" data-get="fc2_day_of_week" style="display:inline"></div></header>
+      <header><div data-type="label" data-device="Weather" data-get="fc2_day_of_week" style="display:inline"></div></header>
        <table width="100%">
        <tr>
-         <td rowspan="5" style="text-align:center;vertical-align:top">
+         <td rowspan="5" style="">
         <div data-type="weather" class="centered"
                data-device="Weather"
                data-get="fc2_condition"
-               data-imageset="meteocons" class="centered"
-               style="width:100px"></div>
-     <br>
+                data-imageset="kleinklima" class="centered"
+               style="width:65px"></div>
            <div data-type="label"
              data-device="Weather"
              data-get="fc2_condition"></div>
@@ -377,13 +408,12 @@
      <div class="container weather">
           	<table width="100%">
      		<tr>
-     			<td rowspan="5" style="text-align:center;vertical-align:top">
+     			<td rowspan="5" style="">
      				<div data-type="weather"
      						data-device="Weather"
      						data-get="fc3_condition"
-     						data-imageset="meteocons" class="centered"
-     						style="width:100px"></div>
-     	<br>
+     						 data-imageset="kleinklima" class="centered"
+     						style="width:65px"></div>
      				<div data-type="label"
      					data-device="Weather"
      					data-get="fc3_condition"></div>
