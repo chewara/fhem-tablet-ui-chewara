@@ -21,7 +21,7 @@
    </div>
  </li>
   <li data-row="1" data-col="3" data-sizex="1" data-sizey="1" class="semitransparent">
-   <header> Schlafzimmer </header>
+   <header> Schlafzimmer <div data-type="label"  data-device="LaCrosse_20"  data-get="humidity" style="display:inline" data-unit=" %" ></div></header>
       <div data-type="thermostat" data-device="Schlafzimmerheizung" data-valve="valveposition" data-step="0.5" data-get="desiredTemperature" data-height="60" data-width="60" data-temp="temperature" data-set="desiredTemperature" class="cell small"></div>
    <div class="cell">
     <div data-type="label" data-device="LaCrosse_20" data-get="temperature" data-unit="°C / " class=" inline thin"> </div>
@@ -43,7 +43,7 @@
          <div data-type="thermostat" data-device="Esszimmerheizung" data-valve="valveposition" data-step="0.5" data-get="desiredTemperature" data-height="60" data-width="60" data-temp="temperature" data-set="desiredTemperature" class="cell small"></div>
    </li>
   <li data-row="1" data-col="5" data-sizex="1" data-sizey="1" class="semitransparent">
-   <header> Wohnzimmer </header>
+   <header> Wohnzimmer <div data-type="label"  data-device="LaCrosse_32"  data-get="humidity" style="display:inline" data-unit=" %" ></header>
    <div data-type="thermostat" data-device="Wohnzimmerheizung" data-valve="valveposition" data-step="0.5" data-get="desiredTemperature" data-height="60" data-width="60" data-temp="temperature" data-set="desiredTemperature" class="cell small"></div>
    <div class="cell">
     <div data-type="label" data-device="LaCrosse_32" data-get="temperature" data-unit="°C / " class=" inline thin"> </div>
@@ -188,14 +188,10 @@
    <li data-row="5" data-col="2" data-sizex="1" data-sizey="2" class="semitransparent">
     <header>Infos </header>
 
-   <div data-type="label" class="top-space darker">Sonnenaufgang</div>
-   <span style="color:#00aa69"><div data-type="label"
-    data-device="twilight"
-    data-get="sr_civil"
-    data-colors="orange"
-    class="large" ></div></span>
-   <div data-type="label" class="top-space darker">Sonnenuntergang</div>
-   <span style="color:#00aa69"><div data-type="label" data-device="twilight" data-get="ss_civil" data-colors="orange" class="large" >
+   <div data-type="label" class="top-space darker">Luftfeuchte Schlafzimmer</div>
+   <span style="color:#00aa69"><div data-type="label"  data-device="LaCrosse_20"  data-get="humidity" class="large"  data-unit=" %" ></div></span>
+   <div data-type="label" class="top-space darker">Luftfeuchte Wohnzimmer</div>
+   <span style="color:#00aa69"><div data-type="label" data-device="LaCrosse_32" data-get="humidity" data-colors="orange" class="large" data-unit=" %">
    </div></span>
    <div data-type="label" class="top-space darker">Fahrzeit Büro</div>
    <span style="color:#00aa69"><div data-type="label" data-device="traffic" data-get="duration_in_traffic" data-colors="orange" class="large">
