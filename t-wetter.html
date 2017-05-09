@@ -102,7 +102,7 @@
                         data-limits='[-73,0,30]'
                         data-colors='["#6699FF","#AA6900","#FF0000"]'
                         data-unit=" %B0C%0A"
-                        class="top-space  bigger inline">
+                        class="top-space  big inline">
                 </div>
         </td>
          <td>
@@ -112,7 +112,7 @@
                         data-limits='[-73,0,100]'
                         data-colors='["#6699FF","#AA6900","#FF0000"]'
                         data-unit=" %"
-                        class="top-space bigger inline ">
+                        class="top-space big inline ">
                 </div>
         </td>
          <td>
@@ -122,7 +122,7 @@
                         data-limits='[-73,0,100]'
                         data-colors='["#6699FF","#AA6900","#FF0000"]'
                         data-unit=" %B0C%0A"
-                        class="top-space bigger inline">
+                        class="top-space big inline">
                 </div>
         </td></tr>
         <tr><td>
@@ -142,23 +142,41 @@
 </div>
 </li>
 <li data-row="2" data-col="5" data-sizex="2" data-sizey="2" class="semitransparent green">
-        <header>Windrichtung</header><br>
-	<div data-type="wind_direction"
-		data-device="Weather"
-		data-direction="windDir"
-		data-speed="wind"
-		data-calm="-"
-		data-size="80"
-		data-tickstep="45"
-		data-angleoffset="0"></div>
-		<br>
-		<header>Sonne</header>
-<div data-type="label" class="top-space  darker">Sonnenaufgang</div>
-<span style="color:#aa6900"><div data-type="label"
-data-device="twilight" data-get="sr_civil" data-colors="orange" class=" green" ></div></span>
-<div data-type="label" class="top-space darker">Sonnenuntergang</div>
-<span style="color:#aa6900"><div data-type="label" data-device="twilight" data-get="ss_civil" data-colors="orange"
-class=" green" ></div></span>
+	<header>Pollenflug <div data-type="label" data-device="pollenflug" style="display:inline" data-get="city"></div> am <div data-type="label" data-device="pollenflug" style="display:inline" data-get="fc1_day_of_week"></div></header>
+	<div class="row">
+		<div class="col big thin left-align">Ampfer</div>
+		<div data-type="label" data-device="pollenflug" data-get="fc1_Ampfer" class="col big thin"></div>
+	</div>
+	<div class="row">
+		<div class="col big thin left-align">Birke</div>
+		<div data-type="label" data-device="pollenflug" data-get="fc1_Birke"  class="col big thin"></div>
+	</div>
+	<div class="row">
+		<div class="col big thin left-align">Buche</div>
+		<div data-type="label" data-device="pollenflug" data-get="fc1_Buche" class="col big thin"></div>
+	</div>
+	<div class="row">
+		<div class="col big thin left-align">Eiche</div>
+		<div data-type="label" data-device="pollenflug" data-get="fc1_Eiche" class="col big thin"></div>
+	</div>
+	<div class="row">
+		<div class="col big thin left-align">Esche</div>
+		<div data-type="label" data-device="pollenflug" data-get="fc1_Esche" class="col big thin"></div>
+	</div>
+	<div class="row">
+		<div class="col big thin left-align">Gr&auml;ser</div>
+		<div data-type="label" data-device="pollenflug" data-get="fc1_Graeser" class="col big thin"></div>
+	</div>
+	<div class="row">
+	 <div class="col big thin left-align">Ulme</div>
+	 <div data-type="label" data-device="pollenflug" data-get="fc1_Ulme" class="col big thin"></div>
+	</div>
+	<div class="row">
+	 <div class="col big thin left-align">Weide</div>
+	 <div data-type="label" data-device="pollenflug" data-get="fc1_Weide" class="col big thin"></div>
+	</div>
+	<div data-type="label" data-device="pollenflug" style="display:inline" data-get="fcn_total"></div>
+	<div data-type="label" data-device="pollenflug" style="display:inline" data-get="fcn_allergen"></div>
 </li>
 <li data-row="4" data-col="2" data-sizex="1" data-sizey="2" class="semitransparent">
 <div class="container weather">
