@@ -213,17 +213,17 @@
      			<td rowspan="5" style="">
      				<div data-type="weather"
             class="centered"
-     						data-device="Weather"
-     						data-get="condition"
+     						data-device="Wetter_Pro"
+     						data-get="weather"
      						 data-imageset="kleinklima"
      						style="width:65px"></div>
      				<div data-type="label"
-     					data-device="Weather"
+     					data-device="Wetter_Pro"
      					data-get="condition"
           class="centered"></div>
      	<br>aktuell:
        <div data-type="label"
-  					data-device="Weather"
+  					data-device="Wetter_Pro"
   					data-get="temperature"
   					data-limits="[-50,0,10,25,30,40]"
   					data-colors='["#9999ff","#ffbdff","#b4eeb4","#ff6900","#ff3333","#ff0000"]'
@@ -231,22 +231,22 @@
   					class="inline " >
   				</div><br>
       	 			Temp: <div data-type="label"
-     					data-device="Weather"
-     					data-get="fc1_low_c"
+     					data-device="Wetter_Pro"
+     					data-get="fc0_tempMin"
      					data-limits="[-50,-30,40]"
      					data-colors='["#9999ff","#00aa69","#ff0000"]'
      					data-unit=" %B0C%0A"
      					class="inline"></div>
      				- <div data-type="label"
-     					data-device="Weather"
-     					data-get="fc1_high_c"
+     					data-device="Wetter_Pro"
+     					data-get="fc0_tempMax"
      					data-limits="[-50,-30,40]"
      					data-colors='["#9999ff","#00aa69","#ff0000"]'
      					data-unit=" %B0C%0A"
      					class="inline"></div>
        <br>
        Feuchte: <div data-type="label"
-        data-device="Weather"
+        data-device="Wetter_Pro"
         data-get="humidity"
         data-limits="[0,40,60]"
         data-colors='["#9999ff","#00aa69","#ff6900"]'
@@ -256,7 +256,7 @@
        <br>
        Wind:
        <div data-type="label"
-   					data-device="Weather"
+   					data-device="Wetter_Pro"
    					data-get="wind"
    					data-unit=" km/h"
    					data-limits="[0, 19, 28, 38, 49, 74, 102, 117]"
@@ -267,7 +267,7 @@
        <br>
        Druck:
        <div data-type="label"
-   					data-device="Weather"
+   					data-device="Wetter_Pro"
    					data-get="pressure"
    					data-unit=" hPa"
    					data-limits="[0,950,1000]"
@@ -276,7 +276,7 @@
    				</div>
       <br> Sicht:
       <div data-type="label"
-       data-device="Weather"
+       data-device="Wetter_Pro"
        data-get="visibility"
        data-unit=" km"
        class="inline" >
@@ -286,9 +286,7 @@
      	</table>
      </div>
      <div data-type="pagetab" data-url="t-wetter.html" data-icon="fa-info-circle" class="top-space inline"></div>
-
      </li>
-
      <li data-row="5" data-col="4" data-sizex="1" data-sizey="2" class="semitransparent">
           <header>Tagestemperaturen</header>
      <div class="container weather">
@@ -356,30 +354,30 @@
 
 </div>
 </li>
-     <li data-row="5" data-col="5" data-sizex="1" data-sizey="2" class="semitransparent">
-      <header><div data-type="label" data-device="Weather" data-get="fc2_day_of_week" style="display:inline"></div></header>
+<li data-row="5" data-col="5" data-sizex="1" data-sizey="2" class="semitransparent">
+      <header><div data-type="label" data-device="Wetter_Pro" data-get="fc1_date" style="display:inline"></div></header>
        <table width="100%">
        <tr>
          <td rowspan="5" style="">
         <div data-type="weather" class="centered"
-               data-device="Weather"
-               data-get="fc2_condition"
+               data-device="Wetter_Pro"
+               data-get="fc1_weatherDay"
                 data-imageset="kleinklima" class="centered"
                style="width:65px"></div>
            <div data-type="label"
-             data-device="Weather"
-             data-get="fc2_condition"></div>
+             data-device="Wetter_Pro"
+             data-get="fc1_weatherDay"></div>
      <br>
          Temp: <div data-type="label"
-             data-device="Weather"
-             data-get="fc2_low_c"
+             data-device="Wetter_Pro"
+             data-get="fc1_tempMin"
              data-limits="[-50,-30,40]"
              data-colors='["#9999ff","#00aa69","#ff0000"]'
              data-unit=" %B0C%0A"
              class="inline"></div>
            - <div data-type="label"
-             data-device="Weather"
-             data-get="fc2_high_c"
+             data-device="Wetter_Pro"
+             data-get="fc1_tempMax"
              data-limits="[-50,-30,40]"
              data-colors='["#9999ff","#00aa69","#ff0000"]'
              data-unit=" %B0C%0A"
@@ -387,30 +385,30 @@
          </td>
        </tr>
      </table><br>
-       <header><div data-type="label" data-device="Weather" data-get="fc3_day_of_week" style="display:inline"></div></header>
+       <header><div data-type="label" data-device="Wetter_Pro" data-get="fc2_date" style="display:inline"></div></header>
      <div class="container weather">
           	<table width="100%">
      		<tr>
      			<td rowspan="5" style="">
      				<div data-type="weather"
-     						data-device="Weather"
-     						data-get="fc3_condition"
+     						data-device="Wetter_Pro"
+     						data-get="fc2_weatherDay"
      						 data-imageset="kleinklima" class="centered"
      						style="width:65px"></div>
      				<div data-type="label"
-     					data-device="Weather"
-     					data-get="fc3_condition"></div>
+     					data-device="Wetter_Pro"
+     					data-get="fc2_weatherDay"></div>
      	<br>
      			Temp: <div data-type="label"
-     					data-device="Weather"
-     					data-get="fc3_low_c"
+     					data-device="Wetter_Pro"
+     					data-get="fc2_tempMin"
      					data-limits="[-50,-30,40]"
      					data-colors='["#9999ff","#00aa69","#ff0000"]'
      					data-unit=" %B0C%0A"
      					class="inline"></div>
      				- <div data-type="label"
-     					data-device="Weather"
-     					data-get="fc3_high_c"
+     					data-device="Wetter_Pro"
+     					data-get="fc2_tempMax"
      					data-limits="[-50,-30,40]"
      					data-colors='["#9999ff","#00aa69","#ff0000"]'
      					data-unit=" %B0C%0A"
