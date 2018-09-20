@@ -21,11 +21,10 @@
    </div>
  </li>
   <li data-row="1" data-col="3" data-sizex="1" data-sizey="1" class="semitransparent">
-   <header> Schlafzimmer </header>
+   <header> Schlafzimmer <div data-type="label" data-device="LaCrosse_20" data-get="temperature" data-unit="°C / " class="small inline"> Temperatur</div>
+       <div data-type="label" data-device="LaCrosse_20" data-get="humidity" data-unit="%" class="small inline thin"> Luftfeuchte</div> </header>
          <div data-type="thermostat" data-device="Schlafzimmerheizung" data-valve="valveposition" data-step="0.5" data-get="temperature" data-height="60" data-width="60" data-temp="desiredTemperature" data-set="desiredTemperature" class="cell small"></div>
    <div class="cell">
-    <div data-type="label" data-device="LaCrosse_20" data-get="temperature" data-unit="°C / " class="big inline thin"> Temperatur</div>
-    <div data-type="label" data-device="LaCrosse_20" data-get="humidity" data-unit="%" class="big inline thin"> Luftfeuchte</div>
     </div>
 </li>
 <li data-row="2" data-col="3" data-sizex="1" data-sizey="1" class="semitransparent">
@@ -44,7 +43,8 @@
     <br>
    </li>
   <li data-row="1" data-col="5" data-sizex="1" data-sizey="1" class="semitransparent">
-   <header> Wohnzimmer </header>
+   <header> Wohnzimmer <div data-type="label" data-device="LaCrosse_32" data-get="temperature" data-unit="°C / " class="inline small"> Temperatur</div>
+       <div data-type="label" data-device="LaCrosse_32" data-get="humidity" data-unit="%" class="inline small"> Luftfeuchte</div> </header>
    <div data-type="thermostat" data-device="Wohnzimmerheizung" data-valve="valveposition" data-step="0.5" data-get="temperature" data-height="60" data-width="60" data-temp="desiredTemperature" data-set="desiredTemperature" class="cell small"></div>
    <div class="cell">
     <div data-type="label" data-device="LaCrosse_32" data-get="temperature" data-unit="°C / " class="big inline thin"> Temperatur</div>
@@ -125,23 +125,45 @@
  </table>
 </li>
 
-  <li data-row="3" data-col="4" data-sizex="1" data-sizey="1" class="semitransparent">
-   <header> Esszimmer Licht </header><br>
-   <div data-type="dimmer" data-device="HUEDevice4" data-get="onoff" data-get-on="1" data-get-off="0" data-set=""
-   data-set-on="on" data-set-off="off" data-dim="pct">
-  </div>
-  </li>
-  <li data-row="3" data-col="5" data-sizex="1" data-sizey="1" class="semitransparent">
-       <header> wohnzimmer Licht </header><br>
-       <div data-type="dimmer" data-device="HUEDevice3" data-get="onoff" data-get-on="1" data-get-off="0" data-set=""
-       data-set-on="on" data-set-off="off" data-dim="pct">
-      </div>
+  <li data-row="3" data-col="4" data-sizex="2" data-sizey="1" class="semitransparent">
+    <header>Spritpreise </header> <br>
+    Rangsdorf		<div data-type="label" class="large inline"
+                  data-device="spritpreise"
+                  data-get="Rangsdorf"
+                  data-limits='["0","1.05","1.15"]'
+                  data-colors='["green","#b4eeb4","firebrick"]'
+                  data-unit="&euro;"
+                  class="big thin">
+               </div> Diesel<br>
+Total		<div data-type="label" class="large inline"
+    data-device="spritpreise"
+    data-get="TotalBlankenfelde"
+    data-limits='["0","1.05","1.15"]'
+    data-colors='["green","#b4eeb4","firebrick"]'
+    data-unit="Euro;"
+    class="big thin">
+    </div> Diesel<br>
+    Sprint		<div data-type="label" class="large inline"
+                data-device="spritpreise"
+                data-get="SprintMahlow"
+                data-limits='["0","1.05","1.15"]'
+                data-colors='["green","#b4eeb4","firebrick"]'
+                data-unit="Euro;"
+                class="big thin">
+    </div> Diesel<br>
+    Aral		<div data-type="label" class="large inline"
+                  data-device="spritpreise"
+                  data-get="AralMahlow"
+                  data-limits='["0","1.05","1.15"]'
+                  data-colors='["green","#b4eeb4","firebrick"]'
+                  data-unit="Euro;"
+                  class="big thin">
+               </div> Diesel
   </li>
   <li data-row="3" data-col="6" data-sizex="1" data-sizey="1" class="semitransparent">
-        <header> Bad Licht </header><br>
-        <div data-type="dimmer" data-device="HUEDevice1" data-get="onoff" data-get-on="1" data-get-off="0" data-set=""
-        data-set-on="on" data-set-off="off" data-dim="pct">
-       </div>
+        <header>ALLE LAMPEN</header>
+        <br>
+      <div data-type="button" data-device="HUEGroup0" class="green big invert">
     </li>
   <li data-row="3" data-col="4" data-sizex="1" data-sizey="3" class="semitransparent">
    <header> Kalender </header><br>
@@ -232,18 +254,18 @@
      			<td rowspan="5" style="text-align:center;vertical-align:top">
      				<div data-type="weather"
             class="centered"
-     						data-device="Weather"
-     						data-get="condition"
-     						data-imageset="meteocons"
+     						data-device="Wetter_Pro"
+     						data-get="weather"
+     						data-imageset="kleinklima"
      						style="width:100px"></div>
      	<br>
      				<div data-type="label"
-     					data-device="Weather"
+     					data-device="Wetter_Pro"
      					data-get="condition"
           class="centered"></div>
      	<br>aktuell:
        <div data-type="label"
-  					data-device="Weather"
+  					data-device="Wetter_Pro"
   					data-get="temperature"
   					data-limits="[-50,0,10,25,30,40]"
   					data-colors='["#9999ff","#ffbdff","#b4eeb4","#ff6900","#ff3333","#ff0000"]'
@@ -251,22 +273,22 @@
   					class="inline " >
   				</div><br>
       	 			Temp: <div data-type="label"
-     					data-device="Weather"
-     					data-get="fc1_low_c"
+     					data-device="Wetter_Pro"
+     					data-get="fc0_tempMin"
      					data-limits="[-50,-30,40]"
      					data-colors='["#9999ff","#00aa69","#ff0000"]'
      					data-unit=" %B0C%0A"
      					class="inline"></div>
      				- <div data-type="label"
-     					data-device="Weather"
-     					data-get="fc1_high_c"
+     					data-device="Wetter_Pro"
+     					data-get="fc0_tempMax"
      					data-limits="[-50,-30,40]"
      					data-colors='["#9999ff","#00aa69","#ff0000"]'
      					data-unit=" %B0C%0A"
      					class="inline"></div>
        <br>
        Feuchte: <div data-type="label"
-        data-device="Weather"
+        data-device="Wetter_Pro"
         data-get="humidity"
         data-limits="[0,40,60]"
         data-colors='["#9999ff","#00aa69","#ff6900"]'
@@ -276,7 +298,7 @@
        <br>
        Wind:
        <div data-type="label"
-   					data-device="Weather"
+   					data-device="Wetter_Pro"
    					data-get="wind"
    					data-unit=" km/h"
    					data-limits="[0, 19, 28, 38, 49, 74, 102, 117]"
@@ -287,7 +309,7 @@
        <br>
        Druck:
        <div data-type="label"
-   					data-device="Weather"
+   					data-device="Wetter_Pro"
    					data-get="pressure"
    					data-unit=" hPa"
    					data-limits="[0,950,1000]"
@@ -296,7 +318,7 @@
    				</div>
       <br> Sicht:
       <div data-type="label"
-       data-device="Weather"
+       data-device="Wetter_Pro"
        data-get="visibility"
        data-unit=" km"
        class="inline" >
@@ -308,31 +330,31 @@
      </li>
 
      <li data-row="5" data-col="4" data-sizex="1" data-sizey="2" class="semitransparent">
-          <header><div data-type="label" data-device="Weather" data-get="fc2_day_of_week" style="display:inline"></div></header>
+          <header><div data-type="label" data-device="Wetter_Pro" data-get="fc1_date" style="display:inline"></div></header>
      <div class="container weather">
        	<table width="100%">
      		<tr>
      			<td rowspan="5" style="text-align:center;vertical-align:top">
          <div data-type="weather" class="centered"
-     						data-device="Weather"
-     						data-get="fc2_condition"
-     						data-imageset="meteocons" class="centered"
+     						data-device="Wetter_Pro"
+     						data-get="fc1_weatherDay"
+     						data-imageset="kleinklima" class="centered"
      						style="width:100px"></div>
      	<br>
      				<div data-type="label"
-     					data-device="Weather"
-     					data-get="fc2_condition"></div>
+     					data-device="Wetter_Pro"
+     					data-get="fc1_weatherDay"></div>
      	<br>
      			Temp: <div data-type="label"
-     					data-device="Weather"
-     					data-get="fc2_low_c"
+     					data-device="Wetter_Pro"
+     					data-get="fc1_tempMin"
      					data-limits="[-50,-30,40]"
      					data-colors='["#9999ff","#00aa69","#ff0000"]'
      					data-unit=" %B0C%0A"
      					class="inline"></div>
      				- <div data-type="label"
-     					data-device="Weather"
-     					data-get="fc2_high_c"
+     					data-device="Wetter_Pro"
+     					data-get="fc1_tempMax"
      					data-limits="[-50,-30,40]"
      					data-colors='["#9999ff","#00aa69","#ff0000"]'
      					data-unit=" %B0C%0A"
@@ -343,31 +365,31 @@
       <div data-type="pagetab" data-url="t-wetter.html" data-icon="" class="top-space inline">mehr</div>
      </li>
      <li data-row="5" data-col="5" data-sizex="1" data-sizey="2" class="semitransparent">
-       <header><div data-type="label" data-device="Weather" data-get="fc3_day_of_week" style="display:inline"></div></header>
+       <header><div data-type="label" data-device="Wetter_Pro" data-get="fc2_date" style="display:inline"></div></header>
      <div class="container weather">
           	<table width="100%">
      		<tr>
      			<td rowspan="5" style="text-align:center;vertical-align:top">
      				<div data-type="weather"
-     						data-device="Weather"
-     						data-get="fc3_condition"
-     						data-imageset="meteocons" class="centered"
+     						data-device="Wetter_Pro"
+     						data-get="fc2_weatherDay"
+     						data-imageset="kleinklima" class="centered"
      						style="width:100px"></div>
      	<br>
      				<div data-type="label"
-     					data-device="Weather"
-     					data-get="fc3_condition"></div>
+     					data-device="Wetter_Pro"
+     					data-get="fc2_weatherDay"></div>
      	<br>
      			Temp: <div data-type="label"
-     					data-device="Weather"
-     					data-get="fc3_low_c"
+     					data-device="Wetter_Pro"
+     					data-get="fc2_tempMin"
      					data-limits="[-50,-30,40]"
      					data-colors='["#9999ff","#00aa69","#ff0000"]'
      					data-unit=" %B0C%0A"
      					class="inline"></div>
      				- <div data-type="label"
-     					data-device="Weather"
-     					data-get="fc3_high_c"
+     					data-device="Wetter_Pro"
+     					data-get="fc2_tempMax"
      					data-limits="[-50,-30,40]"
      					data-colors='["#9999ff","#00aa69","#ff0000"]'
      					data-unit=" %B0C%0A"
@@ -384,41 +406,28 @@
      <li data-row="5" data-col="7" data-sizex="1" data-sizey="1" class="semitransparent">
       <header>Lisa </header> <div data-type="homestatus" class="small" data-version="roommate" data-device='rr_Lisa'></div>
      </li>
-     <li data-row="6" data-col="6" data-sizex="2" data-sizey="1" class="semitransparent">
-       <header>Spritpreise </header>
-       Rangsdorf		<div data-type="label" class="inline"
-       							 data-device="spritpreise"
-       							 data-get="Rangsdorf"
-       							 data-limits='["0","1.05","1.15"]'
-       							 data-colors='["green","#b4eeb4","firebrick"]'
-       							 data-unit="9&euro;"
-       							 class="big thin">
-       						</div> Diesel<br>
-  Total		<div data-type="label" class="inline"
-       data-device="spritpreise"
-       data-get="TotalBlankenfelde"
-       data-limits='["0","1.05","1.15"]'
-       data-colors='["green","#b4eeb4","firebrick"]'
-       data-unit="9&euro;"
-       class="big thin">
-       </div> Diesel<br>
-       Sprint		<div data-type="label" class="inline"
-                   data-device="spritpreise"
-                   data-get="SprintMahlow"
-                   data-limits='["0","1.05","1.15"]'
-                   data-colors='["green","#b4eeb4","firebrick"]'
-                   data-unit="9&euro;"
-                   class="big thin">
-       </div> Diesel<br>
-       Aral		<div data-type="label" class="inline"
-                     data-device="spritpreise"
-                     data-get="AralMahlow"
-                     data-limits='["0","1.05","1.15"]'
-                     data-colors='["green","#b4eeb4","firebrick"]'
-                     data-unit="9&euro;"
-                     class="big thin">
-                  </div> Diesel
+     <li data-row="6" data-col="6" data-sizex="1" data-sizey="1" class="semitransparent">
+       <header>Wohnzimmer Farbe </header>
+       <div data-type="volume"
+	 data-device="HUEDevice3"
+	 data-get="hue"
+	 data-set="hue"
+	 data-min="0"
+	 data-max="65353"
+	 class="hue-tick hue-front small top-space-2x">
+</div>
  </li>
+ <li data-row="6" data-col="7" data-sizex="1" data-sizey="1" class="semitransparent">
+   <header>Schlafzimmer Farbe </header>
+   <div data-type="volume"
+data-device="HUEDevice6"
+data-get="hue"
+data-set="hue"
+data-min="0"
+data-max="65353"
+class="hue-tick hue-front small top-space-2x">
+</div>
+</li>
 </ul>
 </div>
 </body>
